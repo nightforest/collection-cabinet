@@ -1,0 +1,189 @@
+section.bookmarks-section
+    .container.bookmarks-section__container
+        header.bookmarks-section__header
+            h1.page-title.bookmarks-section__title Мій профіль
+
+            form.search.bookmarks-section__search(id="bookmark-search-form" autocomplete="off" novalidate="novalidate")
+                .search__group
+                    input#inputBookmarkSearch.input.search__input(type="text" name="inputBookmarkSearch" placeholder="Пошук по файлах" autocomplete="off" required)
+
+                    button.search__button
+                        svg.search__icon(width="21" height="21")
+                            use(xlink:href="img/sprite.svg#search")
+            
+            .bookmarks-section__buttons
+                button.button.button--outline.bookmarks-section__button(type="button") Додати статтю
+                button.button.button--outline.bookmarks-section__button(type="button" data-modal="modal-create") Створити папку
+
+        ul.bookmarks-section__list
+            li.bookmarks-section__item
+                .bookmark-card
+                    .bookmark-card-menu.is-dropdown
+                        button.bookmark-card-menu__toggle.is-dropdown__toggle
+                            svg.bookmark-card-menu__toggle-icon(width="4" height="18")
+                                use(xlink:href="img/sprite.svg#dots")
+                        
+                        ul.bookmark-card-menu__dropdown
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Редагувати
+                            
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Видалити
+
+                    a.bookmark-card__link(href="#")
+                        .bookmark-card__pic
+                            svg.bookmark-card__icon(width="110" height="86")
+                                use(xlink:href="img/sprite.svg#folder-solid")
+
+                        h3.bookmark-card__title Папка Фінанси
+                        .bookmark-card__info 7 файлів
+            
+            li.bookmarks-section__item
+                .bookmark-card
+                    .bookmark-card-menu.is-dropdown
+                        button.bookmark-card-menu__toggle.is-dropdown__toggle
+                            svg.bookmark-card-menu__toggle-icon(width="4" height="18")
+                                use(xlink:href="img/sprite.svg#dots")
+                        
+                        ul.bookmark-card-menu__dropdown
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Редагувати
+                            
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Видалити
+
+                    a.bookmark-card__link(href="#")
+                        .bookmark-card__pic
+                            svg.bookmark-card__icon(width="110" height="86")
+                                use(xlink:href="img/sprite.svg#folder-solid")
+
+                        h3.bookmark-card__title Папка Фінанси
+                        .bookmark-card__info 7 файлів
+            
+            li.bookmarks-section__item
+                .bookmark-card
+                    .bookmark-card-menu.is-dropdown
+                        button.bookmark-card-menu__toggle.is-dropdown__toggle
+                            svg.bookmark-card-menu__toggle-icon(width="4" height="18")
+                                use(xlink:href="img/sprite.svg#dots")
+                        
+                        ul.bookmark-card-menu__dropdown
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Редагувати
+                            
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Видалити
+
+                    a.bookmark-card__link(href="#")
+                        .bookmark-card__pic
+                            svg.bookmark-card__icon(width="110" height="86")
+                                use(xlink:href="img/sprite.svg#folder-solid")
+
+                        h3.bookmark-card__title Папка Фінанси
+                        .bookmark-card__info 7 файлів
+
+            li.bookmarks-section__item
+                .bookmark-card
+                    .bookmark-card-menu.is-dropdown
+                        button.bookmark-card-menu__toggle.is-dropdown__toggle
+                            svg.bookmark-card-menu__toggle-icon(width="4" height="18")
+                                use(xlink:href="img/sprite.svg#dots")
+                        
+                        ul.bookmark-card-menu__dropdown
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Редагувати
+                            
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Видалити
+
+                    a.bookmark-card__link(href="#")
+                        .bookmark-card__pic
+                            svg.bookmark-card__icon(width="110" height="86")
+                                use(xlink:href="img/sprite.svg#folder-solid")
+
+                        h3.bookmark-card__title Папка Фінанси
+                        .bookmark-card__info 7 файлів
+            
+            li.bookmarks-section__item
+                .bookmark-card
+                    .bookmark-card-menu.is-dropdown
+                        button.bookmark-card-menu__toggle.is-dropdown__toggle
+                            svg.bookmark-card-menu__toggle-icon(width="4" height="18")
+                                use(xlink:href="img/sprite.svg#dots")
+                        
+                        ul.bookmark-card-menu__dropdown
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Редагувати
+                            
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Видалити
+
+                    a.bookmark-card__link(href="#")
+                        .bookmark-card__pic
+                            svg.bookmark-card__icon(width="110" height="86")
+                                use(xlink:href="img/sprite.svg#docx")
+
+                        h3.bookmark-card__title Назва пропозиції
+            
+            li.bookmarks-section__item
+                .bookmark-card
+                    .bookmark-card-menu.is-dropdown
+                        button.bookmark-card-menu__toggle.is-dropdown__toggle
+                            svg.bookmark-card-menu__toggle-icon(width="4" height="18")
+                                use(xlink:href="img/sprite.svg#dots")
+                        
+                        ul.bookmark-card-menu__dropdown
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Редагувати
+                            
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Видалити
+
+                    a.bookmark-card__link(href="#")
+                        .bookmark-card__pic
+                            svg.bookmark-card__icon(width="110" height="86")
+                                use(xlink:href="img/sprite.svg#docx")
+
+                        h3.bookmark-card__title Назва пропозиції
+            
+            li.bookmarks-section__item
+                .bookmark-card
+                    .bookmark-card-menu.is-dropdown
+                        button.bookmark-card-menu__toggle.is-dropdown__toggle
+                            svg.bookmark-card-menu__toggle-icon(width="4" height="18")
+                                use(xlink:href="img/sprite.svg#dots")
+                        
+                        ul.bookmark-card-menu__dropdown
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Редагувати
+                            
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Видалити
+
+                    a.bookmark-card__link(href="#")
+                        .bookmark-card__pic
+                            svg.bookmark-card__icon(width="110" height="86")
+                                use(xlink:href="img/sprite.svg#docx")
+
+                        h3.bookmark-card__title Назва пропозиції
+
+            li.bookmarks-section__item
+                .bookmark-card
+                    .bookmark-card-menu.is-dropdown
+                        button.bookmark-card-menu__toggle.is-dropdown__toggle
+                            svg.bookmark-card-menu__toggle-icon(width="4" height="18")
+                                use(xlink:href="img/sprite.svg#dots")
+                        
+                        ul.bookmark-card-menu__dropdown
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Редагувати
+                            
+                            li.bookmark-card-menu__item
+                                a.bookmark-card-menu__link(href="#") Видалити
+
+                    a.bookmark-card__link(href="#")
+                        .bookmark-card__pic
+                            svg.bookmark-card__icon(width="110" height="86")
+                                use(xlink:href="img/sprite.svg#docx")
+
+                        h3.bookmark-card__title Назва пропозиції

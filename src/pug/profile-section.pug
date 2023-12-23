@@ -1,0 +1,59 @@
+section.profile-section
+    .container.profile-section__container
+        h1.page-title.profile-section__title Мій профіль
+
+        form.form.profile-section__form(id="profile-form" autocomplete="off" novalidate="novalidate")
+            .form-block
+                .form-block__left
+                    label.form-block__label Ім’я
+                
+                .form-block__right
+                    input#inputFirstName.input.form__input(type="text" name="inputFirstName" placeholder="Ім’я" autocomplete="off" required)
+
+            .form-block
+                .form-block__left
+                    label.form-block__label Прізвище
+                
+                .form-block__right
+                    input#inputLastName.input.form__input(type="text" name="inputLastName" placeholder="Прізвище" autocomplete="off" required)
+
+            .form-block
+                .form-block__left
+                    label.form-block__label Email
+                
+                .form-block__right
+                    input#inputEmail.input.form__input(type="email" name="inputEmail" placeholder="example@gmail.com" autocomplete="off" required)
+
+            .form-block
+                .form-block__left
+                    label.form-block__label Номер телефону
+                
+                .form-block__right
+                    input#inputPhone.input.form__input.phone-mask(type="text" name="inputPhone" placeholder="+38 (___) __-__-___" autocomplete="off" required)
+
+            .form-block
+                .form-block__left
+                    label.form-block__label Дата народження
+                
+                .form-block__right
+                    input#inputDate.input.form__input(type="date" name="inputDate" placeholder="" autocomplete="off" required)
+
+            .form-block
+                .form-block__left
+                    label.form-block__label Місто
+                
+                .form-block__right
+                    select#selectCity.select(name="selectCity" aria-label="Виберіть місто" required)
+                        option(value="") Виберіть місто
+                        option(value="1") Київ
+                        option(value="2") Одеса
+                        option(value="3") Львів
+                        option(value="4") Харків
+
+            .form-block
+                .form-block__left
+
+                .form-block__right
+                    .form__buttons-group
+                        button.button.form__button Зберегти
+                        button.button.button--outline.form__button(type="button" data-modal="modal-edit-password") Редагувати пароль

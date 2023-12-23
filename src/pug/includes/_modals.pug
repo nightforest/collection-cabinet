@@ -1,0 +1,197 @@
+.modal-wrap
+    #modal-success.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="22")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                .modal__content
+                    svg.modal__icon(width="114" height="114")
+                        use(xlink:href="img/sprite.svg#success")
+                    h3.modal__title Форма відправлена
+                    p.modal__descr Наш менеджер зв’яжется с вами
+                    a.button.modal__button(href="#") На головну
+    
+    #modal-edit-password.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="22")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                h3.modal__title Редагувати пароль
+
+                form.form.modal__form(id="edit-password-form" autocomplete="off" novalidate="novalidate")
+                    .form__group
+                        input#inputEditPassword.input.form__input(type="password" name="inputEditPassword" placeholder="Старий пароль" autocomplete="off" required)
+
+                    .form__group
+                        input#inputEditNewPassword.input.form__input(type="password" name="inputEditNewPassword" placeholder="Новий пароль" autocomplete="off" required)
+
+                    .form__group
+                        input#inputEditRepeatPassword.input.form__input(type="password" name="inputEditRepeatPassword" placeholder="Повторити пароль" autocomplete="off" required)
+                    
+                    .form__buttons-group.form__buttons-group--center
+                        button.button.form__button.modal__button Зберегти
+
+    #modal-bookmark.modal.modal--small
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="22")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                h3.modal__title Додавання позиції до розділу “Закладки”
+
+                form.form.modal__form(id="bookmark-form" autocomplete="off" novalidate="novalidate")
+                    .form__group
+                        select#selectBookmarkFolder.select(name="selectBookmarkFolder" aria-label="Виберіть папку" required)
+                            option(value="") Виберіть папку
+                            option(value="1") Папка 1
+                            option(value="2") Папка 2
+                            option(value="3") Папка 3
+                            option(value="4") Папка 4
+
+                    .form__buttons-group.form__buttons-group--center
+                        button.button.form__button.modal__button Додати
+
+    #modal-file.modal.modal--small
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="22")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                h3.modal__title Робота з файлом
+
+                form.form.modal__form(id="file-form" autocomplete="off" novalidate="novalidate")
+                    .form__group
+                        input#inputFileTitle.input.form__input(type="text" name="inputFileTitle" placeholder="Введіть вашу назву пропозиції" autocomplete="off" required)
+
+                    .form__group
+                        select#selectFileFolder.select(name="selectFileFolder" aria-label="Виберіть папку" required)
+                            option(value="") Виберіть папку
+                            option(value="1") Папка 1
+                            option(value="2") Папка 2
+                            option(value="3") Папка 3
+                            option(value="4") Папка 4
+
+                    .form__buttons-group.form__buttons-group--center
+                        button.button.form__button.modal__button Додати
+
+    #modal-create.modal.modal--small
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="22")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                h3.modal__title Створити папку
+
+                form.form.modal__form(id="create-form" autocomplete="off" novalidate="novalidate")
+                    .form__group
+                        input#inputCreateFolderTitle.input.form__input(type="text" name="inputCreateFolderTitle" placeholder="Введіть назву файлу" autocomplete="off" required)
+
+                    .form__buttons-group.form__buttons-group--center
+                        button.button.form__button.modal__button Додати
+
+    #modal-search.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="22")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                form.search.modal__search(id="modal-search-form" autocomplete="off" novalidate="novalidate")
+                    .search__group
+                        input#inputModalSearch.input.search__input(type="text" name="inputModalSearch" placeholder="Пошук по збірнику" autocomplete="off" required)
+
+                        button.search__button
+                            svg.search__icon(width="21" height="21")
+                                use(xlink:href="img/sprite.svg#search")
+    
+    #modal-notifications.modal.modal--bg-none
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="22")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                ul.modal__notifications
+                    li.modal__notifications-item
+                        .notification-card
+                            time.notification-card__date 27.11.2023
+
+                            .notification-card__info
+                                h3.notification-card__title Кримінальне процесуальне законодавство України
+                                a.button.button--outline.notification-card__more(href="#")
+                                    svg.button__icon(width="17" height="12")
+                                        use(xlink:href="img/sprite.svg#long-arrow-right")
+                    
+                    li.modal__notifications-item
+                        .notification-card
+                            time.notification-card__date 27.11.2023
+
+                            .notification-card__info
+                                h3.notification-card__title Кримінальне процесуальне законодавство України
+                                a.button.button--outline.notification-card__more(href="#")
+                                    svg.button__icon(width="17" height="12")
+                                        use(xlink:href="img/sprite.svg#long-arrow-right")
+
+    #modal-search-disabled.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="22")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                .modal__content
+                    h3.modal__title.modal__title--mb-20 Пошук недоступний
+                    a.button.button--outline(href="#") Перейти на Тариф 2
+    
+    #modal-video.modal.modal--video
+        .modal__inner
+            .modal__window
+                button.modal__close.modal__close--outside(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="22")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                .modal__video
+                    iframe(id="youtube-video" width="960" height="540" src="https://www.youtube.com/embed/CIpOxa5hxOw?showinfo=0" frameborder="0" allowfullscreen)
+
+    #modal-delete.modal.modal--small
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="22")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                h3.modal__title.modal__title--mb-20 Ви підтверджуєте видалення?
+
+                .modal__buttons
+                    button.button.modal__button(type="button") Так
+                    button.button.button--outline.modal__button(type="button") Ні
+
+    #modal-period.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="22")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                .modal__content
+                    h3.modal__title.modal__title--mb-20 Оберіть термін продовження підписки
+
+                    ul.tariffs-list.modal__tariffs-list
+                        li.tariffs-list__item
+                            button.button.button--outline.tariffs-list__button.is-active(type="button") На місяць
+                        
+                        li.tariffs-list__item
+                            button.button.button--outline.tariffs-list__button(type="button") На пів року
+                        
+                        li.tariffs-list__item
+                            button.button.button--outline.tariffs-list__button(type="button") На рік
+
+                    .modal__price Вартість 8$
+                    button.button.modal__button(type="button") Обрати

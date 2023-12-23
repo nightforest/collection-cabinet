@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <!--base(href="/")-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Title -->
+        <title>Bookmarks Page</title>
+        <!-- SEO Meta -->
+        <meta name="description" content="Page description">
+        <meta name="keywords" content="keyword">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+      <script type="module" crossorigin src="/assets/main-05b7b75c.js"></script>
+      <link rel="stylesheet" href="/assets/main-9696e381.css">
+    </head>
+    <body>
+        <!-- Header -->
+        
+<header class="header">
+  <div class="container header__container">
+    <button class="burger header__burger" type="button" aria-label="Open sidebar" aria-expanded="false" data-sidebar-toggle="data-sidebar-toggle">
+      <div class="burger__line"></div>
+      <div class="burger__line"></div>
+      <div class="burger__line"></div>
+    </button>
+    <form class="search header__search" id="search-form" autocomplete="off" novalidate="novalidate">
+      <div class="search__group">
+        <input class="input search__input" id="inputSearch" type="text" name="inputSearch" placeholder="Пошук по збірнику" autocomplete="off" required="required"/>
+        <button class="search__button">
+          <svg class="search__icon" width="21" height="21">
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </div>
+    </form>
+    <ul class="actions header__actions">
+      <li class="actions__item is-dropdown actions__item--hidden-md">
+        <button class="button button--outline actions__button is-dropdown__toggle" type="button" aria-label="Show dropdown menu">
+          <svg class="button__icon" width="21" height="22">
+            <use xlink:href="img/sprite.svg#bell"></use>
+          </svg>
+        </button>
+        <ul class="actions-dropdown">
+          <li class="actions-dropdown__item">
+            <div class="notification-card">
+              <time class="notification-card__date">27.11.2023</time>
+              <div class="notification-card__info">
+                <h3 class="notification-card__title">Кримінальне процесуальне законодавство України</h3><a class="button button--outline notification-card__more" href="#">
+                  <svg class="button__icon" width="17" height="12">
+                    <use xlink:href="img/sprite.svg#long-arrow-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </li>
+          <li class="actions-dropdown__item">
+            <div class="notification-card">
+              <time class="notification-card__date">27.11.2023</time>
+              <div class="notification-card__info">
+                <h3 class="notification-card__title">Кримінальне процесуальне законодавство України</h3><a class="button button--outline notification-card__more" href="#">
+                  <svg class="button__icon" width="17" height="12">
+                    <use xlink:href="img/sprite.svg#long-arrow-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="actions__count">2</div>
+      </li>
+      <li class="actions__item is-dropdown actions__item--visible-md">
+        <button class="button button--outline actions__button" type="button" aria-label="Show notifications modal" data-modal="modal-notifications">
+          <svg class="button__icon" width="21" height="22">
+            <use xlink:href="img/sprite.svg#bell"></use>
+          </svg>
+        </button>
+        <div class="actions__count">2</div>
+      </li>
+      <li class="actions__item actions__item--hidden-md"><a class="button actions__button actions__button--big" href="#">Моя підписка</a></li>
+      <li class="actions__item actions__item--visible-md">
+        <button class="button button--outline actions__button" type="button" data-modal="modal-search" aria-label="Show search modal">
+          <svg class="button__icon" width="21" height="21">
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="actions__item"><a class="button button--outline actions__button" href="#" aria-label="Logout">
+          <svg class="button__icon" width="24" height="22">
+            <use xlink:href="img/sprite.svg#logout"></use>
+          </svg></a></li>
+    </ul>
+  </div>
+</header>
+
+        <!-- Main -->
+        <main id="main" class="main">
+            
+<section class="bookmarks-section">
+  <div class="container bookmarks-section__container">
+    <header class="bookmarks-section__header">
+      <h1 class="page-title bookmarks-section__title">Мій профіль</h1>
+      <form class="search bookmarks-section__search" id="bookmark-search-form" autocomplete="off" novalidate="novalidate">
+        <div class="search__group">
+          <input class="input search__input" id="inputBookmarkSearch" type="text" name="inputBookmarkSearch" placeholder="Пошук по файлах" autocomplete="off" required="required"/>
+          <button class="search__button">
+            <svg class="search__icon" width="21" height="21">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <div class="bookmarks-section__buttons">
+        <button class="button button--outline bookmarks-section__button" type="button">Додати статтю</button>
+        <button class="button button--outline bookmarks-section__button" type="button" data-modal="modal-create">Створити папку</button>
+      </div>
+    </header>
+    <ul class="bookmarks-section__list">
+      <li class="bookmarks-section__item">
+        <div class="bookmark-card">
+          <div class="bookmark-card-menu is-dropdown">
+            <button class="bookmark-card-menu__toggle is-dropdown__toggle">
+              <svg class="bookmark-card-menu__toggle-icon" width="4" height="18">
+                <use xlink:href="img/sprite.svg#dots"></use>
+              </svg>
+            </button>
+            <ul class="bookmark-card-menu__dropdown">
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Редагувати</a></li>
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Видалити</a></li>
+            </ul>
+          </div><a class="bookmark-card__link" href="#">
+            <div class="bookmark-card__pic">
+              <svg class="bookmark-card__icon" width="110" height="86">
+                <use xlink:href="img/sprite.svg#folder-solid"></use>
+              </svg>
+            </div>
+            <h3 class="bookmark-card__title">Папка Фінанси</h3>
+            <div class="bookmark-card__info">7 файлів</div></a>
+        </div>
+      </li>
+      <li class="bookmarks-section__item">
+        <div class="bookmark-card">
+          <div class="bookmark-card-menu is-dropdown">
+            <button class="bookmark-card-menu__toggle is-dropdown__toggle">
+              <svg class="bookmark-card-menu__toggle-icon" width="4" height="18">
+                <use xlink:href="img/sprite.svg#dots"></use>
+              </svg>
+            </button>
+            <ul class="bookmark-card-menu__dropdown">
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Редагувати</a></li>
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Видалити</a></li>
+            </ul>
+          </div><a class="bookmark-card__link" href="#">
+            <div class="bookmark-card__pic">
+              <svg class="bookmark-card__icon" width="110" height="86">
+                <use xlink:href="img/sprite.svg#folder-solid"></use>
+              </svg>
+            </div>
+            <h3 class="bookmark-card__title">Папка Фінанси</h3>
+            <div class="bookmark-card__info">7 файлів</div></a>
+        </div>
+      </li>
+      <li class="bookmarks-section__item">
+        <div class="bookmark-card">
+          <div class="bookmark-card-menu is-dropdown">
+            <button class="bookmark-card-menu__toggle is-dropdown__toggle">
+              <svg class="bookmark-card-menu__toggle-icon" width="4" height="18">
+                <use xlink:href="img/sprite.svg#dots"></use>
+              </svg>
+            </button>
+            <ul class="bookmark-card-menu__dropdown">
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Редагувати</a></li>
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Видалити</a></li>
+            </ul>
+          </div><a class="bookmark-card__link" href="#">
+            <div class="bookmark-card__pic">
+              <svg class="bookmark-card__icon" width="110" height="86">
+                <use xlink:href="img/sprite.svg#folder-solid"></use>
+              </svg>
+            </div>
+            <h3 class="bookmark-card__title">Папка Фінанси</h3>
+            <div class="bookmark-card__info">7 файлів</div></a>
+        </div>
+      </li>
+      <li class="bookmarks-section__item">
+        <div class="bookmark-card">
+          <div class="bookmark-card-menu is-dropdown">
+            <button class="bookmark-card-menu__toggle is-dropdown__toggle">
+              <svg class="bookmark-card-menu__toggle-icon" width="4" height="18">
+                <use xlink:href="img/sprite.svg#dots"></use>
+              </svg>
+            </button>
+            <ul class="bookmark-card-menu__dropdown">
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Редагувати</a></li>
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Видалити</a></li>
+            </ul>
+          </div><a class="bookmark-card__link" href="#">
+            <div class="bookmark-card__pic">
+              <svg class="bookmark-card__icon" width="110" height="86">
+                <use xlink:href="img/sprite.svg#folder-solid"></use>
+              </svg>
+            </div>
+            <h3 class="bookmark-card__title">Папка Фінанси</h3>
+            <div class="bookmark-card__info">7 файлів</div></a>
+        </div>
+      </li>
+      <li class="bookmarks-section__item">
+        <div class="bookmark-card">
+          <div class="bookmark-card-menu is-dropdown">
+            <button class="bookmark-card-menu__toggle is-dropdown__toggle">
+              <svg class="bookmark-card-menu__toggle-icon" width="4" height="18">
+                <use xlink:href="img/sprite.svg#dots"></use>
+              </svg>
+            </button>
+            <ul class="bookmark-card-menu__dropdown">
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Редагувати</a></li>
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Видалити</a></li>
+            </ul>
+          </div><a class="bookmark-card__link" href="#">
+            <div class="bookmark-card__pic">
+              <svg class="bookmark-card__icon" width="110" height="86">
+                <use xlink:href="img/sprite.svg#docx"></use>
+              </svg>
+            </div>
+            <h3 class="bookmark-card__title">Назва пропозиції</h3></a>
+        </div>
+      </li>
+      <li class="bookmarks-section__item">
+        <div class="bookmark-card">
+          <div class="bookmark-card-menu is-dropdown">
+            <button class="bookmark-card-menu__toggle is-dropdown__toggle">
+              <svg class="bookmark-card-menu__toggle-icon" width="4" height="18">
+                <use xlink:href="img/sprite.svg#dots"></use>
+              </svg>
+            </button>
+            <ul class="bookmark-card-menu__dropdown">
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Редагувати</a></li>
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Видалити</a></li>
+            </ul>
+          </div><a class="bookmark-card__link" href="#">
+            <div class="bookmark-card__pic">
+              <svg class="bookmark-card__icon" width="110" height="86">
+                <use xlink:href="img/sprite.svg#docx"></use>
+              </svg>
+            </div>
+            <h3 class="bookmark-card__title">Назва пропозиції</h3></a>
+        </div>
+      </li>
+      <li class="bookmarks-section__item">
+        <div class="bookmark-card">
+          <div class="bookmark-card-menu is-dropdown">
+            <button class="bookmark-card-menu__toggle is-dropdown__toggle">
+              <svg class="bookmark-card-menu__toggle-icon" width="4" height="18">
+                <use xlink:href="img/sprite.svg#dots"></use>
+              </svg>
+            </button>
+            <ul class="bookmark-card-menu__dropdown">
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Редагувати</a></li>
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Видалити</a></li>
+            </ul>
+          </div><a class="bookmark-card__link" href="#">
+            <div class="bookmark-card__pic">
+              <svg class="bookmark-card__icon" width="110" height="86">
+                <use xlink:href="img/sprite.svg#docx"></use>
+              </svg>
+            </div>
+            <h3 class="bookmark-card__title">Назва пропозиції</h3></a>
+        </div>
+      </li>
+      <li class="bookmarks-section__item">
+        <div class="bookmark-card">
+          <div class="bookmark-card-menu is-dropdown">
+            <button class="bookmark-card-menu__toggle is-dropdown__toggle">
+              <svg class="bookmark-card-menu__toggle-icon" width="4" height="18">
+                <use xlink:href="img/sprite.svg#dots"></use>
+              </svg>
+            </button>
+            <ul class="bookmark-card-menu__dropdown">
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Редагувати</a></li>
+              <li class="bookmark-card-menu__item"><a class="bookmark-card-menu__link" href="#">Видалити</a></li>
+            </ul>
+          </div><a class="bookmark-card__link" href="#">
+            <div class="bookmark-card__pic">
+              <svg class="bookmark-card__icon" width="110" height="86">
+                <use xlink:href="img/sprite.svg#docx"></use>
+              </svg>
+            </div>
+            <h3 class="bookmark-card__title">Назва пропозиції</h3></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+        </main>
+
+        <!-- Sidebar -->
+        
+<aside class="sidebar">
+  <div class="sidebar__panel">
+    <div class="sidebar__inner">
+      <div class="logo sidebar__logo"><a class="logo__link" href="#" aria-label="logo">
+          <svg class="logo__img" width="38" height="32">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg><span class="logo__title">Збірник</span></a></div>
+      <nav class="sidebar-menu">
+        <ul class="sidebar-menu__list">
+          <li class="sidebar-menu__item"><a class="sidebar-menu__link is-active" href="#"><span class="sidebar-menu__pic">
+                <svg class="sidebar-menu__icon" width="17" height="19">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg></span><span class="sidebar-menu__title">Мій профіль</span></a></li>
+          <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#"><span class="sidebar-menu__pic">
+                <svg class="sidebar-menu__icon" width="22" height="18">
+                  <use xlink:href="img/sprite.svg#book"></use>
+                </svg></span><span class="sidebar-menu__title">Збірник</span></a></li>
+          <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#"><span class="sidebar-menu__pic">
+                <svg class="sidebar-menu__icon" width="16" height="20">
+                  <use xlink:href="img/sprite.svg#bookmark"></use>
+                </svg></span><span class="sidebar-menu__title">Закладки</span></a></li>
+          <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#"><span class="sidebar-menu__pic">
+                <svg class="sidebar-menu__icon" width="17" height="21">
+                  <use xlink:href="img/sprite.svg#file"></use>
+                </svg></span><span class="sidebar-menu__title">Робота з файлами</span></a></li>
+          <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#"><span class="sidebar-menu__pic">
+                <svg class="sidebar-menu__icon" width="21" height="17">
+                  <use xlink:href="img/sprite.svg#folder"></use>
+                </svg></span><span class="sidebar-menu__title">Реєстри</span></a></li>
+          <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#"><span class="sidebar-menu__pic">
+                <svg class="sidebar-menu__icon" width="20" height="19">
+                  <use xlink:href="img/sprite.svg#subscribe"></use>
+                </svg></span><span class="sidebar-menu__title">Моя підписка</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</aside>
+
+        <!-- Alerts -->
+        
+<div class="alert is-visible">
+  <svg class="alert__icon" width="15" height="11">
+    <use xlink:href="img/sprite.svg#check"></use>
+  </svg><span>Дані успішно збережні</span>
+</div>
+<div class="alert alert--red">
+  <svg class="alert__icon" width="15" height="15">
+    <use xlink:href="img/sprite.svg#cross"></use>
+  </svg><span>Дані заповнено некоректно</span>
+</div>
+
+        <!-- Modals -->
+        
+<div class="modal-wrap">
+  <div class="modal" id="modal-success">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="23" height="22">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <svg class="modal__icon" width="114" height="114">
+            <use xlink:href="img/sprite.svg#success"></use>
+          </svg>
+          <h3 class="modal__title">Форма відправлена</h3>
+          <p class="modal__descr">Наш менеджер зв’яжется с вами</p><a class="button modal__button" href="#">На головну</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal-edit-password">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="23" height="22">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <h3 class="modal__title">Редагувати пароль</h3>
+        <form class="form modal__form" id="edit-password-form" autocomplete="off" novalidate="novalidate">
+          <div class="form__group">
+            <input class="input form__input" id="inputEditPassword" type="password" name="inputEditPassword" placeholder="Старий пароль" autocomplete="off" required="required"/>
+          </div>
+          <div class="form__group">
+            <input class="input form__input" id="inputEditNewPassword" type="password" name="inputEditNewPassword" placeholder="Новий пароль" autocomplete="off" required="required"/>
+          </div>
+          <div class="form__group">
+            <input class="input form__input" id="inputEditRepeatPassword" type="password" name="inputEditRepeatPassword" placeholder="Повторити пароль" autocomplete="off" required="required"/>
+          </div>
+          <div class="form__buttons-group form__buttons-group--center">
+            <button class="button form__button modal__button">Зберегти</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal--small" id="modal-bookmark">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="23" height="22">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <h3 class="modal__title">Додавання позиції до розділу “Закладки”</h3>
+        <form class="form modal__form" id="bookmark-form" autocomplete="off" novalidate="novalidate">
+          <div class="form__group">
+            <select class="select" id="selectBookmarkFolder" name="selectBookmarkFolder" aria-label="Виберіть папку" required="required">
+              <option value="">Виберіть папку</option>
+              <option value="1">Папка 1</option>
+              <option value="2">Папка 2</option>
+              <option value="3">Папка 3</option>
+              <option value="4">Папка 4</option>
+            </select>
+          </div>
+          <div class="form__buttons-group form__buttons-group--center">
+            <button class="button form__button modal__button">Додати</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal--small" id="modal-file">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="23" height="22">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <h3 class="modal__title">Робота з файлом</h3>
+        <form class="form modal__form" id="file-form" autocomplete="off" novalidate="novalidate">
+          <div class="form__group">
+            <input class="input form__input" id="inputFileTitle" type="text" name="inputFileTitle" placeholder="Введіть вашу назву пропозиції" autocomplete="off" required="required"/>
+          </div>
+          <div class="form__group">
+            <select class="select" id="selectFileFolder" name="selectFileFolder" aria-label="Виберіть папку" required="required">
+              <option value="">Виберіть папку</option>
+              <option value="1">Папка 1</option>
+              <option value="2">Папка 2</option>
+              <option value="3">Папка 3</option>
+              <option value="4">Папка 4</option>
+            </select>
+          </div>
+          <div class="form__buttons-group form__buttons-group--center">
+            <button class="button form__button modal__button">Додати</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal--small" id="modal-create">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="23" height="22">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <h3 class="modal__title">Створити папку</h3>
+        <form class="form modal__form" id="create-form" autocomplete="off" novalidate="novalidate">
+          <div class="form__group">
+            <input class="input form__input" id="inputCreateFolderTitle" type="text" name="inputCreateFolderTitle" placeholder="Введіть назву файлу" autocomplete="off" required="required"/>
+          </div>
+          <div class="form__buttons-group form__buttons-group--center">
+            <button class="button form__button modal__button">Додати</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal-search">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="23" height="22">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <form class="search modal__search" id="modal-search-form" autocomplete="off" novalidate="novalidate">
+          <div class="search__group">
+            <input class="input search__input" id="inputModalSearch" type="text" name="inputModalSearch" placeholder="Пошук по збірнику" autocomplete="off" required="required"/>
+            <button class="search__button">
+              <svg class="search__icon" width="21" height="21">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal--bg-none" id="modal-notifications">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="23" height="22">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <ul class="modal__notifications">
+          <li class="modal__notifications-item">
+            <div class="notification-card">
+              <time class="notification-card__date">27.11.2023</time>
+              <div class="notification-card__info">
+                <h3 class="notification-card__title">Кримінальне процесуальне законодавство України</h3><a class="button button--outline notification-card__more" href="#">
+                  <svg class="button__icon" width="17" height="12">
+                    <use xlink:href="img/sprite.svg#long-arrow-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </li>
+          <li class="modal__notifications-item">
+            <div class="notification-card">
+              <time class="notification-card__date">27.11.2023</time>
+              <div class="notification-card__info">
+                <h3 class="notification-card__title">Кримінальне процесуальне законодавство України</h3><a class="button button--outline notification-card__more" href="#">
+                  <svg class="button__icon" width="17" height="12">
+                    <use xlink:href="img/sprite.svg#long-arrow-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal-search-disabled">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="23" height="22">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <h3 class="modal__title modal__title--mb-20">Пошук недоступний</h3><a class="button button--outline" href="#">Перейти на Тариф 2</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal--video" id="modal-video">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close modal__close--outside" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="23" height="22">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <div class="modal__video">
+          <iframe id="youtube-video" width="960" height="540" src="https://www.youtube.com/embed/CIpOxa5hxOw?showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal--small" id="modal-delete">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="23" height="22">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <h3 class="modal__title modal__title--mb-20">Ви підтверджуєте видалення?</h3>
+        <div class="modal__buttons">
+          <button class="button modal__button" type="button">Так</button>
+          <button class="button button--outline modal__button" type="button">Ні</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal-period">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="23" height="22">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <h3 class="modal__title modal__title--mb-20">Оберіть термін продовження підписки</h3>
+          <ul class="tariffs-list modal__tariffs-list">
+            <li class="tariffs-list__item">
+              <button class="button button--outline tariffs-list__button is-active" type="button">На місяць</button>
+            </li>
+            <li class="tariffs-list__item">
+              <button class="button button--outline tariffs-list__button" type="button">На пів року</button>
+            </li>
+            <li class="tariffs-list__item">
+              <button class="button button--outline tariffs-list__button" type="button">На рік</button>
+            </li>
+          </ul>
+          <div class="modal__price">Вартість 8$</div>
+          <button class="button modal__button" type="button">Обрати</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+    </body>
+</html>

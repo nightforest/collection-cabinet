@@ -1,0 +1,116 @@
+section.subscription-section
+    .container.subscription-section__container
+        h1.page-title.subscription-section__title Моя підписка
+
+        .current-subscription
+            .current-subscription__info
+                h3.current-subscription__title Зараз ви використовуєте 
+                    strong.blue-color
+                        a.blue-link(href="#") тариф Lite
+                        |  - 5$/місяць
+                
+                .current-subscription__date Активний до 27.12.2023
+                .current-subscription__id ID 9384734986
+
+            button.button.button--outline.current-subscription__button(type="button") Продовжити підписку
+
+        .tariffs
+            h3.tariffs__title Ви можете обрати кращий тариф який надасть вам можливість використання нашого сервісу по максимуму. 
+
+            ul.tariffs-list
+                li.tariffs-list__item
+                    button.button.button--outline.tariffs-list__button.is-active(type="button") На місяць
+                
+                li.tariffs-list__item
+                    button.button.button--outline.tariffs-list__button(type="button") На пів року
+                
+                li.tariffs-list__item
+                    button.button.button--outline.tariffs-list__button(type="button") На рік
+            
+            .tariff-card.tariffs__card
+                .tariff-card__body
+                    h3.tariff-card__title Тариф LITE
+
+                    ul.tariff-card__list
+                        li.tariff-card__item
+                            strong Інтелектуальний пошук
+                            
+                            .tariff-card__status.tariff-card__status--green
+                                svg.tariff-card__status-icon(width="15" height="11")
+                                    use(xlink:href="img/sprite.svg#check")
+                        
+                        li.tariff-card__item
+                            strong Доступна база правових позицій
+                            
+                            .tariff-card__status.tariff-card__status--green
+                                svg.tariff-card__status-icon(width="15" height="11")
+                                    use(xlink:href="img/sprite.svg#check")
+                        
+                        li.tariff-card__item
+                            span Можливість скачувати сторінку кнопкою export
+                            
+                            .tariff-card__status
+                                svg.tariff-card__status-icon(width="15" height="15")
+                                    use(xlink:href="img/sprite.svg#cross")
+                        
+                        li.tariff-card__item
+                            span Можливість створювати закладки по рішенням в особистому кабінеті
+                            
+                            .tariff-card__status
+                                svg.tariff-card__status-icon(width="15" height="15")
+                                    use(xlink:href="img/sprite.svg#cross")
+                        
+                        li.tariff-card__item
+                            span Можливість відмічати жовтим кольором потрібне
+                            
+                            .tariff-card__status
+                                svg.tariff-card__status-icon(width="15" height="15")
+                                    use(xlink:href="img/sprite.svg#cross")
+                        
+                        li.tariff-card__item
+                            span Можливість самостійно створювати свої особисті сторінки з рішеннями, просвоювати імена рішенням з прив’язкою до посилання і т.п.
+                            
+                            .tariff-card__status
+                                svg.tariff-card__status-icon(width="15" height="15")
+                                    use(xlink:href="img/sprite.svg#cross")
+                        
+                        li.tariff-card__item
+                            span Можливість копіювати сторінку
+                            
+                            .tariff-card__status
+                                svg.tariff-card__status-icon(width="15" height="15")
+                                    use(xlink:href="img/sprite.svg#cross")
+                    
+                .tariff-card__footer
+                    .tariff-card__total
+                        .tariff-card__price Вартість 5$
+                        .tariff-card__discount 27$ / 6 мес (-10%)
+                        .tariff-card__discount 48$ / 12 мес (-20%)
+                    
+                    button.play-button.tariff-card__play-button(type="button" data-modal="modal-video")
+                        span.play-button__pic
+                            svg.play-button__icon(width="11" height="14")
+                                use(xlink:href="img/sprite.svg#play")
+                        | Як це працює?
+                        
+                    button.button.tariff-card__buy-button(type="button" data-modal="modal-period") Обрати
+
+            .tariff-max.tariffs__max
+                .tariff-max__col.tariff-max__col--5
+                    h3.tariff-max__title Незабаром вийде тариф MAX
+                    p.tariff-max__descr Вам знайома ситуація, коли Ви шукаєте те, що колись читали, серед тисяч скріншотів різних юридичних ресурсів?
+                
+                .tariff-max__col.tariff-max__col--4
+                    .tariff-max__info Ми вже працюємо над базой кримінального законодавства
+
+                    .tariff-max__total
+                        .tariff-max__price Вартість 8$
+                        .tariff-max__discount 43$ / 6 мес (-10%)
+                        .tariff-max__discount 76$ / 12 мес (-22%)
+
+                .tariff-max__col.tariff-max__col--3
+                    picture.tariff-max__picture
+                        img.tariff-max__img(src="img/tariff-img.webp" srcset="img/tariff-img@2x.webp 2x" loading="lazy" width="231" height="140"  alt="alt")
+
+        .subscription-section__buttons
+            button.button.button--red.subscription-section__button(type="button" data-modal="modal-delete") Відмінити підписку

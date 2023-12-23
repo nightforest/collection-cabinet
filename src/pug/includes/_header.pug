@@ -1,0 +1,63 @@
+header.header
+    .container.header__container
+        button.burger.header__burger(type="button" aria-label="Open sidebar" aria-expanded="false" data-sidebar-toggle)
+            .burger__line
+            .burger__line
+            .burger__line
+
+        form.search.header__search(id="search-form" autocomplete="off" novalidate="novalidate")
+            .search__group
+                input#inputSearch.input.search__input(type="text" name="inputSearch" placeholder="Пошук по збірнику" autocomplete="off" required)
+
+                button.search__button
+                    svg.search__icon(width="21" height="21")
+                        use(xlink:href="img/sprite.svg#search")
+
+        ul.actions.header__actions
+            li.actions__item.is-dropdown.actions__item--hidden-md
+                button.button.button--outline.actions__button.is-dropdown__toggle(type="button" aria-label="Show dropdown menu")
+                    svg.button__icon(width="21" height="22")
+                        use(xlink:href="img/sprite.svg#bell")
+                
+                ul.actions-dropdown
+                    li.actions-dropdown__item
+                        .notification-card
+                            time.notification-card__date 27.11.2023
+
+                            .notification-card__info
+                                h3.notification-card__title Кримінальне процесуальне законодавство України
+                                a.button.button--outline.notification-card__more(href="#")
+                                    svg.button__icon(width="17" height="12")
+                                        use(xlink:href="img/sprite.svg#long-arrow-right")
+
+                    li.actions-dropdown__item
+                        .notification-card
+                            time.notification-card__date 27.11.2023
+
+                            .notification-card__info
+                                h3.notification-card__title Кримінальне процесуальне законодавство України
+                                a.button.button--outline.notification-card__more(href="#")
+                                    svg.button__icon(width="17" height="12")
+                                        use(xlink:href="img/sprite.svg#long-arrow-right")
+                
+                .actions__count 2
+
+            li.actions__item.is-dropdown.actions__item--visible-md
+                button.button.button--outline.actions__button(type="button" aria-label="Show notifications modal" data-modal="modal-notifications")
+                    svg.button__icon(width="21" height="22")
+                        use(xlink:href="img/sprite.svg#bell")
+
+                .actions__count 2
+
+            li.actions__item.actions__item--hidden-md
+                a.button.actions__button.actions__button--big(href="#") Моя підписка
+
+            li.actions__item.actions__item--visible-md
+                button.button.button--outline.actions__button(type="button" data-modal="modal-search" aria-label="Show search modal")
+                    svg.button__icon(width="21" height="21")
+                        use(xlink:href="img/sprite.svg#search")
+
+            li.actions__item
+                a.button.button--outline.actions__button(href="#" aria-label="Logout")
+                    svg.button__icon(width="24" height="22")
+                        use(xlink:href="img/sprite.svg#logout")
