@@ -13,7 +13,10 @@ const createFormValidation = () => {
                     errorMessage: "Заповніть це поле",
                 },
             ]);
-        
+            
+        validator.onSuccess((event) => {
+            event.currentTarget.submit();
+        });
     }
 }
 

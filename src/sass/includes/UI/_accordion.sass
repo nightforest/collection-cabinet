@@ -6,26 +6,41 @@
     isolation: isolate
 
     &__header
-        margin: 0
-
-    &__trigger
+        position: relative
         display: flex
         align-items: center
-        justify-content: space-between
+        padding: 15px 60px 15px 15px
+        min-height: 50px
+        transition: background-color .5s ease
+        margin: 0
+
+        &:has(.accordion__trigger[aria-expanded="true"])
+            background: var(--blue)
+            color: var(--white)
+            
+            .checkbox__label
+                color: var(--white)
+
+    &__title
+        margin: 0
+        line-height: 1
+
+    &__trigger
+        position: absolute
+        top: 5px
+        right: 10px
+        display: flex
+        align-items: center
+        justify-content: center
         text-align: left
         gap: 15px
-        width: 100%
-        padding: 20px 35px 20px 20px
-        font-size: 22px
-        font-weight: 700
-        line-height: 1.25
+        width: 40px
+        height: 40px
+        padding: 5px
         color: var(--blue)
-        background: var(--white)
-        transition: background-color .5s ease
-
-        @media ($max-md)
-            font-size: 18px
-            padding: 18px 15px
+        border: 1px solid var(--blue)
+        border-radius: 10px
+        transition: all .5s ease
 
         &[aria-expanded="true"]
             color: var(--blue)
@@ -34,11 +49,16 @@
             .accordion__icon
                 transform: rotateX(180deg)
 
+            &:hover,
+            &:active,
+            &:focus-visible
+                border-color: var(--white)
+
         &:hover,
         &:active,
         &:focus-visible
-            color: var(--blue)
-            background: #F7F8FA
+            color: var(--white)
+            background: var(--blue)
 
     &__icon
         transition: transform .5s ease
@@ -61,34 +81,44 @@
         > .accordion__panel
             border-top: 1px solid #A8B2C2
 
-            .accordion__trigger
-                font-size: 20px
+            .accordion__text
+                padding-left: 30px
 
                 @media ($max-md)
-                    font-size: 14px
+                    padding-left: 20px
 
             .accordion__inner
 
                 > .accordion__panel
 
-                    .accordion__trigger
-                        padding-left: 45px
-                        font-size: 20px
-                        font-weight: 500
+                    .accordion__header
+                        padding-left: 30px
 
                         @media ($max-md)
-                            font-size: 14px
+                            padding-left: 20px
+
+                    .accordion__text
+                        padding-left: 45px
+
+                        @media ($max-md)
                             padding-left: 25px
 
                     .accordion__inner
 
                         > .accordion__panel
 
-                            .accordion__trigger
-                                padding-left: 70px
-                                font-size: 18px
-                                font-weight: 400
+                            .accordion__header
+                                padding-left: 45px
 
                                 @media ($max-md)
-                                    font-size: 14px
-                                    padding-left: 35px
+                                    padding-left: 25px
+
+                            .accordion__text
+                                padding-left: 60px
+
+                                @media ($max-md)
+                                    padding-left: 30px
+
+    &__text
+        padding: 15px 60px 15px 15px
+        min-height: 50px

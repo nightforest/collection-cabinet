@@ -14,6 +14,8 @@ import bookmarkFormValidation from './includes/bookmarkFormValidation.js';
 import fileFormValidation from './includes/fileFormValidation.js';
 import createFormValidation from './includes/createFormValidation.js';
 import modalSearchFormValidation from './includes/modalSearchFormValidation.js';
+import filter from './includes/filter.js';
+import initTabs from './includes/initTabs.js';
 import '../sass/main.sass';
 
 
@@ -33,3 +35,5 @@ bookmarkFormValidation();
 fileFormValidation();
 createFormValidation();
 modalSearchFormValidation();
+filter();
+initTabs();

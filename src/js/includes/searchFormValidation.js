@@ -14,6 +14,9 @@ const searchFormValidation = () => {
                 },
             ]);
         
+        validator.onSuccess((event) => {
+            event.currentTarget.submit();
+        });
     }
 }
 

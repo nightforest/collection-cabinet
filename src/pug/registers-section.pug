@@ -1,0 +1,61 @@
+section.collection-section
+    .container.collection-section__container
+        .filter-toggle
+            h3.filter-toggle__title Фільтр
+            
+            button.button.button--outline.filter-toggle__button(type="button" aria-label="Hide Filter" data-filter-toggle)
+                svg.button__icon(width="20" height="20p")
+                    use(xlink:href="img/sprite.svg#filter")
+
+        h1.page-title.profile-section__title Реєстр
+
+        table.collection-table
+            thead.collection-table__thead
+                tr
+                    th Номер
+                    th Назва та посилання на реєстр
+
+            tbody.collection-table__tbody
+                tr
+                    td #1
+                    
+                    td
+                        h4.collection-table__title Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nobis a accusamus tempore dolorem eos esse enim sint corrupti? Atque?
+                        a.blue-link.collection-table__link(href="#") Посилання на реєстр
+                tr
+                    td #2
+                    
+                    td
+                        h4.collection-table__title Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nobis a accusamus tempore dolorem eos esse enim sint corrupti? Atque?
+                        a.blue-link.collection-table__link(href="#") Посилання на реєстр
+                tr
+                    td #3
+                    
+                    td
+                        h4.collection-table__title Кримінальне процесуальне законодавство України
+                        a.blue-link.collection-table__link(href="#") Посилання на реєстр
+                tr
+                    td #4
+                    
+                    td
+                        h4.collection-table__title Кримінальне процесуальне законодавство України
+                        a.blue-link.collection-table__link(href="#") Посилання на реєстр
+
+        nav.pagenav.collection-section__pagenav(aria-label="Page navigation")
+            ul.pagenav__list
+                li.pagenav__item
+                    a.pagenav__arrow(href="#" aria-label="Previous")
+                        svg.pagenav__icon(width="7" height="14")
+                            use(xlink:href="img/sprite.svg#arrow-left")
+                li.pagenav__item.is-active(aria-current="page")
+                    a.pagenav__link(href="#") 1
+                li.pagenav__item
+                    a.pagenav__link(href="#") 2
+                li.pagenav__item
+                    span ...
+                li.pagenav__item
+                    a.pagenav__link(href="#") 7
+                li.pagenav__item
+                    a.pagenav__arrow(href="#" aria-label="Next")
+                        svg.pagenav__icon(width="7" height="14")
+                            use(xlink:href="img/sprite.svg#arrow-right")

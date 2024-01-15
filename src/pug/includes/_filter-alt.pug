@@ -1,0 +1,204 @@
+aside.filter.is-hide
+    .filter__panel
+        .filter__top
+            .logo.filter__logo
+                a.logo__link(href="#" aria-label="logo")
+                    svg.logo__img(width="38" height="32")
+                        use(xlink:href="img/sprite.svg#logo")
+                    
+                    span.logo__title База правових позицій
+
+            button.burger.filter__burger(type="button" aria-label="Open sidebar" aria-expanded="false" data-sidebar-toggle)
+                .burger__line
+                .burger__line
+                .burger__line
+
+        .filter__inner
+            .filter__header
+                h3.filter__title
+                    svg.filter__title-icon(width="38" height="38")
+                        use(xlink:href="img/sprite.svg#filter")
+                    span Фільтр
+
+                button.button.button--outline.filter__hide-button(type="button" aria-label="Hide Filter" data-filter-hide)
+                    svg.button__icon(width="10" height="19")
+                        use(xlink:href="img/sprite.svg#arrow-left")
+                
+                button.button.button--outline.filter__toggle-button(type="button" aria-label="Hide Filter" data-filter-toggle)
+                    svg.button__icon(width="17" height="17")
+                        use(xlink:href="img/sprite.svg#close-modal")
+            
+            .accordion.filter__accordion
+                .accordion__panel
+                    .accordion__header#accordion-header-1
+                        h3.accordion__title КК
+
+                        button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-1")
+                            svg.accordion__icon(width="15" height="8")
+                                use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                    .accordion__content#accordion-content-1(role="region" aria-labelledby="accordion-header-1" aria-hidden="false")
+                        .accordion__inner
+                            .accordion__panel
+                                .accordion__header#accordion-header-2
+                                    .checkbox.accordion__checkbox
+                                        input.checkbox__input#accordion-checkbox-2(type="checkbox" name="checkbox" value="true" required)
+                                        label.checkbox__label(for="accordion-checkbox-2") ст. №-№130 Розділ 1 загальні положення
+
+                                    button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-2")
+                                        svg.accordion__icon(width="15" height="8")
+                                            use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                .accordion__content#accordion-content-2(role="region" aria-labelledby="accordion-header-2" aria-hidden="false")
+                                    .accordion__inner
+                                        .accordion__panel
+                                            .accordion__header#accordion-header-6
+                                                .checkbox.accordion__checkbox
+                                                    input.checkbox__input#accordion-checkbox-6(type="checkbox" name="checkbox" value="true" required)
+                                                    label.checkbox__label(for="accordion-checkbox-6") ст. №-№130 Розділ 1 загальні положення
+
+                                                button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-6")
+                                                    svg.accordion__icon(width="15" height="8")
+                                                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                            .accordion__content#accordion-content-6(role="region" aria-labelledby="accordion-header-6" aria-hidden="false")
+                                                .accordion__inner
+                                                    .accordion__panel
+                                                        .accordion__header#accordion-header-9
+                                                            .checkbox.accordion__checkbox
+                                                                input.checkbox__input#accordion-checkbox-9(type="checkbox" name="checkbox" value="true" required)
+                                                                label.checkbox__label(for="accordion-checkbox-9") ст. №-№130 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.
+
+                                                            button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-9")
+                                                                svg.accordion__icon(width="15" height="8")
+                                                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                                        .accordion__content#accordion-content-9(role="region" aria-labelledby="accordion-header-9" aria-hidden="false")
+                                                            .accordion__inner
+                                                                .accordion__text
+                                                                    .checkbox.accordion__checkbox
+                                                                        input.checkbox__input#accordion-checkbox-91(type="checkbox" name="checkbox" value="true" required checked)
+                                                                        label.checkbox__label(for="accordion-checkbox-91") Cт. 1
+
+                                                    .accordion__panel
+                                                        .accordion__header#accordion-header-10
+                                                            .checkbox.accordion__checkbox
+                                                                input.checkbox__input#accordion-checkbox-10(type="checkbox" name="checkbox" value="true" required)
+                                                                label.checkbox__label(for="accordion-checkbox-10") ст. №-№130 Розділ 1 загальні положення
+
+                                                            button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-10")
+                                                                svg.accordion__icon(width="15" height="8")
+                                                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                                        .accordion__content#accordion-content-10(role="region" aria-labelledby="accordion-header-10" aria-hidden="true")
+                                                            .accordion__inner
+                                                                .accordion__text
+                                                                    .checkbox.accordion__checkbox
+                                                                        input.checkbox__input#accordion-checkbox-101(type="checkbox" name="checkbox" value="true" required)
+                                                                        label.checkbox__label(for="accordion-checkbox-101") Cт. 1
+
+                                                    .accordion__panel
+                                                        .accordion__header#accordion-header-11
+                                                            .checkbox.accordion__checkbox
+                                                                input.checkbox__input#accordion-checkbox-11(type="checkbox" name="checkbox" value="true" required)
+                                                                label.checkbox__label(for="accordion-checkbox-11") ст. №-№130 Розділ 1 загальні положення
+
+                                                            button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-11")
+                                                                svg.accordion__icon(width="15" height="8")
+                                                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                                        .accordion__content#accordion-content-11(role="region" aria-labelledby="accordion-header-11" aria-hidden="true")
+                                                            .accordion__inner
+                                                                .accordion__text
+                                                                    .checkbox.accordion__checkbox
+                                                                        input.checkbox__input#accordion-checkbox-111(type="checkbox" name="checkbox" value="true" required)
+                                                                        label.checkbox__label(for="accordion-checkbox-111") Cт. 1
+
+                                        .accordion__panel
+                                            .accordion__header#accordion-header-7
+                                                .checkbox.accordion__checkbox
+                                                    input.checkbox__input#accordion-checkbox-7(type="checkbox" name="checkbox" value="true" required)
+                                                    label.checkbox__label(for="accordion-checkbox-7") ст. №-№130 Розділ 1 загальні положення
+
+                                                button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-7")
+                                                    svg.accordion__icon(width="15" height="8")
+                                                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                            .accordion__content#accordion-content-7(role="region" aria-labelledby="accordion-header-7" aria-hidden="true")
+                                                .accordion__inner
+                                                    .accordion__text
+                                                        .checkbox.accordion__checkbox
+                                                            input.checkbox__input#accordion-checkbox-71(type="checkbox" name="checkbox" value="true" required)
+                                                            label.checkbox__label(for="accordion-checkbox-71") Cт. 1
+
+                                        .accordion__panel
+                                            .accordion__header#accordion-header-8
+                                                .checkbox.accordion__checkbox
+                                                    input.checkbox__input#accordion-checkbox-8(type="checkbox" name="checkbox" value="true" required)
+                                                    label.checkbox__label(for="accordion-checkbox-8") ст. №-№130 Розділ 1 загальні положення
+
+                                                button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-8")
+                                                    svg.accordion__icon(width="15" height="8")
+                                                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                            .accordion__content#accordion-content-8(role="region" aria-labelledby="accordion-header-8" aria-hidden="true")
+                                                .accordion__inner
+                                                    .accordion__text
+                                                        .checkbox.accordion__checkbox
+                                                            input.checkbox__input#accordion-checkbox-81(type="checkbox" name="checkbox" value="true" required)
+                                                            label.checkbox__label(for="accordion-checkbox-81") Cт. 1
+
+                            .accordion__panel
+                                .accordion__header#accordion-header-3
+                                    .checkbox.accordion__checkbox
+                                        input.checkbox__input#accordion-checkbox-3(type="checkbox" name="checkbox" value="true" required)
+                                        label.checkbox__label(for="accordion-checkbox-3") ст. №-№130 Розділ 1 загальні положення
+
+                                    button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-3")
+                                        svg.accordion__icon(width="15" height="8")
+                                            use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                .accordion__content#accordion-content-3(role="region" aria-labelledby="accordion-header-3" aria-hidden="true")
+                                    .accordion__inner
+                                        .accordion__text
+                                            .checkbox.accordion__checkbox
+                                                input.checkbox__input#accordion-checkbox-31(type="checkbox" name="checkbox" value="true" required)
+                                                label.checkbox__label(for="accordion-checkbox-31") Cт. 1
+
+                            .accordion__panel
+                                .accordion__header#accordion-header-4
+                                    .checkbox.accordion__checkbox
+                                        input.checkbox__input#accordion-checkbox-4(type="checkbox" name="checkbox" value="true" required)
+                                        label.checkbox__label(for="accordion-checkbox-4") ст. №-№130 Розділ 1 загальні положення
+
+                                    button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-4")
+                                        svg.accordion__icon(width="15" height="8")
+                                            use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                .accordion__content#accordion-content-4(role="region" aria-labelledby="accordion-header-4" aria-hidden="true")
+                                    .accordion__inner
+                                        .accordion__text
+                                            .checkbox.accordion__checkbox
+                                                input.checkbox__input#accordion-checkbox-41(type="checkbox" name="checkbox" value="true" required)
+                                                label.checkbox__label(for="accordion-checkbox-41") Cт. 1
+                            
+                            .accordion__panel
+                                .accordion__header#accordion-header-5
+                                    .checkbox.accordion__checkbox
+                                        input.checkbox__input#accordion-checkbox-5(type="checkbox" name="checkbox" value="true" required)
+                                        label.checkbox__label(for="accordion-checkbox-5") ст. №-№130 Розділ 1 загальні положення
+
+                                    button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-5")
+                                        svg.accordion__icon(width="15" height="8")
+                                            use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                .accordion__content#accordion-content-5(role="region" aria-labelledby="accordion-header-5" aria-hidden="true")
+                                    .accordion__inner
+                                        .accordion__text
+                                            .checkbox.accordion__checkbox
+                                                input.checkbox__input#accordion-checkbox-51(type="checkbox" name="checkbox" value="true" required)
+                                                label.checkbox__label(for="accordion-checkbox-51") Cт. 1
+
+        .filter__bottom
+            button.button.button--outline.filter__button(type="button") Скинути
+            button.button.filter__button(type="button") Показати (213)

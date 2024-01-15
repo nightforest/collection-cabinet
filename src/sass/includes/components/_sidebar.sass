@@ -1,22 +1,16 @@
 .sidebar
     position: fixed
     top: 0
-    left: 0
-    z-index: $z-index-3
+    right: 0
+    z-index: $z-index-2
     width: 100%
-    max-width: 320px
+    max-width: 100%
     height: calc(var(--vh) * 100)
     outline: 0
-    // background: rgba(0, 0, 0, .5)
-    opacity: 1
-    visibility: visible
-    transition: all .5s ease
-
-    @media ($max-xl)
-        opacity: 0
-        visibility: hidden
-        max-width: 100%
-        z-index: $z-index-2
+    background: rgba(0, 0, 0, .25)
+    opacity: 0
+    visibility: hidden
+    transition: all .25s ease
 
     &.is-visible
         opacity: 1
@@ -29,18 +23,14 @@
     &__panel
         position: fixed
         top: 0
-        left: 0
+        right: 0
         width: 100%
         max-width: 320px
         height: 100%
         background: var(--blue)
-        visibility: visible
-        transform: translate3d(0, 0, 0)
-        transition: all .5s ease
-
-        @media ($max-xl)
-            visibility: hidden
-            transform: translate3d(-100%, 0, 0)
+        visibility: hidden
+        transform: translate3d(100%, 0, 0)
+        transition: all .25s ease
 
         @media ($max-sm)
             max-width: 100%
@@ -52,9 +42,7 @@
         width: 100%
         padding: 0
         overflow-y: auto
-
-        @media ($max-xl)
-            padding-top: 90px
+        padding-top: 90px
 
         @media ($max-md)
             padding-top: 70px
@@ -128,3 +116,15 @@
             border: 1px solid var(--white)
             color: var(--white)
             transition: all .5s ease
+
+        &__button
+            width: 100%
+            display: none
+
+            @media ($max-lg)
+                display: flex
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                border-color: var(--white)

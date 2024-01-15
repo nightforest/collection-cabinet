@@ -1,8 +1,15 @@
 section.profile-section
     .container.profile-section__container
+        .filter-toggle
+            h3.filter-toggle__title Фільтр
+            
+            button.button.button--outline.filter-toggle__button(type="button" aria-label="Hide Filter" data-filter-toggle)
+                svg.button__icon(width="20" height="20p")
+                    use(xlink:href="img/sprite.svg#filter")
+
         h1.page-title.profile-section__title Мій профіль
 
-        form.form.profile-section__form(id="profile-form" autocomplete="off" novalidate="novalidate")
+        form.form.profile-section__form(id="profile-form" autocomplete="off" novalidate="novalidate" action="#" method="post")
             .form-block
                 .form-block__left
                     label.form-block__label Ім’я

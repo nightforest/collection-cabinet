@@ -2,12 +2,14 @@ const sidebar = () => {
     const body = document.querySelector('body');
     const header = document.querySelector('.header');
     const mobileNav = document.querySelector(".sidebar");
-    const mobileNavToggle = document.querySelector("[data-sidebar-toggle]");
+    const mobileNavToggleAll = document.querySelectorAll("[data-sidebar-toggle]");
     const paddingRight = window.innerWidth - document.documentElement.clientWidth;
     
-    mobileNavToggle?.addEventListener('click', e => {
-        e.preventDefault();
-        mobileNavShowHide();
+    mobileNavToggleAll?.forEach(item => {
+        item?.addEventListener('click', e => {
+            e.preventDefault();
+            mobileNavShowHide();
+        });
     });
 
     mobileNav?.addEventListener('click', e => {
@@ -19,7 +21,10 @@ const sidebar = () => {
     function mobileNavShowHide() {
         header?.classList.toggle('is-active');
         mobileNav?.classList.toggle('is-visible');
-        mobileNavToggle?.classList.toggle('is-active');
+
+        mobileNavToggleAll?.forEach(item => {
+            item?.classList.toggle('is-active');
+        });
 
         if (mobileNav.classList.contains('is-visible')) {
             body.classList.add('scroll-disabled');

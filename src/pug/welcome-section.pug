@@ -1,5 +1,12 @@
 section.welcome-section
     .container.welcome-section__container
+        .filter-toggle
+            h3.filter-toggle__title Фільтр
+            
+            button.button.button--outline.filter-toggle__button(type="button" aria-label="Hide Filter" data-filter-toggle)
+                svg.button__icon(width="20" height="20p")
+                    use(xlink:href="img/sprite.svg#filter")
+                    
         picture.welcome-section__picture
             img.welcome-section__img(src="img/welcome-img.svg" loading="lazy" width="416" height="401" alt="alt")
 

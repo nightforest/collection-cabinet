@@ -1,5 +1,12 @@
 section.page-section
     .container.page-section__container
+        .filter-toggle
+            h3.filter-toggle__title Фільтр
+            
+            button.button.button--outline.filter-toggle__button(type="button" aria-label="Hide Filter" data-filter-toggle)
+                svg.button__icon(width="20" height="20p")
+                    use(xlink:href="img/sprite.svg#filter")
+                    
         header.page-section__header
             .page-section__descr
                 button.button.button--outline.page-section__back-button(type="button" aria-label="Back" data-tooltip="Назад")

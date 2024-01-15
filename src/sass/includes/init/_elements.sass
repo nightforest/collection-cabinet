@@ -84,14 +84,20 @@ strong
     display: flex
     flex-direction: column
     padding-top: 90px
-    padding-left: 320px
+    padding-left: 560px
 
-    @media ($max-xl)
-        padding-left: 0
+    @media (max-width: 1400px)
+        padding-left: 420px
 
     @media ($max-md)
         padding-top: 70px
+    
+    &.is-full
+        padding-left: 128px
+        transition: padding .25s ease
 
+        @media ($max-md)
+            padding-left: 0
 
 .scroll-disabled
     overflow-y: hidden

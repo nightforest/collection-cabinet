@@ -14,6 +14,9 @@ const bookmarkFormValidation = () => {
                 },
             ]);
         
+        validator.onSuccess((event) => {
+            event.currentTarget.submit();
+        });
     }
 }
 

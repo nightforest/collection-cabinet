@@ -1,203 +1,139 @@
 section.collection-section
     .container.collection-section__container
-        h1.page-title.collection-section__title Збірник
+        .filter-toggle
+            h3.filter-toggle__title Фільтр
+            
+            button.button.button--outline.filter-toggle__button(type="button" aria-label="Hide Filter" data-filter-toggle)
+                svg.button__icon(width="20" height="20p")
+                    use(xlink:href="img/sprite.svg#filter")
 
-        .accordion
-            .accordion__panel
-                h3.accordion__header#accordion-header-1
-                    button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-1") КК (в разработке)
-                        svg.accordion__icon(width="19" height="10")
-                            use(xlink:href="img/sprite.svg#dropdown-arrow")
+        form.sort-form.collection-section__sort-form(id="sort-form" autocomplete="off" novalidate="novalidate")
+            .sort-form__group
+                select#selectSortBy.select(name="selectSortBy" aria-label="Sort by" required)
+                    option(value="1") Сортувати за зростанням
+                    option(value="2") Сортувати за спаданням
 
-                .accordion__content#accordion-content-1(role="region" aria-labelledby="accordion-header-1" aria-hidden="false")
-                    .accordion__inner
-                        .accordion__panel
-                            h3.accordion__header#accordion-header-2
-                                button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-2") ст. №-№130 Розділ 1 загальні положення
-                                    svg.accordion__icon(width="19" height="10")
-                                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+        table.collection-table
+            thead.collection-table__thead
+                tr
+                    th Дата
+                        .sort
+                            button.sort__button(type="button" aria-label="Sort up")
+                                svg.sort__icon(width="11" height="6")
+                                    use(xlink:href="img/sprite.svg#sort-up-arrow")
+                            
+                            button.sort__button(type="button" aria-label="Sort up")
+                                svg.sort__icon(width="11" height="6")
+                                    use(xlink:href="img/sprite.svg#sort-down-arrow")
 
-                            .accordion__content#accordion-content-2(role="region" aria-labelledby="accordion-header-2" aria-hidden="false")
-                                .accordion__inner
-                                    .accordion__panel
-                                        h3.accordion__header#accordion-header-6
-                                            button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-6") ст. 1-6 глава 1 кримінальне процесуальне законодавство
-                                                svg.accordion__icon(width="19" height="10")
-                                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+                    th Назва статті
+                    th Опис
+                    th
+            
+            tbody.collection-table__tbody
+                tr
+                    td
+                        time.collection-table__date 27.11.2023
+                        span.collection-table__info ккс вс
+                    
+                    td
+                        h4.collection-table__title Кримінальне процесуальне законодавство України
+                        a.blue-link.collection-table__link(href="#") Посилання на рішення
+                    
+                    td
+                        .collection-descr
+                            a.collection-descr__text(href="#")
+                                p Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...
+                                
+                                .collection-descr__hidden
+                                    p Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...
 
-                                        .accordion__content#accordion-content-6(role="region" aria-labelledby="accordion-header-6" aria-hidden="false")
-                                            .accordion__inner
-                                                .accordion__panel
-                                                    h3.accordion__header#accordion-header-9
-                                                        button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-9") Ст.1
-                                                            svg.accordion__icon(width="19" height="10")
-                                                                use(xlink:href="img/sprite.svg#dropdown-arrow")
+                            button.collection-descr__more(type="button")
+                                span Читати детальніше
+                                svg.collection-descr__more-icon(width="8" height="4")
+                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
 
-                                                    .accordion__content#accordion-content-9(role="region" aria-labelledby="accordion-header-9" aria-hidden="false")
-                                                        .accordion__inner
-                                                            table.collection-table
-                                                                thead.collection-table__thead
-                                                                    tr
-                                                                        th Дата
-                                                                        th Назва статті
-                                                                        th Опис
-                                                                        th
-                                                                
-                                                                tbody.collection-table__tbody
-                                                                    tr
-                                                                        td
-                                                                            time.collection-table__date 27.11.2023
-                                                                            span.collection-table__info ккс вс
-                                                                        
-                                                                        td
-                                                                            h4.collection-table__title Кримінальне процесуальне законодавство України
-                                                                            a.blue-link.collection-table__link(href="#") Посилання на рішення
-                                                                        
-                                                                        td
-                                                                            .collection-descr
-                                                                                .collection-descr__text
-                                                                                    p Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...
-                                                                                    
-                                                                                    .collection-descr__hidden
-                                                                                        p Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...
+                    td
+                        ul.actions.collection-table__actions
+                            li.actions__item
+                                button.button.button--outline.actions__button(type="button" aria-label="Copy" data-tooltip="Копіювати")
+                                    svg.button__icon(width="22" height="22")
+                                        use(xlink:href="img/sprite.svg#copy")
 
-                                                                                button.collection-descr__more(type="button")
-                                                                                    span Читати детальніше
-                                                                                    svg.collection-descr__more-icon(width="8" height="4")
-                                                                                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+                            li.actions__item
+                                button.button.button--outline.actions__button(type="button" aria-label="Add to bookmarks" data-tooltip="В закладки" data-modal="modal-bookmark")
+                                    svg.button__icon(width="19" height="24")
+                                        use(xlink:href="img/sprite.svg#bookmark")
 
-                                                                        td
-                                                                            ul.actions.collection-table__actions
-                                                                                li.actions__item
-                                                                                    button.button.button--outline.actions__button(type="button" aria-label="Copy" data-tooltip="Копіювати")
-                                                                                        svg.button__icon(width="22" height="22")
-                                                                                            use(xlink:href="img/sprite.svg#copy")
+                            li.actions__item
+                                button.button.button--outline.actions__button(type="button" aria-label="Add page" data-tooltip="Створити")
+                                    svg.button__icon(width="22" height="24")
+                                        use(xlink:href="img/sprite.svg#create")
+                            
+                            li.actions__item
+                                button.button.button--outline.actions__button(type="button" aria-label="Word" data-tooltip="Word")
+                                    svg.button__icon(width="18" height="21")
+                                        use(xlink:href="img/sprite.svg#word-simple")
 
-                                                                                li.actions__item
-                                                                                    button.button.button--outline.actions__button(type="button" aria-label="Add to bookmarks" data-tooltip="В закладки" data-modal="modal-bookmark")
-                                                                                        svg.button__icon(width="19" height="24")
-                                                                                            use(xlink:href="img/sprite.svg#bookmark")
+                tr
+                    td
+                        time.collection-table__date 27.11.2023
+                        span.collection-table__info ккс вс
+                    
+                    td
+                        h4.collection-table__title Кримінальне процесуальне законодавство України
+                        a.blue-link.collection-table__link(href="#") Посилання на рішення
+                    
+                    td
+                        .collection-descr
+                            a.collection-descr__text(href="#")
+                                p Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...
+                                
+                                .collection-descr__hidden
+                                    p Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...
 
-                                                                                li.actions__item
-                                                                                    button.button.button--outline.actions__button(type="button" aria-label="Add page" data-tooltip="Створити")
-                                                                                        svg.button__icon(width="22" height="24")
-                                                                                            use(xlink:href="img/sprite.svg#create")
-                                                                                
-                                                                                li.actions__item
-                                                                                    button.button.button--outline.actions__button(type="button" aria-label="Read more" data-tooltip="Перейти")
-                                                                                        svg.button__icon(width="17" height="12")
-                                                                                            use(xlink:href="img/sprite.svg#long-arrow-right")
+                            button.collection-descr__more(type="button")
+                                span Читати детальніше
+                                svg.collection-descr__more-icon(width="8" height="4")
+                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
 
-                                                                    tr
-                                                                        td
-                                                                            time.collection-table__date 27.11.2023
-                                                                            span.collection-table__info ккс вс
-                                                                        
-                                                                        td
-                                                                            h4.collection-table__title Кримінальне процесуальне законодавство України
-                                                                            a.blue-link.collection-table__link(href="#") Посилання на рішення
-                                                                        
-                                                                        td
-                                                                            .collection-descr
-                                                                                .collection-descr__text
-                                                                                    p Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...
-                                                                                    
-                                                                                    .collection-descr__hidden
-                                                                                        p Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...
+                    td
+                        ul.actions.collection-table__actions
+                            li.actions__item
+                                button.button.button--outline.actions__button(type="button" aria-label="Copy" data-tooltip="Копіювати")
+                                    svg.button__icon(width="22" height="22")
+                                        use(xlink:href="img/sprite.svg#copy")
 
-                                                                                button.collection-descr__more(type="button")
-                                                                                    span Читати детальніше
-                                                                                    svg.collection-descr__more-icon(width="8" height="4")
-                                                                                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+                            li.actions__item
+                                button.button.button--outline.actions__button(type="button" aria-label="Add to bookmarks" data-tooltip="В закладки" data-modal="modal-bookmark")
+                                    svg.button__icon(width="19" height="24")
+                                        use(xlink:href="img/sprite.svg#bookmark")
 
-                                                                        td
-                                                                            ul.actions.collection-table__actions
-                                                                                li.actions__item
-                                                                                    button.button.button--outline.actions__button(type="button" aria-label="Copy" data-tooltip="Копіювати")
-                                                                                        svg.button__icon(width="22" height="22")
-                                                                                            use(xlink:href="img/sprite.svg#copy")
+                            li.actions__item
+                                button.button.button--outline.actions__button(type="button" aria-label="Add page" data-tooltip="Створити")
+                                    svg.button__icon(width="22" height="24")
+                                        use(xlink:href="img/sprite.svg#create")
+                            
+                            li.actions__item
+                                button.button.button--outline.actions__button(type="button" aria-label="Word" data-tooltip="Word")
+                                    svg.button__icon(width="18" height="21")
+                                        use(xlink:href="img/sprite.svg#word-simple")
 
-                                                                                li.actions__item
-                                                                                    button.button.button--outline.actions__button(type="button" aria-label="Add to bookmarks" data-tooltip="В закладки" data-modal="modal-bookmark")
-                                                                                        svg.button__icon(width="19" height="24")
-                                                                                            use(xlink:href="img/sprite.svg#bookmark")
-
-                                                                                li.actions__item
-                                                                                    button.button.button--outline.actions__button(type="button" aria-label="Add page" data-tooltip="Створити")
-                                                                                        svg.button__icon(width="22" height="24")
-                                                                                            use(xlink:href="img/sprite.svg#create")
-                                                                                
-                                                                                li.actions__item
-                                                                                    button.button.button--outline.actions__button(type="button" aria-label="Read more" data-tooltip="Перейти")
-                                                                                        svg.button__icon(width="17" height="12")
-                                                                                            use(xlink:href="img/sprite.svg#long-arrow-right")
-
-                                                .accordion__panel
-                                                    h3.accordion__header#accordion-header-10
-                                                        button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-10") Ст.1
-                                                            svg.accordion__icon(width="19" height="10")
-                                                                use(xlink:href="img/sprite.svg#dropdown-arrow")
-
-                                                    .accordion__content#accordion-content-10(role="region" aria-labelledby="accordion-header-10" aria-hidden="true")
-                                                        .accordion__inner
-                                                            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, quo!
-
-                                                .accordion__panel
-                                                    h3.accordion__header#accordion-header-11
-                                                        button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-11") Ст.1
-                                                            svg.accordion__icon(width="19" height="10")
-                                                                use(xlink:href="img/sprite.svg#dropdown-arrow")
-
-                                                    .accordion__content#accordion-content-11(role="region" aria-labelledby="accordion-header-11" aria-hidden="true")
-                                                        .accordion__inner
-                                                            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, quo!
-
-                                    .accordion__panel
-                                        h3.accordion__header#accordion-header-7
-                                            button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-7") ст. 1-6 глава 1 кримінальне процесуальне законодавство
-                                                svg.accordion__icon(width="19" height="10")
-                                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
-
-                                        .accordion__content#accordion-content-7(role="region" aria-labelledby="accordion-header-7" aria-hidden="true")
-                                            .accordion__inner
-                                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, quo!
-
-                                    .accordion__panel
-                                        h3.accordion__header#accordion-header-8
-                                            button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-8") ст. 1-6 глава 1 кримінальне процесуальне законодавство
-                                                svg.accordion__icon(width="19" height="10")
-                                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
-
-                                        .accordion__content#accordion-content-8(role="region" aria-labelledby="accordion-header-8" aria-hidden="true")
-                                            .accordion__inner
-                                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, quo!
-
-                        .accordion__panel
-                            h3.accordion__header#accordion-header-3
-                                button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-3") ст. №-№130 Розділ 1 загальні положення
-                                    svg.accordion__icon(width="19" height="10")
-                                        use(xlink:href="img/sprite.svg#dropdown-arrow")
-
-                            .accordion__content#accordion-content-3(role="region" aria-labelledby="accordion-header-3" aria-hidden="true")
-                                .accordion__inner
-                                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, quo!
-
-                        .accordion__panel
-                            h3.accordion__header#accordion-header-4
-                                button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-4") ст. №-№130 Розділ 1 загальні положення
-                                    svg.accordion__icon(width="19" height="10")
-                                        use(xlink:href="img/sprite.svg#dropdown-arrow")
-
-                            .accordion__content#accordion-content-4(role="region" aria-labelledby="accordion-header-4" aria-hidden="true")
-                                .accordion__inner
-                                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, quo!
-                        
-                        .accordion__panel
-                            h3.accordion__header#accordion-header-5
-                                button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-5") ст. №-№130 Розділ 1 загальні положення
-                                    svg.accordion__icon(width="19" height="10")
-                                        use(xlink:href="img/sprite.svg#dropdown-arrow")
-
-                            .accordion__content#accordion-content-5(role="region" aria-labelledby="accordion-header-5" aria-hidden="true")
-                                .accordion__inner
-                                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, quo!
+        nav.pagenav.collection-section__pagenav(aria-label="Page navigation")
+            ul.pagenav__list
+                li.pagenav__item
+                    a.pagenav__arrow(href="#" aria-label="Previous")
+                        svg.pagenav__icon(width="7" height="14")
+                            use(xlink:href="img/sprite.svg#arrow-left")
+                li.pagenav__item.is-active(aria-current="page")
+                    a.pagenav__link(href="#") 1
+                li.pagenav__item
+                    a.pagenav__link(href="#") 2
+                li.pagenav__item
+                    span ...
+                li.pagenav__item
+                    a.pagenav__link(href="#") 7
+                li.pagenav__item
+                    a.pagenav__arrow(href="#" aria-label="Next")
+                        svg.pagenav__icon(width="7" height="14")
+                            use(xlink:href="img/sprite.svg#arrow-right")

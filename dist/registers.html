@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <!-- Title -->
-        <title>Main Page</title>
+        <title>Registers Page</title>
         <!-- SEO Meta -->
         <meta name="description" content="Page description">
         <meta name="keywords" content="keyword">
@@ -112,8 +112,8 @@
         <!-- Main -->
         <main id="main" class="main is-full">
             
-<section class="welcome-section">
-  <div class="container welcome-section__container">
+<section class="collection-section">
+  <div class="container collection-section__container">
     <div class="filter-toggle">
       <h3 class="filter-toggle__title">Фільтр</h3>
       <button class="button button--outline filter-toggle__button" type="button" aria-label="Hide Filter" data-filter-toggle="data-filter-toggle">
@@ -122,10 +122,57 @@
         </svg>
       </button>
     </div>
-    <picture class="welcome-section__picture"><img class="welcome-section__img" src="img/welcome-img.svg" loading="lazy" width="416" height="401" alt="alt"/></picture>
-    <div class="welcome-section__text">
-      <p>Ми зібрали для вас безліч правових позицій. Для нас немає нічого важливішого, ніж ваш успіх у юридичній галузі.</p>
-    </div><a class="button welcome-section__button" href="#">Перейти у збірник</a>
+    <h1 class="page-title profile-section__title">Реєстр</h1>
+    <table class="collection-table">
+      <thead class="collection-table__thead">
+        <tr>
+          <th>Номер</th>
+          <th>Назва та посилання на реєстр</th>
+        </tr>
+      </thead>
+      <tbody class="collection-table__tbody">
+        <tr>
+          <td>#1</td>
+          <td>
+            <h4 class="collection-table__title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nobis a accusamus tempore dolorem eos esse enim sint corrupti? Atque?</h4><a class="blue-link collection-table__link" href="#">Посилання на реєстр</a>
+          </td>
+        </tr>
+        <tr>
+          <td>#2</td>
+          <td>
+            <h4 class="collection-table__title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nobis a accusamus tempore dolorem eos esse enim sint corrupti? Atque?</h4><a class="blue-link collection-table__link" href="#">Посилання на реєстр</a>
+          </td>
+        </tr>
+        <tr>
+          <td>#3</td>
+          <td>
+            <h4 class="collection-table__title">Кримінальне процесуальне законодавство України</h4><a class="blue-link collection-table__link" href="#">Посилання на реєстр</a>
+          </td>
+        </tr>
+        <tr>
+          <td>#4</td>
+          <td>
+            <h4 class="collection-table__title">Кримінальне процесуальне законодавство України</h4><a class="blue-link collection-table__link" href="#">Посилання на реєстр</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <nav class="pagenav collection-section__pagenav" aria-label="Page navigation">
+      <ul class="pagenav__list">
+        <li class="pagenav__item"><a class="pagenav__arrow" href="#" aria-label="Previous">
+            <svg class="pagenav__icon" width="7" height="14">
+              <use xlink:href="img/sprite.svg#arrow-left"></use>
+            </svg></a></li>
+        <li class="pagenav__item is-active" aria-current="page"><a class="pagenav__link" href="#">1</a></li>
+        <li class="pagenav__item"><a class="pagenav__link" href="#">2</a></li>
+        <li class="pagenav__item"><span>...</span></li>
+        <li class="pagenav__item"><a class="pagenav__link" href="#">7</a></li>
+        <li class="pagenav__item"><a class="pagenav__arrow" href="#" aria-label="Next">
+            <svg class="pagenav__icon" width="7" height="14">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg></a></li>
+      </ul>
+    </nav>
   </div>
 </section>
         </main>
@@ -404,7 +451,7 @@
     </div>
   </div>
 </aside>
-        
+
         <!-- Sidebar -->
         
 <aside class="sidebar">
@@ -443,7 +490,7 @@
     </div>
   </div>
 </aside>
-        
+
         <!-- Modals -->
         
 <div class="modal-wrap">
