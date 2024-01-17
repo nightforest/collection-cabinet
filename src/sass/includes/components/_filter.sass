@@ -51,6 +51,9 @@
             .filter__bottom
                 display: none
 
+            .filter__search
+                display: none
+
     &.is-visible
         opacity: 1
         visibility: visible
@@ -170,6 +173,9 @@
         @media ($max-md)
             display: flex
 
+    &__search
+        margin-bottom: 15px
+
     &__bottom
         display: flex
         align-items: center
@@ -177,6 +183,9 @@
         gap: 30px
         padding: 15px
         background: var(--white)
+
+        @media ($max-md)
+            gap: 15px
     
     &__button
         width: 100%

@@ -28,6 +28,14 @@ aside.filter.is-hide
                     svg.button__icon(width="17" height="17")
                         use(xlink:href="img/sprite.svg#close-modal")
             
+            form.search.filter__search(id="filter-search-form" autocomplete="off" novalidate="novalidate")
+                .search__group
+                    input#inputFilterSearch.input.search__input(type="text" name="inputFilterSearch" placeholder="Пошук..." autocomplete="off" required)
+
+                    button.search__button
+                        svg.search__icon(width="21" height="21")
+                            use(xlink:href="img/sprite.svg#search")
+                            
             .accordion.filter__accordion
                 .accordion__panel
                     .accordion__header#accordion-header-1
