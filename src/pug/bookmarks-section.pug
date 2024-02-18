@@ -8,19 +8,31 @@ section.bookmarks-section
                     use(xlink:href="img/sprite.svg#filter")
                     
         header.bookmarks-section__header
-            h1.page-title.bookmarks-section__title Мій профіль
+            .bookmarks-section__header-row
+                h1.page-title.bookmarks-section__title Мій профіль
 
-            form.search.bookmarks-section__search(id="bookmark-search-form" autocomplete="off" novalidate="novalidate")
-                .search__group
-                    input#inputBookmarkSearch.input.search__input(type="text" name="inputBookmarkSearch" placeholder="Пошук по файлах" autocomplete="off" required)
+                form.sort-form.bookmarks-section__sort-form(id="sort-form" autocomplete="off" novalidate="novalidate")
+                    .sort-form__group
+                        select#selectSortBy.select(name="selectSortBy" aria-label="Sort by" required)
+                            option(value="1") Сортувати за датою
+                            option(value="2") Сортувати за назвою
 
-                    button.search__button
-                        svg.search__icon(width="21" height="21")
-                            use(xlink:href="img/sprite.svg#search")
-            
-            .bookmarks-section__buttons
-                button.button.button--outline.bookmarks-section__button(type="button") Додати статтю
-                button.button.button--outline.bookmarks-section__button(type="button" data-modal="modal-create") Створити папку
+            .bookmarks-section__header-row
+                button.button.button--outline.bookmarks-section__back-button(type="button" aria-label="Back" data-tooltip="Назад")
+                    svg.button__icon(width="10" height="19")
+                        use(xlink:href="img/sprite.svg#arrow-left")
+                        
+                form.search.bookmarks-section__search(id="bookmark-search-form" autocomplete="off" novalidate="novalidate")
+                    .search__group
+                        input#inputBookmarkSearch.input.search__input(type="text" name="inputBookmarkSearch" placeholder="Пошук по файлах" autocomplete="off" required)
+
+                        button.search__button
+                            svg.search__icon(width="21" height="21")
+                                use(xlink:href="img/sprite.svg#search")
+
+                .bookmarks-section__buttons
+                    button.button.button--outline.bookmarks-section__button(type="button") Додати статтю
+                    button.button.button--outline.bookmarks-section__button(type="button" data-modal="modal-create") Створити папку
 
         ul.bookmarks-section__list
             li.bookmarks-section__item
@@ -42,7 +54,7 @@ section.bookmarks-section
                             svg.bookmark-card__icon(width="90" height="77")
                                 use(xlink:href="img/sprite.svg#case")
 
-                        h3.bookmark-card__title Папка Фінанси
+                        h3.bookmark-card__title Ухв про поверн ОА за пп. 5 п. 4 Прикінцевих не оскаржується
                         .bookmark-card__info 7 файлів
             
             li.bookmarks-section__item

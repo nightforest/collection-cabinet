@@ -15,6 +15,20 @@ section.page-section
 
                 .page-section__info
                     h1.page-title.page-section__title Ст. 1 глава 1 Кримінальне процесуальне законодавство
+                    
+                    time.page-section__date
+                        a.black-link(href="#") 27.11.2023
+
+                    ul.page-section__tags
+                        li.page-section__tags-item
+                            a.black-link(href="#") ккс вс
+                        
+                        li.page-section__tags-item
+                            a.black-link(href="#") ккс вс
+                        
+                        li.page-section__tags-item
+                            a.black-link(href="#") ккс вс
+
                     a.blue-link.page-section__link(href="#") Посилання на рішення 
 
             ul.actions.page-section__actions
@@ -38,16 +52,23 @@ section.page-section
                         svg.button__icon(width="18" height="21")
                             use(xlink:href="img/sprite.svg#word-simple")
 
-        .tabs.page-section__tabs(data-tabs="tabs-1" data-active="0")
-            ul.tabs__nav
-                li.tabs__nav-item
-                    button.button.button--outline.tabs__nav-btn(type="button") Назва ПП
+        .page-section__buttons
+            .tabs.page-section__tabs(data-tabs="tabs-1" data-active="0")
+                ul.tabs__nav
+                    li.tabs__nav-item
+                        button.button.button--outline.tabs__nav-btn(type="button") Назва ПП
 
-                li.tabs__nav-item
-                    button.button.button--outline.tabs__nav-btn(type="button") ПП
+                    li.tabs__nav-item
+                        button.button.button--outline.tabs__nav-btn(type="button") ПП
 
-                li.tabs__nav-item
-                    button.button.button--outline.tabs__nav-btn(type="button") Статья КК
+                    li.tabs__nav-item
+                        button.button.button--outline.tabs__nav-btn(type="button") Статья КК
+            
+            button.button.page-section__button(type="button") Зберегти
+            
+            button.button.button--outline.page-section__button(type="button") Экспорт у Word
+                svg.button__icon(width="28" height="28")
+                    use(xlink:href="img/sprite.svg#word")
         
         .tabs-content.page-section__tabs-content(data-tabs-content="tabs-1")
             .tabs-panel

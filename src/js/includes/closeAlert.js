@@ -10,7 +10,7 @@ const closeAlert = () => {
 
     setTimeout(() => {
         activeAlert?.classList.remove('is-visible');
-    }, 5000);
+    }, 3000);
 }
 
 export default closeAlert;

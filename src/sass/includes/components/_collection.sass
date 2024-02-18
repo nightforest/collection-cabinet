@@ -33,6 +33,13 @@
 
                     &:first-child
                         text-align: center
+                        width: 10%
+                    
+                    &:nth-child(2)
+                        width: 20%
+                    
+                    &:nth-child(3)
+                        width: 70%
         
         &__tbody
             
@@ -104,6 +111,7 @@
             font-weight: 400
             line-height: 1.25
             margin: 0
+            text-align: justify
 
             @media ($max-md)
                 font-size: 14px
@@ -134,6 +142,7 @@
         &__text
             line-height: 1.25
             color: var(--black)
+            text-align: justify
             transition: color .5s ease
 
             &:hover,

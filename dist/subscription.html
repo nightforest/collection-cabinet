@@ -29,8 +29,8 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-ee4724ce.js"></script>
-      <link rel="stylesheet" href="/assets/main-4b17c12e.css">
+      <script type="module" crossorigin src="/assets/main-32cd6bc6.js"></script>
+      <link rel="stylesheet" href="/assets/main-f61f4769.css">
     </head>
     <body>
         <!-- Header -->
@@ -144,141 +144,229 @@
           <button class="button button--outline tariffs-list__button" type="button">На рік</button>
         </li>
       </ul>
-      <div class="tariff-card tariffs__card">
-        <div class="tariff-card__body">
-          <h3 class="tariff-card__title">Тариф LITE</h3>
-          <ul class="tariff-card__list">
-            <li class="tariff-card__item"><strong>Інтелектуальний пошук</strong>
-              <div class="tariff-card__status tariff-card__status--green">
-                <svg class="tariff-card__status-icon" width="15" height="11">
-                  <use xlink:href="img/sprite.svg#check"></use>
-                </svg>
+      <div class="swiper tariffs-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide tariffs-slider__slide">
+            <div class="tariff-card">
+              <div class="tariff-card__body">
+                <h3 class="tariff-card__title">Тариф LITE</h3>
+                <ul class="tariff-card__list">
+                  <li class="tariff-card__item"><strong>Інтелектуальний пошук</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><strong>Доступна база правових позицій</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><span>Можливість скачувати сторінку кнопкою export</span>
+                    <div class="tariff-card__status">
+                      <svg class="tariff-card__status-icon" width="15" height="15">
+                        <use xlink:href="img/sprite.svg#cross"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><span>Можливість створювати закладки по рішенням в особистому кабінеті</span>
+                    <div class="tariff-card__status">
+                      <svg class="tariff-card__status-icon" width="15" height="15">
+                        <use xlink:href="img/sprite.svg#cross"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><span>Можливість відмічати жовтим кольором потрібне</span>
+                    <div class="tariff-card__status">
+                      <svg class="tariff-card__status-icon" width="15" height="15">
+                        <use xlink:href="img/sprite.svg#cross"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><span>Можливість самостійно створювати свої особисті сторінки з рішеннями, просвоювати імена рішенням з прив’язкою до посилання і т.п.</span>
+                    <div class="tariff-card__status">
+                      <svg class="tariff-card__status-icon" width="15" height="15">
+                        <use xlink:href="img/sprite.svg#cross"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><span>Можливість копіювати сторінку</span>
+                    <div class="tariff-card__status">
+                      <svg class="tariff-card__status-icon" width="15" height="15">
+                        <use xlink:href="img/sprite.svg#cross"></use>
+                      </svg>
+                    </div>
+                  </li>
+                </ul>
+                <div class="tariff-card__buttons">
+                  <button class="button button--outline tariff-card__button" type="button">1 день безкоштовне демо</button>
+                  <button class="play-button" type="button" data-modal="modal-video"><span class="play-button__pic">
+                      <svg class="play-button__icon" width="11" height="14">
+                        <use xlink:href="img/sprite.svg#play"></use>
+                      </svg></span>Як це працює?</button>
+                </div>
               </div>
-            </li>
-            <li class="tariff-card__item"><strong>Доступна база правових позицій</strong>
-              <div class="tariff-card__status tariff-card__status--green">
-                <svg class="tariff-card__status-icon" width="15" height="11">
-                  <use xlink:href="img/sprite.svg#check"></use>
-                </svg>
+              <div class="tariff-card__footer">
+                <div class="tariff-card__total">
+                  <div class="tariff-card__price">Вартість 5$</div>
+                  <div class="tariff-card__discount">27$ / 6 мес (-10%)</div>
+                  <div class="tariff-card__discount">48$ / 12 мес (-20%)</div>
+                </div>
+                <button class="button tariff-card__buy-button" type="button">Обрати</button>
               </div>
-            </li>
-            <li class="tariff-card__item"><span>Можливість скачувати сторінку кнопкою export</span>
-              <div class="tariff-card__status">
-                <svg class="tariff-card__status-icon" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#cross"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="tariff-card__item"><span>Можливість створювати закладки по рішенням в особистому кабінеті</span>
-              <div class="tariff-card__status">
-                <svg class="tariff-card__status-icon" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#cross"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="tariff-card__item"><span>Можливість відмічати жовтим кольором потрібне</span>
-              <div class="tariff-card__status">
-                <svg class="tariff-card__status-icon" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#cross"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="tariff-card__item"><span>Можливість самостійно створювати свої особисті сторінки з рішеннями, просвоювати імена рішенням з прив’язкою до посилання і т.п.</span>
-              <div class="tariff-card__status">
-                <svg class="tariff-card__status-icon" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#cross"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="tariff-card__item"><span>Можливість копіювати сторінку</span>
-              <div class="tariff-card__status">
-                <svg class="tariff-card__status-icon" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#cross"></use>
-                </svg>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="tariff-card__footer">
-          <div class="tariff-card__total">
-            <div class="tariff-card__price">Вартість 5$</div>
-            <div class="tariff-card__discount">27$ / 6 мес (-10%)</div>
-            <div class="tariff-card__discount">48$ / 12 мес (-20%)</div>
+            </div>
           </div>
-          <button class="play-button tariff-card__play-button" type="button" data-modal="modal-video"><span class="play-button__pic">
-              <svg class="play-button__icon" width="11" height="14">
-                <use xlink:href="img/sprite.svg#play"></use>
-              </svg></span>Як це працює?</button>
-          <button class="button tariff-card__buy-button" type="button" data-modal="modal-period">Обрати</button>
-        </div>
-      </div>
-      <div class="tariff-card tariffs__card">
-        <div class="tariff-card__body">
-          <h3 class="tariff-card__title">Тариф LITE</h3>
-          <ul class="tariff-card__list">
-            <li class="tariff-card__item"><strong>Інтелектуальний пошук</strong>
-              <div class="tariff-card__status tariff-card__status--green">
-                <svg class="tariff-card__status-icon" width="15" height="11">
-                  <use xlink:href="img/sprite.svg#check"></use>
-                </svg>
+          <div class="swiper-slide tariffs-slider__slide">
+            <div class="tariff-card">
+              <div class="tariff-card__body">
+                <h3 class="tariff-card__title">Тариф BASE</h3>
+                <ul class="tariff-card__list">
+                  <li class="tariff-card__item"><strong>Інтелектуальний пошук</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><strong>Доступна база правових позицій</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><strong>Можливість скачувати сторінку кнопкою export</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><strong>Можливість створювати закладки по рішенням в особистому кабінеті</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><strong>Можливість відмічати жовтим кольором потрібне</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><strong>Можливість самостійно створювати свої особисті сторінки з рішеннями, просвоювати імена рішенням з прив’язкою до посилання і т.п.</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><strong>Можливість копіювати сторінку</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                </ul>
+                <div class="tariff-card__buttons">
+                  <button class="button button--outline tariff-card__button" type="button">1 день безкоштовне демо</button>
+                  <button class="play-button" type="button" data-modal="modal-video"><span class="play-button__pic">
+                      <svg class="play-button__icon" width="11" height="14">
+                        <use xlink:href="img/sprite.svg#play"></use>
+                      </svg></span>Як це працює?</button>
+                </div>
               </div>
-            </li>
-            <li class="tariff-card__item"><strong>Доступна база правових позицій</strong>
-              <div class="tariff-card__status tariff-card__status--green">
-                <svg class="tariff-card__status-icon" width="15" height="11">
-                  <use xlink:href="img/sprite.svg#check"></use>
-                </svg>
+              <div class="tariff-card__footer">
+                <div class="tariff-card__total">
+                  <div class="tariff-card__price">Вартість 7$</div>
+                  <div class="tariff-card__discount">37$ / 6 мес (-10%)</div>
+                  <div class="tariff-card__discount">65$ / 12 мес (-25%)</div>
+                </div>
+                <button class="button tariff-card__buy-button" type="button">Обрати</button>
               </div>
-            </li>
-            <li class="tariff-card__item"><span>Можливість скачувати сторінку кнопкою export</span>
-              <div class="tariff-card__status">
-                <svg class="tariff-card__status-icon" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#cross"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="tariff-card__item"><span>Можливість створювати закладки по рішенням в особистому кабінеті</span>
-              <div class="tariff-card__status">
-                <svg class="tariff-card__status-icon" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#cross"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="tariff-card__item"><span>Можливість відмічати жовтим кольором потрібне</span>
-              <div class="tariff-card__status">
-                <svg class="tariff-card__status-icon" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#cross"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="tariff-card__item"><span>Можливість самостійно створювати свої особисті сторінки з рішеннями, просвоювати імена рішенням з прив’язкою до посилання і т.п.</span>
-              <div class="tariff-card__status">
-                <svg class="tariff-card__status-icon" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#cross"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="tariff-card__item"><span>Можливість копіювати сторінку</span>
-              <div class="tariff-card__status">
-                <svg class="tariff-card__status-icon" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#cross"></use>
-                </svg>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="tariff-card__footer">
-          <div class="tariff-card__total">
-            <div class="tariff-card__price">Вартість 5$</div>
-            <div class="tariff-card__discount">27$ / 6 мес (-10%)</div>
-            <div class="tariff-card__discount">48$ / 12 мес (-20%)</div>
+            </div>
           </div>
-          <button class="play-button tariff-card__play-button" type="button" data-modal="modal-video"><span class="play-button__pic">
-              <svg class="play-button__icon" width="11" height="14">
-                <use xlink:href="img/sprite.svg#play"></use>
-              </svg></span>Як це працює?</button>
-          <button class="button tariff-card__buy-button" type="button" data-modal="modal-period">Обрати</button>
+          <div class="swiper-slide tariffs-slider__slide">
+            <div class="tariff-card">
+              <div class="tariff-card__body">
+                <h3 class="tariff-card__title">Тариф BASE</h3>
+                <ul class="tariff-card__list">
+                  <li class="tariff-card__item"><strong>Інтелектуальний пошук</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><strong>Доступна база правових позицій</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><strong>Можливість скачувати сторінку кнопкою export</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><strong>Можливість створювати закладки по рішенням в особистому кабінеті</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><strong>Можливість відмічати жовтим кольором потрібне</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><strong>Можливість самостійно створювати свої особисті сторінки з рішеннями, просвоювати імена рішенням з прив’язкою до посилання і т.п.</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="tariff-card__item"><strong>Можливість копіювати сторінку</strong>
+                    <div class="tariff-card__status tariff-card__status--green">
+                      <svg class="tariff-card__status-icon" width="15" height="11">
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg>
+                    </div>
+                  </li>
+                </ul>
+                <div class="tariff-card__buttons">
+                  <button class="button button--outline tariff-card__button" type="button">1 день безкоштовне демо</button>
+                  <button class="play-button" type="button" data-modal="modal-video"><span class="play-button__pic">
+                      <svg class="play-button__icon" width="11" height="14">
+                        <use xlink:href="img/sprite.svg#play"></use>
+                      </svg></span>Як це працює?</button>
+                </div>
+              </div>
+              <div class="tariff-card__footer">
+                <div class="tariff-card__total">
+                  <div class="tariff-card__price">Вартість 7$</div>
+                  <div class="tariff-card__discount">37$ / 6 мес (-10%)</div>
+                  <div class="tariff-card__discount">65$ / 12 мес (-25%)</div>
+                </div>
+                <button class="button tariff-card__buy-button" type="button">Обрати</button>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="swiper-pagination tariffs-slider__pagination"></div>
       </div>
     </div>
     <div class="subscription-section__buttons">
@@ -293,10 +381,7 @@
 <aside class="filter is-hide">
   <div class="filter__panel">
     <div class="filter__top">
-      <div class="logo filter__logo"><a class="logo__link" href="#" aria-label="logo">
-          <svg class="logo__img" width="38" height="32">
-            <use xlink:href="img/sprite.svg#logo"></use>
-          </svg><span class="logo__title">База правових позицій</span></a></div>
+      <div class="logo filter__logo"><a class="logo__link" href="#" aria-label="logo"><img class="logo__img" src="img/logo-white.png" srcset="img/logo-white@2x.png 2x" width="82" height="61" alt="logo"/></a></div>
       <button class="burger filter__burger" type="button" aria-label="Open sidebar" aria-expanded="false" data-sidebar-toggle="data-sidebar-toggle">
         <div class="burger__line"></div>
         <div class="burger__line"></div>
@@ -310,7 +395,7 @@
             <use xlink:href="img/sprite.svg#filter"></use>
           </svg><span>Фільтр</span>
         </h3>
-        <button class="button button--outline filter__hide-button" type="button" aria-label="Hide Filter" data-filter-hide="data-filter-hide">
+        <button class="button button--outline filter__hide-button" type="button" aria-label="Hide Filter" data-tooltip-left="Регулювання масштабу" data-filter-hide="data-filter-hide">
           <svg class="button__icon" width="10" height="19">
             <use xlink:href="img/sprite.svg#arrow-left"></use>
           </svg>
@@ -347,7 +432,7 @@
                 <div class="accordion__header" id="accordion-header-2">
                   <div class="checkbox accordion__checkbox">
                     <input class="checkbox__input" id="accordion-checkbox-2" type="checkbox" name="checkbox" value="true" required="required"/>
-                    <label class="checkbox__label" for="accordion-checkbox-2">ст. №-№130 Розділ 1 загальні положення</label>
+                    <label class="checkbox__label" for="accordion-checkbox-2"> <strong class="red-color">625 - 675</strong> ст. №-№130 Розділ 1 загальні положення</label>
                   </div>
                   <button class="accordion__trigger" aria-expanded="true" aria-controls="accordion-content-2">
                     <svg class="accordion__icon" width="15" height="8">
@@ -375,7 +460,7 @@
                             <div class="accordion__header" id="accordion-header-9">
                               <div class="checkbox accordion__checkbox">
                                 <input class="checkbox__input" id="accordion-checkbox-9" type="checkbox" name="checkbox" value="true" required="required"/>
-                                <label class="checkbox__label" for="accordion-checkbox-9">ст. №-№130 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.</label>
+                                <label class="checkbox__label" for="accordion-checkbox-9">ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.</label>
                               </div>
                               <button class="accordion__trigger" aria-expanded="true" aria-controls="accordion-content-9">
                                 <svg class="accordion__icon" width="15" height="8">
@@ -385,10 +470,78 @@
                             </div>
                             <div class="accordion__content" id="accordion-content-9" role="region" aria-labelledby="accordion-header-9" aria-hidden="false">
                               <div class="accordion__inner">
-                                <div class="accordion__text">
-                                  <div class="checkbox accordion__checkbox">
-                                    <input class="checkbox__input" id="accordion-checkbox-91" type="checkbox" name="checkbox" value="true" required="required" checked="checked"/>
-                                    <label class="checkbox__label" for="accordion-checkbox-91">Cт. 1</label>
+                                <div class="accordion__panel">
+                                  <div class="accordion__header" id="accordion-header-91">
+                                    <div class="checkbox accordion__checkbox">
+                                      <input class="checkbox__input" id="accordion-checkbox-91" type="checkbox" name="checkbox" value="true" required="required"/>
+                                      <label class="checkbox__label" for="accordion-checkbox-91">ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.</label>
+                                    </div>
+                                    <button class="accordion__trigger" aria-expanded="true" aria-controls="accordion-content-91">
+                                      <svg class="accordion__icon" width="15" height="8">
+                                        <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                  <div class="accordion__content" id="accordion-content-91" role="region" aria-labelledby="accordion-header-91" aria-hidden="false">
+                                    <div class="accordion__inner">
+                                      <div class="accordion__panel">
+                                        <div class="accordion__header" id="accordion-header-92">
+                                          <div class="checkbox accordion__checkbox">
+                                            <input class="checkbox__input" id="accordion-checkbox-92" type="checkbox" name="checkbox" value="true" required="required"/>
+                                            <label class="checkbox__label" for="accordion-checkbox-92">ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.</label>
+                                          </div>
+                                          <button class="accordion__trigger" aria-expanded="true" aria-controls="accordion-content-92">
+                                            <svg class="accordion__icon" width="15" height="8">
+                                              <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                        <div class="accordion__content" id="accordion-content-92" role="region" aria-labelledby="accordion-header-92" aria-hidden="false">
+                                          <div class="accordion__inner">
+                                            <div class="accordion__panel">
+                                              <div class="accordion__header" id="accordion-header-93">
+                                                <div class="checkbox accordion__checkbox">
+                                                  <input class="checkbox__input" id="accordion-checkbox-93" type="checkbox" name="checkbox" value="true" required="required"/>
+                                                  <label class="checkbox__label" for="accordion-checkbox-93">ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.</label>
+                                                </div>
+                                                <button class="accordion__trigger" aria-expanded="true" aria-controls="accordion-content-93">
+                                                  <svg class="accordion__icon" width="15" height="8">
+                                                    <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                              <div class="accordion__content" id="accordion-content-93" role="region" aria-labelledby="accordion-header-93" aria-hidden="false">
+                                                <div class="accordion__inner">
+                                                  <div class="accordion__panel">
+                                                    <div class="accordion__header" id="accordion-header-94">
+                                                      <div class="checkbox accordion__checkbox">
+                                                        <input class="checkbox__input" id="accordion-checkbox-94" type="checkbox" name="checkbox" value="true" required="required"/>
+                                                        <label class="checkbox__label" for="accordion-checkbox-94">ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.</label>
+                                                      </div>
+                                                      <button class="accordion__trigger" aria-expanded="true" aria-controls="accordion-content-94">
+                                                        <svg class="accordion__icon" width="15" height="8">
+                                                          <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                                                        </svg>
+                                                      </button>
+                                                    </div>
+                                                    <div class="accordion__content" id="accordion-content-94" role="region" aria-labelledby="accordion-header-94" aria-hidden="false">
+                                                      <div class="accordion__inner">
+                                                        <div class="accordion__text">
+                                                          <div class="checkbox accordion__checkbox">
+                                                            <input class="checkbox__input" id="accordion-checkbox-95" type="checkbox" name="checkbox" value="true" required="required" checked="checked"/>
+                                                            <label class="checkbox__label" for="accordion-checkbox-95">Cт. 1</label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>

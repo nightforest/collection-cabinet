@@ -29,8 +29,8 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-ee4724ce.js"></script>
-      <link rel="stylesheet" href="/assets/main-4b17c12e.css">
+      <script type="module" crossorigin src="/assets/main-32cd6bc6.js"></script>
+      <link rel="stylesheet" href="/assets/main-f61f4769.css">
     </head>
     <body>
         <!-- Header -->
@@ -123,20 +123,37 @@
       </button>
     </div>
     <header class="bookmarks-section__header">
-      <h1 class="page-title bookmarks-section__title">Мій профіль</h1>
-      <form class="search bookmarks-section__search" id="bookmark-search-form" autocomplete="off" novalidate="novalidate">
-        <div class="search__group">
-          <input class="input search__input" id="inputBookmarkSearch" type="text" name="inputBookmarkSearch" placeholder="Пошук по файлах" autocomplete="off" required="required"/>
-          <button class="search__button">
-            <svg class="search__icon" width="21" height="21">
-              <use xlink:href="img/sprite.svg#search"></use>
-            </svg>
-          </button>
+      <div class="bookmarks-section__header-row">
+        <h1 class="page-title bookmarks-section__title">Мій профіль</h1>
+        <form class="sort-form bookmarks-section__sort-form" id="sort-form" autocomplete="off" novalidate="novalidate">
+          <div class="sort-form__group">
+            <select class="select" id="selectSortBy" name="selectSortBy" aria-label="Sort by" required="required">
+              <option value="1">Сортувати за датою</option>
+              <option value="2">Сортувати за назвою</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="bookmarks-section__header-row">
+        <button class="button button--outline bookmarks-section__back-button" type="button" aria-label="Back" data-tooltip="Назад">
+          <svg class="button__icon" width="10" height="19">
+            <use xlink:href="img/sprite.svg#arrow-left"></use>
+          </svg>
+        </button>
+        <form class="search bookmarks-section__search" id="bookmark-search-form" autocomplete="off" novalidate="novalidate">
+          <div class="search__group">
+            <input class="input search__input" id="inputBookmarkSearch" type="text" name="inputBookmarkSearch" placeholder="Пошук по файлах" autocomplete="off" required="required"/>
+            <button class="search__button">
+              <svg class="search__icon" width="21" height="21">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <div class="bookmarks-section__buttons">
+          <button class="button button--outline bookmarks-section__button" type="button">Додати статтю</button>
+          <button class="button button--outline bookmarks-section__button" type="button" data-modal="modal-create">Створити папку</button>
         </div>
-      </form>
-      <div class="bookmarks-section__buttons">
-        <button class="button button--outline bookmarks-section__button" type="button">Додати статтю</button>
-        <button class="button button--outline bookmarks-section__button" type="button" data-modal="modal-create">Створити папку</button>
       </div>
     </header>
     <ul class="bookmarks-section__list">
@@ -158,7 +175,7 @@
                 <use xlink:href="img/sprite.svg#case"></use>
               </svg>
             </div>
-            <h3 class="bookmark-card__title">Папка Фінанси</h3>
+            <h3 class="bookmark-card__title">Ухв про поверн ОА за пп. 5 п. 4 Прикінцевих не оскаржується</h3>
             <div class="bookmark-card__info">7 файлів</div></a>
         </div>
       </li>
@@ -322,10 +339,7 @@
 <aside class="filter is-hide">
   <div class="filter__panel">
     <div class="filter__top">
-      <div class="logo filter__logo"><a class="logo__link" href="#" aria-label="logo">
-          <svg class="logo__img" width="38" height="32">
-            <use xlink:href="img/sprite.svg#logo"></use>
-          </svg><span class="logo__title">База правових позицій</span></a></div>
+      <div class="logo filter__logo"><a class="logo__link" href="#" aria-label="logo"><img class="logo__img" src="img/logo-white.png" srcset="img/logo-white@2x.png 2x" width="82" height="61" alt="logo"/></a></div>
       <button class="burger filter__burger" type="button" aria-label="Open sidebar" aria-expanded="false" data-sidebar-toggle="data-sidebar-toggle">
         <div class="burger__line"></div>
         <div class="burger__line"></div>
@@ -339,7 +353,7 @@
             <use xlink:href="img/sprite.svg#filter"></use>
           </svg><span>Фільтр</span>
         </h3>
-        <button class="button button--outline filter__hide-button" type="button" aria-label="Hide Filter" data-filter-hide="data-filter-hide">
+        <button class="button button--outline filter__hide-button" type="button" aria-label="Hide Filter" data-tooltip-left="Регулювання масштабу" data-filter-hide="data-filter-hide">
           <svg class="button__icon" width="10" height="19">
             <use xlink:href="img/sprite.svg#arrow-left"></use>
           </svg>
@@ -376,7 +390,7 @@
                 <div class="accordion__header" id="accordion-header-2">
                   <div class="checkbox accordion__checkbox">
                     <input class="checkbox__input" id="accordion-checkbox-2" type="checkbox" name="checkbox" value="true" required="required"/>
-                    <label class="checkbox__label" for="accordion-checkbox-2">ст. №-№130 Розділ 1 загальні положення</label>
+                    <label class="checkbox__label" for="accordion-checkbox-2"> <strong class="red-color">625 - 675</strong> ст. №-№130 Розділ 1 загальні положення</label>
                   </div>
                   <button class="accordion__trigger" aria-expanded="true" aria-controls="accordion-content-2">
                     <svg class="accordion__icon" width="15" height="8">
@@ -404,7 +418,7 @@
                             <div class="accordion__header" id="accordion-header-9">
                               <div class="checkbox accordion__checkbox">
                                 <input class="checkbox__input" id="accordion-checkbox-9" type="checkbox" name="checkbox" value="true" required="required"/>
-                                <label class="checkbox__label" for="accordion-checkbox-9">ст. №-№130 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.</label>
+                                <label class="checkbox__label" for="accordion-checkbox-9">ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.</label>
                               </div>
                               <button class="accordion__trigger" aria-expanded="true" aria-controls="accordion-content-9">
                                 <svg class="accordion__icon" width="15" height="8">
@@ -414,10 +428,78 @@
                             </div>
                             <div class="accordion__content" id="accordion-content-9" role="region" aria-labelledby="accordion-header-9" aria-hidden="false">
                               <div class="accordion__inner">
-                                <div class="accordion__text">
-                                  <div class="checkbox accordion__checkbox">
-                                    <input class="checkbox__input" id="accordion-checkbox-91" type="checkbox" name="checkbox" value="true" required="required" checked="checked"/>
-                                    <label class="checkbox__label" for="accordion-checkbox-91">Cт. 1</label>
+                                <div class="accordion__panel">
+                                  <div class="accordion__header" id="accordion-header-91">
+                                    <div class="checkbox accordion__checkbox">
+                                      <input class="checkbox__input" id="accordion-checkbox-91" type="checkbox" name="checkbox" value="true" required="required"/>
+                                      <label class="checkbox__label" for="accordion-checkbox-91">ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.</label>
+                                    </div>
+                                    <button class="accordion__trigger" aria-expanded="true" aria-controls="accordion-content-91">
+                                      <svg class="accordion__icon" width="15" height="8">
+                                        <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                  <div class="accordion__content" id="accordion-content-91" role="region" aria-labelledby="accordion-header-91" aria-hidden="false">
+                                    <div class="accordion__inner">
+                                      <div class="accordion__panel">
+                                        <div class="accordion__header" id="accordion-header-92">
+                                          <div class="checkbox accordion__checkbox">
+                                            <input class="checkbox__input" id="accordion-checkbox-92" type="checkbox" name="checkbox" value="true" required="required"/>
+                                            <label class="checkbox__label" for="accordion-checkbox-92">ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.</label>
+                                          </div>
+                                          <button class="accordion__trigger" aria-expanded="true" aria-controls="accordion-content-92">
+                                            <svg class="accordion__icon" width="15" height="8">
+                                              <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                        <div class="accordion__content" id="accordion-content-92" role="region" aria-labelledby="accordion-header-92" aria-hidden="false">
+                                          <div class="accordion__inner">
+                                            <div class="accordion__panel">
+                                              <div class="accordion__header" id="accordion-header-93">
+                                                <div class="checkbox accordion__checkbox">
+                                                  <input class="checkbox__input" id="accordion-checkbox-93" type="checkbox" name="checkbox" value="true" required="required"/>
+                                                  <label class="checkbox__label" for="accordion-checkbox-93">ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.</label>
+                                                </div>
+                                                <button class="accordion__trigger" aria-expanded="true" aria-controls="accordion-content-93">
+                                                  <svg class="accordion__icon" width="15" height="8">
+                                                    <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                              <div class="accordion__content" id="accordion-content-93" role="region" aria-labelledby="accordion-header-93" aria-hidden="false">
+                                                <div class="accordion__inner">
+                                                  <div class="accordion__panel">
+                                                    <div class="accordion__header" id="accordion-header-94">
+                                                      <div class="checkbox accordion__checkbox">
+                                                        <input class="checkbox__input" id="accordion-checkbox-94" type="checkbox" name="checkbox" value="true" required="required"/>
+                                                        <label class="checkbox__label" for="accordion-checkbox-94">ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.</label>
+                                                      </div>
+                                                      <button class="accordion__trigger" aria-expanded="true" aria-controls="accordion-content-94">
+                                                        <svg class="accordion__icon" width="15" height="8">
+                                                          <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                                                        </svg>
+                                                      </button>
+                                                    </div>
+                                                    <div class="accordion__content" id="accordion-content-94" role="region" aria-labelledby="accordion-header-94" aria-hidden="false">
+                                                      <div class="accordion__inner">
+                                                        <div class="accordion__text">
+                                                          <div class="checkbox accordion__checkbox">
+                                                            <input class="checkbox__input" id="accordion-checkbox-95" type="checkbox" name="checkbox" value="true" required="required" checked="checked"/>
+                                                            <label class="checkbox__label" for="accordion-checkbox-95">Cт. 1</label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>

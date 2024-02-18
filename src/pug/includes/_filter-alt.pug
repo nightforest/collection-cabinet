@@ -3,10 +3,7 @@ aside.filter.is-hide
         .filter__top
             .logo.filter__logo
                 a.logo__link(href="#" aria-label="logo")
-                    svg.logo__img(width="38" height="32")
-                        use(xlink:href="img/sprite.svg#logo")
-                    
-                    span.logo__title База правових позицій
+                    img.logo__img(src="img/logo-white.png" srcset="img/logo-white@2x.png 2x" width="82" height="61" alt="logo")
 
             button.burger.filter__burger(type="button" aria-label="Open sidebar" aria-expanded="false" data-sidebar-toggle)
                 .burger__line
@@ -20,7 +17,7 @@ aside.filter.is-hide
                         use(xlink:href="img/sprite.svg#filter")
                     span Фільтр
 
-                button.button.button--outline.filter__hide-button(type="button" aria-label="Hide Filter" data-filter-hide)
+                button.button.button--outline.filter__hide-button(type="button" aria-label="Hide Filter" data-tooltip-left="Регулювання масштабу" data-filter-hide)
                     svg.button__icon(width="10" height="19")
                         use(xlink:href="img/sprite.svg#arrow-left")
                 
@@ -51,7 +48,9 @@ aside.filter.is-hide
                                 .accordion__header#accordion-header-2
                                     .checkbox.accordion__checkbox
                                         input.checkbox__input#accordion-checkbox-2(type="checkbox" name="checkbox" value="true" required)
-                                        label.checkbox__label(for="accordion-checkbox-2") ст. №-№130 Розділ 1 загальні положення
+                                        label.checkbox__label(for="accordion-checkbox-2") 
+                                            strong.red-color 625 - 675
+                                            |  ст. №-№130 Розділ 1 загальні положення
 
                                     button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-2")
                                         svg.accordion__icon(width="15" height="8")
@@ -75,7 +74,7 @@ aside.filter.is-hide
                                                         .accordion__header#accordion-header-9
                                                             .checkbox.accordion__checkbox
                                                                 input.checkbox__input#accordion-checkbox-9(type="checkbox" name="checkbox" value="true" required)
-                                                                label.checkbox__label(for="accordion-checkbox-9") ст. №-№130 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.
+                                                                label.checkbox__label(for="accordion-checkbox-9") ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.
 
                                                             button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-9")
                                                                 svg.accordion__icon(width="15" height="8")
@@ -83,10 +82,58 @@ aside.filter.is-hide
 
                                                         .accordion__content#accordion-content-9(role="region" aria-labelledby="accordion-header-9" aria-hidden="false")
                                                             .accordion__inner
-                                                                .accordion__text
-                                                                    .checkbox.accordion__checkbox
-                                                                        input.checkbox__input#accordion-checkbox-91(type="checkbox" name="checkbox" value="true" required checked)
-                                                                        label.checkbox__label(for="accordion-checkbox-91") Cт. 1
+                                                                .accordion__panel
+                                                                    .accordion__header#accordion-header-91
+                                                                        .checkbox.accordion__checkbox
+                                                                            input.checkbox__input#accordion-checkbox-91(type="checkbox" name="checkbox" value="true" required)
+                                                                            label.checkbox__label(for="accordion-checkbox-91") ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.
+
+                                                                        button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-91")
+                                                                            svg.accordion__icon(width="15" height="8")
+                                                                                use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                                                    .accordion__content#accordion-content-91(role="region" aria-labelledby="accordion-header-91" aria-hidden="false")
+                                                                        .accordion__inner
+                                                                            .accordion__panel
+                                                                                .accordion__header#accordion-header-92
+                                                                                    .checkbox.accordion__checkbox
+                                                                                        input.checkbox__input#accordion-checkbox-92(type="checkbox" name="checkbox" value="true" required)
+                                                                                        label.checkbox__label(for="accordion-checkbox-92") ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.
+
+                                                                                    button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-92")
+                                                                                        svg.accordion__icon(width="15" height="8")
+                                                                                            use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                                                                .accordion__content#accordion-content-92(role="region" aria-labelledby="accordion-header-92" aria-hidden="false")
+                                                                                    .accordion__inner
+                                                                                        .accordion__panel
+                                                                                            .accordion__header#accordion-header-93
+                                                                                                .checkbox.accordion__checkbox
+                                                                                                    input.checkbox__input#accordion-checkbox-93(type="checkbox" name="checkbox" value="true" required)
+                                                                                                    label.checkbox__label(for="accordion-checkbox-93") ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.
+
+                                                                                                button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-93")
+                                                                                                    svg.accordion__icon(width="15" height="8")
+                                                                                                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                                                                            .accordion__content#accordion-content-93(role="region" aria-labelledby="accordion-header-93" aria-hidden="false")
+                                                                                                .accordion__inner
+                                                                                                    .accordion__panel
+                                                                                                        .accordion__header#accordion-header-94
+                                                                                                            .checkbox.accordion__checkbox
+                                                                                                                input.checkbox__input#accordion-checkbox-94(type="checkbox" name="checkbox" value="true" required)
+                                                                                                                label.checkbox__label(for="accordion-checkbox-94") ст. №-№131 Розділ 1 загальні положення Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, eius.
+
+                                                                                                            button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-94")
+                                                                                                                svg.accordion__icon(width="15" height="8")
+                                                                                                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                                                                                                        .accordion__content#accordion-content-94(role="region" aria-labelledby="accordion-header-94" aria-hidden="false")
+                                                                                                            .accordion__inner
+                                                                                                                .accordion__text
+                                                                                                                    .checkbox.accordion__checkbox
+                                                                                                                        input.checkbox__input#accordion-checkbox-95(type="checkbox" name="checkbox" value="true" required checked)
+                                                                                                                        label.checkbox__label(for="accordion-checkbox-95") Cт. 1
 
                                                     .accordion__panel
                                                         .accordion__header#accordion-header-10
