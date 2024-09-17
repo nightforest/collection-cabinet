@@ -1,13 +1,13 @@
 header.header.is-full
     .container.header__container
-        button.burger.header__burger(type="button" aria-label="Open sidebar" aria-expanded="false" data-sidebar-toggle)
+        button.burger.header__burger(type="button" aria-label="Open sidebar" aria-expanded="false" data-modal-once="modal-tip-7" data-sidebar-toggle)
             .burger__line
             .burger__line
             .burger__line
 
-        a.button.header__button(href="#") Модуль КК
+        a.button.header__button(href="#" data-modal-once="modal-tip-3") Модуль КК
 
-        a.button.button--outline.header__button(href="#") Модуль КПК
+        a.button.button--outline.header__button(href="#" data-modal-once="modal-tip-3") Модуль КПК
 
         form.search.header__search(id="search-form" autocomplete="off" novalidate="novalidate")
             .search__group
@@ -57,7 +57,7 @@ header.header.is-full
                 a.button.actions__button.actions__button--big(href="#") Моя підписка
 
             li.actions__item.actions__item--visible-md
-                button.button.button--outline.actions__button(type="button" data-modal="modal-search" aria-label="Show search modal")
+                button.button.button--outline.actions__button(type="button" data-modal-once="modal-tip-6" aria-label="Show search modal")
                     svg.button__icon(width="21" height="21")
                         use(xlink:href="img/sprite.svg#search")
 

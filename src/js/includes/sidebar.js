@@ -6,8 +6,8 @@ const sidebar = () => {
     const paddingRight = window.innerWidth - document.documentElement.clientWidth;
     
     mobileNavToggleAll?.forEach(item => {
-        item?.addEventListener('click', e => {
-            e.preventDefault();
+        item?.addEventListener('click', () => {
+            // e.preventDefault();
             mobileNavShowHide();
         });
     });

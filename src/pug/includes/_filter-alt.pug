@@ -5,7 +5,7 @@ aside.filter.is-hide
                 a.logo__link(href="#" aria-label="logo")
                     img.logo__img(src="img/logo-white.png" srcset="img/logo-white@2x.png 2x" width="82" height="61" alt="logo")
 
-            button.burger.filter__burger(type="button" aria-label="Open sidebar" aria-expanded="false" data-sidebar-toggle)
+            button.burger.filter__burger(type="button" aria-label="Open sidebar" aria-expanded="false" data-modal-once="modal-tip-7" data-sidebar-toggle)
                 .burger__line
                 .burger__line
                 .burger__line
@@ -17,7 +17,7 @@ aside.filter.is-hide
                         use(xlink:href="img/sprite.svg#filter")
                     span Фільтр
 
-                button.button.button--outline.filter__hide-button(type="button" aria-label="Hide Filter" data-tooltip-left="Регулювання масштабу" data-filter-hide)
+                button.button.button--outline.filter__hide-button(type="button" aria-label="Hide Filter" data-modal-once="modal-tip-3" data-tooltip-left="Регулювання масштабу" data-filter-hide)
                     svg.button__icon(width="10" height="19")
                         use(xlink:href="img/sprite.svg#arrow-left")
                 
@@ -27,7 +27,7 @@ aside.filter.is-hide
             
             form.search.filter__search(id="filter-search-form" autocomplete="off" novalidate="novalidate")
                 .search__group
-                    input#inputFilterSearch.input.search__input(type="text" name="inputFilterSearch" placeholder="Пошук..." autocomplete="off" required)
+                    input#inputFilterSearch.input.search__input(type="text" name="inputFilterSearch" data-modal-once="modal-tip-6" placeholder="Пошук..." autocomplete="off" required)
 
                     button.search__button
                         svg.search__icon(width="21" height="21")
@@ -38,7 +38,7 @@ aside.filter.is-hide
                     .accordion__header#accordion-header-1
                         h3.accordion__title КК
 
-                        button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-1")
+                        button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-1" data-modal-once="modal-tip-4")
                             svg.accordion__icon(width="15" height="8")
                                 use(xlink:href="img/sprite.svg#dropdown-arrow")
 
@@ -48,7 +48,7 @@ aside.filter.is-hide
                                 .accordion__header#accordion-header-2
                                     .checkbox.accordion__checkbox
                                         input.checkbox__input#accordion-checkbox-2(type="checkbox" name="checkbox" value="true" required)
-                                        label.checkbox__label(for="accordion-checkbox-2") 
+                                        label.checkbox__label(for="accordion-checkbox-2" data-modal-once="modal-tip-5") 
                                             strong.red-color 625 - 675
                                             |  ст. №-№130 Розділ 1 загальні положення
 
@@ -62,7 +62,7 @@ aside.filter.is-hide
                                             .accordion__header#accordion-header-6
                                                 .checkbox.accordion__checkbox
                                                     input.checkbox__input#accordion-checkbox-6(type="checkbox" name="checkbox" value="true" required)
-                                                    label.checkbox__label(for="accordion-checkbox-6") ст. №-№130 Розділ 1 загальні положення
+                                                    label.checkbox__label(for="accordion-checkbox-6" data-modal-once="modal-tip-5") ст. №-№130 Розділ 1 загальні положення
 
                                                 button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-6")
                                                     svg.accordion__icon(width="15" height="8")
@@ -255,5 +255,5 @@ aside.filter.is-hide
                                                 label.checkbox__label(for="accordion-checkbox-51") Cт. 1
 
         .filter__bottom
-            button.button.button--outline.filter__button(type="button") Скинути
+            button.button.button--outline.filter__button(type="button" data-modal-once="modal-tip-13") Скинути
             button.button.filter__button(type="button") Показати (213)
