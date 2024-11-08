@@ -1,33 +1,41 @@
-section.collection-section
+section.collection-section.collection-section--pt-0
     .container.collection-section__container
-        .filter-toggle
-            h3.filter-toggle__title Фільтр
-            
-            button.button.button--outline.filter-toggle__button(type="button" aria-label="Hide Filter" data-filter-toggle)
-                svg.button__icon(width="20" height="20p")
-                    use(xlink:href="img/sprite.svg#filter")
+        header.collection-section__sticky-header
+            .filter-toggle.collection-section__filter-toggle
+                h3.filter-toggle__title Фільтр
+                
+                button.button.button--outline.filter-toggle__button(type="button" aria-label="Hide Filter" data-filter-toggle)
+                    svg.button__icon(width="20" height="20p")
+                        use(xlink:href="img/sprite.svg#filter")
 
-        form.sort-form.collection-section__sort-form(id="sort-form" autocomplete="off" novalidate="novalidate")
-            .sort-form__group
-                select#selectSortBy.select(name="selectSortBy" aria-label="Sort by" required)
-                    option(value="1") Сортувати за зростанням
-                    option(value="2") Сортувати за спаданням
+            form.sort-form.collection-section__sort-form(id="sort-form" autocomplete="off" novalidate="novalidate")
+                .sort-form__group
+                    select#selectSortBy.select(name="selectSortBy" aria-label="Sort by" required)
+                        option(value="1") Сортувати за зростанням
+                        option(value="2") Сортувати за ієрархією судових рішень (ВПВС, ОПВС, ККСВС) та хронологією
 
         table.collection-table
             thead.collection-table__thead
                 tr
                     th Дата
-                        .sort
-                            button.sort__button(type="button" aria-label="Sort up")
-                                svg.sort__icon(width="11" height="6")
-                                    use(xlink:href="img/sprite.svg#sort-up-arrow")
+                        //- .sort
+                        //-     button.sort__button(type="button" aria-label="Sort up")
+                        //-         svg.sort__icon(width="11" height="6")
+                        //-             use(xlink:href="img/sprite.svg#sort-up-arrow")
                             
-                            button.sort__button(type="button" aria-label="Sort up")
-                                svg.sort__icon(width="11" height="6")
-                                    use(xlink:href="img/sprite.svg#sort-down-arrow")
+                        //-     button.sort__button(type="button" aria-label="Sort up")
+                        //-         svg.sort__icon(width="11" height="6")
+                        //-             use(xlink:href="img/sprite.svg#sort-down-arrow")
 
                     th Назва статті
-                    th Опис
+                    th
+                        .collection-table__th-group
+                            span Опис
+                            form.sort-form.collection-table__sort-form(id="sort-table-form" autocomplete="off" novalidate="novalidate")
+                                .sort-form__group
+                                    select#selectSortBy.select(name="selectSortBy" aria-label="Sort by" required)
+                                        option(value="1") Сортувати за спаданням
+                                        option(value="2") Сортувати за ієрархією судових рішень (ВПВС, ОПВС, ККСВС) та хронологією
             
             tbody.collection-table__tbody
                 tr
@@ -77,6 +85,100 @@ section.collection-section
                                 svg.collection-descr__more-icon(width="8" height="4")
                                     use(xlink:href="img/sprite.svg#dropdown-arrow")
 
+                tr
+                    td
+                        time.collection-table__date
+                            a.black-link(href="#") 27.11.2023
+                        span.collection-table__info
+                            a.black-link(href="#") ккс вс
+                        
+                        ul.actions.actions--center.collection-table__actions
+                            li.actions__item
+                                button.button.button--xs.button--outline(type="button" aria-label="Add to bookmarks" data-tooltip="В закладки" data-modal="modal-bookmark")
+                                    svg.button__icon(width="14" height="14")
+                                        use(xlink:href="img/sprite.svg#bookmark")
+
+                            li.actions__item
+                                button.button.button--xs.button--outline(type="button" aria-label="Download" data-tooltip="Скачати")
+                                    svg.button__icon(width="14" height="14")
+                                        use(xlink:href="img/sprite.svg#download")
+
+                            li.actions__item
+                                button.button.button--xs.button--outline(type="button" aria-label="Share" data-tooltip="Поділитися")
+                                    svg.button__icon(width="14" height="14")
+                                        use(xlink:href="img/sprite.svg#share")
+                    
+                    td
+                        h4.collection-table__title
+                            a.black-link(href="#") Кримінальне процесуальне законодавство України
+                        
+                        .collection-table__link-group  
+                            a.blue-link.collection-table__link(href="#") Посилання на рішення
+
+                            button.button.button--outline.button--xs(type="button" aria-label="Copy" data-tooltip="Копіювати")
+                                svg.button__icon(width="14" height="14")
+                                    use(xlink:href="img/sprite.svg#copy")
+                    
+                    td
+                        .collection-descr
+                            a.black-link.collection-descr__text(href="#")
+                                p Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...
+                                
+                                .collection-descr__hidden
+                                    p Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...
+
+                            button.collection-descr__more(type="button")
+                                span Читати детальніше
+                                svg.collection-descr__more-icon(width="8" height="4")
+                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+                
+                tr
+                    td
+                        time.collection-table__date
+                            a.black-link(href="#") 27.11.2023
+                        span.collection-table__info
+                            a.black-link(href="#") ккс вс
+                        
+                        ul.actions.actions--center.collection-table__actions
+                            li.actions__item
+                                button.button.button--xs.button--outline(type="button" aria-label="Add to bookmarks" data-tooltip="В закладки" data-modal="modal-bookmark")
+                                    svg.button__icon(width="14" height="14")
+                                        use(xlink:href="img/sprite.svg#bookmark")
+
+                            li.actions__item
+                                button.button.button--xs.button--outline(type="button" aria-label="Download" data-tooltip="Скачати")
+                                    svg.button__icon(width="14" height="14")
+                                        use(xlink:href="img/sprite.svg#download")
+
+                            li.actions__item
+                                button.button.button--xs.button--outline(type="button" aria-label="Share" data-tooltip="Поділитися")
+                                    svg.button__icon(width="14" height="14")
+                                        use(xlink:href="img/sprite.svg#share")
+                    
+                    td
+                        h4.collection-table__title
+                            a.black-link(href="#") Кримінальне процесуальне законодавство України
+                        
+                        .collection-table__link-group  
+                            a.blue-link.collection-table__link(href="#") Посилання на рішення
+
+                            button.button.button--outline.button--xs(type="button" aria-label="Copy" data-tooltip="Копіювати")
+                                svg.button__icon(width="14" height="14")
+                                    use(xlink:href="img/sprite.svg#copy")
+                    
+                    td
+                        .collection-descr
+                            a.black-link.collection-descr__text(href="#")
+                                p Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...
+                                
+                                .collection-descr__hidden
+                                    p Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...
+
+                            button.collection-descr__more(type="button")
+                                span Читати детальніше
+                                svg.collection-descr__more-icon(width="8" height="4")
+                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+                                    
                 tr
                     td
                         time.collection-table__date

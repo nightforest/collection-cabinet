@@ -29,13 +29,13 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-2b5eeff9.js"></script>
-      <link rel="stylesheet" href="/assets/main-80eba807.css">
+      <script type="module" crossorigin src="/assets/main-038a7e6a.js"></script>
+      <link rel="stylesheet" href="/assets/main-814527fc.css">
     </head>
     <body>
         <!-- Header -->
         
-<header class="header">
+<header class="header header--rel">
   <div class="container header__container">
     <button class="burger header__burger" type="button" aria-label="Open sidebar" aria-expanded="false" data-sidebar-toggle="data-sidebar-toggle">
       <div class="burger__line"></div>
@@ -110,48 +110,150 @@
 </header>
 
         <!-- Main -->
-        <main id="main" class="main">
+        <main id="main" class="main main--pt-0">
             
-<section class="collection-section">
+<section class="collection-section collection-section--pt-0">
   <div class="container collection-section__container">
-    <div class="filter-toggle">
-      <h3 class="filter-toggle__title">Фільтр</h3>
-      <button class="button button--outline filter-toggle__button" type="button" aria-label="Hide Filter" data-filter-toggle="data-filter-toggle">
-        <svg class="button__icon" width="20" height="20p">
-          <use xlink:href="img/sprite.svg#filter"></use>
-        </svg>
-      </button>
-    </div>
-    <form class="sort-form collection-section__sort-form" id="sort-form" autocomplete="off" novalidate="novalidate">
-      <div class="sort-form__group">
-        <select class="select" id="selectSortBy" name="selectSortBy" aria-label="Sort by" required="required">
-          <option value="1">Сортувати за зростанням</option>
-          <option value="2">Сортувати за спаданням</option>
-        </select>
+    <header class="collection-section__sticky-header">
+      <div class="filter-toggle collection-section__filter-toggle">
+        <h3 class="filter-toggle__title">Фільтр</h3>
+        <button class="button button--outline filter-toggle__button" type="button" aria-label="Hide Filter" data-filter-toggle="data-filter-toggle">
+          <svg class="button__icon" width="20" height="20p">
+            <use xlink:href="img/sprite.svg#filter"></use>
+          </svg>
+        </button>
       </div>
-    </form>
+      <form class="sort-form collection-section__sort-form" id="sort-form" autocomplete="off" novalidate="novalidate">
+        <div class="sort-form__group">
+          <select class="select" id="selectSortBy" name="selectSortBy" aria-label="Sort by" required="required">
+            <option value="1">Сортувати за зростанням</option>
+            <option value="2">Сортувати за ієрархією судових рішень (ВПВС, ОПВС, ККСВС) та хронологією</option>
+          </select>
+        </div>
+      </form>
+    </header>
     <table class="collection-table">
       <thead class="collection-table__thead">
         <tr>
-          <th>Дата
-            <div class="sort">
-              <button class="sort__button" type="button" aria-label="Sort up">
-                <svg class="sort__icon" width="11" height="6">
-                  <use xlink:href="img/sprite.svg#sort-up-arrow"></use>
-                </svg>
-              </button>
-              <button class="sort__button" type="button" aria-label="Sort up">
-                <svg class="sort__icon" width="11" height="6">
-                  <use xlink:href="img/sprite.svg#sort-down-arrow"></use>
-                </svg>
-              </button>
+          <th>Дата</th>
+          <th>Назва статті</th>
+          <th>
+            <div class="collection-table__th-group"><span>Опис</span>
+              <form class="sort-form collection-table__sort-form" id="sort-table-form" autocomplete="off" novalidate="novalidate">
+                <div class="sort-form__group">
+                  <select class="select" id="selectSortBy" name="selectSortBy" aria-label="Sort by" required="required">
+                    <option value="1">Сортувати за спаданням</option>
+                    <option value="2">Сортувати за ієрархією судових рішень (ВПВС, ОПВС, ККСВС) та хронологією</option>
+                  </select>
+                </div>
+              </form>
             </div>
           </th>
-          <th>Назва статті</th>
-          <th>Опис</th>
         </tr>
       </thead>
       <tbody class="collection-table__tbody">
+        <tr>
+          <td>
+            <time class="collection-table__date"><a class="black-link" href="#">27.11.2023</a></time><span class="collection-table__info"><a class="black-link" href="#">ккс вс</a></span>
+            <ul class="actions actions--center collection-table__actions">
+              <li class="actions__item">
+                <button class="button button--xs button--outline" type="button" aria-label="Add to bookmarks" data-tooltip="В закладки" data-modal="modal-bookmark">
+                  <svg class="button__icon" width="14" height="14">
+                    <use xlink:href="img/sprite.svg#bookmark"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="actions__item">
+                <button class="button button--xs button--outline" type="button" aria-label="Download" data-tooltip="Скачати">
+                  <svg class="button__icon" width="14" height="14">
+                    <use xlink:href="img/sprite.svg#download"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="actions__item">
+                <button class="button button--xs button--outline" type="button" aria-label="Share" data-tooltip="Поділитися">
+                  <svg class="button__icon" width="14" height="14">
+                    <use xlink:href="img/sprite.svg#share"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </td>
+          <td>
+            <h4 class="collection-table__title"><a class="black-link" href="#">Кримінальне процесуальне законодавство України</a></h4>
+            <div class="collection-table__link-group"> <a class="blue-link collection-table__link" href="#">Посилання на рішення</a>
+              <button class="button button--outline button--xs" type="button" aria-label="Copy" data-tooltip="Копіювати">
+                <svg class="button__icon" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#copy"></use>
+                </svg>
+              </button>
+            </div>
+          </td>
+          <td>
+            <div class="collection-descr"><a class="black-link collection-descr__text" href="#">
+                <p>Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...</p>
+                <div class="collection-descr__hidden">
+                  <p>Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...</p>
+                </div></a>
+              <button class="collection-descr__more" type="button"><span>Читати детальніше</span>
+                <svg class="collection-descr__more-icon" width="8" height="4">
+                  <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <time class="collection-table__date"><a class="black-link" href="#">27.11.2023</a></time><span class="collection-table__info"><a class="black-link" href="#">ккс вс</a></span>
+            <ul class="actions actions--center collection-table__actions">
+              <li class="actions__item">
+                <button class="button button--xs button--outline" type="button" aria-label="Add to bookmarks" data-tooltip="В закладки" data-modal="modal-bookmark">
+                  <svg class="button__icon" width="14" height="14">
+                    <use xlink:href="img/sprite.svg#bookmark"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="actions__item">
+                <button class="button button--xs button--outline" type="button" aria-label="Download" data-tooltip="Скачати">
+                  <svg class="button__icon" width="14" height="14">
+                    <use xlink:href="img/sprite.svg#download"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="actions__item">
+                <button class="button button--xs button--outline" type="button" aria-label="Share" data-tooltip="Поділитися">
+                  <svg class="button__icon" width="14" height="14">
+                    <use xlink:href="img/sprite.svg#share"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </td>
+          <td>
+            <h4 class="collection-table__title"><a class="black-link" href="#">Кримінальне процесуальне законодавство України</a></h4>
+            <div class="collection-table__link-group"> <a class="blue-link collection-table__link" href="#">Посилання на рішення</a>
+              <button class="button button--outline button--xs" type="button" aria-label="Copy" data-tooltip="Копіювати">
+                <svg class="button__icon" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#copy"></use>
+                </svg>
+              </button>
+            </div>
+          </td>
+          <td>
+            <div class="collection-descr"><a class="black-link collection-descr__text" href="#">
+                <p>Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...</p>
+                <div class="collection-descr__hidden">
+                  <p>Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки... Онлайн-сервисы помогают пользователям решать самые разные задачи в интернете: проводить финансовые транзакции, совершать покупки...</p>
+                </div></a>
+              <button class="collection-descr__more" type="button"><span>Читати детальніше</span>
+                <svg class="collection-descr__more-icon" width="8" height="4">
+                  <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
         <tr>
           <td>
             <time class="collection-table__date"><a class="black-link" href="#">27.11.2023</a></time><span class="collection-table__info"><a class="black-link" href="#">ккс вс</a></span>
