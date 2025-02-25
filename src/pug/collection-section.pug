@@ -1,18 +1,18 @@
-section.collection-section.collection-section--pt-0
+section.collection-section
     .container.collection-section__container
-        header.collection-section__sticky-header
-            .filter-toggle.collection-section__filter-toggle
-                h3.filter-toggle__title Фільтр
-                
-                button.button.button--outline.filter-toggle__button(type="button" aria-label="Hide Filter" data-filter-toggle)
-                    svg.button__icon(width="20" height="20p")
-                        use(xlink:href="img/sprite.svg#filter")
+        .filter-toggle.collection-section__filter-toggle
+            h3.filter-toggle__title Фільтр
+                span.filter-toggle__info.green-color У вас є активні фільтри
+            
+            button.button.button--outline.filter-toggle__button.is-active(type="button" aria-label="Hide Filter" data-filter-toggle)
+                svg.button__icon(width="20" height="20")
+                    use(xlink:href="img/sprite.svg#filter")
 
-            form.sort-form.collection-section__sort-form(id="sort-form" autocomplete="off" novalidate="novalidate")
-                .sort-form__group
-                    select#selectSortBy.select(name="selectSortBy" aria-label="Sort by" required)
-                        option(value="1") Сортувати за зростанням
-                        option(value="2") Сортувати за ієрархією судових рішень (ВПВС, ОПВС, ККСВС) та хронологією
+        form.sort-form.collection-section__sort-form(id="sort-form" autocomplete="off" novalidate="novalidate")
+            .sort-form__group
+                select#selectSortBy.select(name="selectSortBy" aria-label="Sort by" required)
+                    option(value="1") Сортувати за зростанням
+                    option(value="2") Сортувати за ієрархією судових рішень (ВПВС, ОПВС, ККСВС) та хронологією
 
         table.collection-table
             thead.collection-table__thead
@@ -40,10 +40,8 @@ section.collection-section.collection-section--pt-0
             tbody.collection-table__tbody
                 tr
                     td
-                        time.collection-table__date
-                            a.black-link(href="#") 27.11.2023
-                        span.collection-table__info
-                            a.black-link(href="#") ккс вс
+                        a.collection-table__date(href="#") 27.11.2023
+                        a.collection-table__info(href="#") ккс вс
 
                         ul.actions.actions--center.collection-table__actions
                             li.actions__item
@@ -84,13 +82,15 @@ section.collection-section.collection-section--pt-0
                                 span Читати детальніше
                                 svg.collection-descr__more-icon(width="8" height="4")
                                     use(xlink:href="img/sprite.svg#dropdown-arrow")
+                            
+                            button.button.button--outline.button--xs(type="button" aria-label="Copy" data-tooltip="Копіювати")
+                                svg.button__icon(width="14" height="14")
+                                    use(xlink:href="img/sprite.svg#copy")
 
                 tr
                     td
-                        time.collection-table__date
-                            a.black-link(href="#") 27.11.2023
-                        span.collection-table__info
-                            a.black-link(href="#") ккс вс
+                        a.collection-table__date(href="#") 27.11.2023
+                        a.collection-table__info(href="#") ккс вс
                         
                         ul.actions.actions--center.collection-table__actions
                             li.actions__item
@@ -131,13 +131,15 @@ section.collection-section.collection-section--pt-0
                                 span Читати детальніше
                                 svg.collection-descr__more-icon(width="8" height="4")
                                     use(xlink:href="img/sprite.svg#dropdown-arrow")
+                            
+                            button.button.button--outline.button--xs(type="button" aria-label="Copy" data-tooltip="Копіювати")
+                                svg.button__icon(width="14" height="14")
+                                    use(xlink:href="img/sprite.svg#copy")
                 
                 tr
                     td
-                        time.collection-table__date
-                            a.black-link(href="#") 27.11.2023
-                        span.collection-table__info
-                            a.black-link(href="#") ккс вс
+                        a.collection-table__date(href="#") 27.11.2023
+                        a.collection-table__info(href="#") ккс вс
                         
                         ul.actions.actions--center.collection-table__actions
                             li.actions__item
@@ -178,13 +180,15 @@ section.collection-section.collection-section--pt-0
                                 span Читати детальніше
                                 svg.collection-descr__more-icon(width="8" height="4")
                                     use(xlink:href="img/sprite.svg#dropdown-arrow")
+                            
+                            button.button.button--outline.button--xs(type="button" aria-label="Copy" data-tooltip="Копіювати")
+                                svg.button__icon(width="14" height="14")
+                                    use(xlink:href="img/sprite.svg#copy")
                                     
                 tr
                     td
-                        time.collection-table__date
-                            a.black-link(href="#") 27.11.2023
-                        span.collection-table__info
-                            a.black-link(href="#") ккс вс
+                        a.collection-table__date(href="#") 27.11.2023
+                        a.collection-table__info(href="#") ккс вс
                         
                         ul.actions.actions--center.collection-table__actions
                             li.actions__item
@@ -225,6 +229,10 @@ section.collection-section.collection-section--pt-0
                                 span Читати детальніше
                                 svg.collection-descr__more-icon(width="8" height="4")
                                     use(xlink:href="img/sprite.svg#dropdown-arrow")
+                            
+                            button.button.button--outline.button--xs(type="button" aria-label="Copy" data-tooltip="Копіювати")
+                                svg.button__icon(width="14" height="14")
+                                    use(xlink:href="img/sprite.svg#copy")
 
         nav.pagenav.collection-section__pagenav(aria-label="Page navigation")
             ul.pagenav__list

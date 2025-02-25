@@ -6,7 +6,11 @@
 
     &__input
         padding-right: 44px
-        border-color: var(--blue)
+
+        @media ($max-md)
+            height: 40px
+            font-size: 12px
+            padding-left: 12px
 
         &.just-validate-error-field
             border-color: var(--red)
@@ -22,7 +26,7 @@
         justify-content: center
         width: 24px
         height: 24px
-        color: var(--black)
+        color: var(--grey)
         transition: color .5s ease
 
         &:hover,
@@ -31,7 +35,7 @@
             color: var(--blue)
 
         &:disabled
-            color: var(--grey)
+            color: var(--grey-alt)
     
     .just-validate-error-label
         position: absolute

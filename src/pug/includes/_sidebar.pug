@@ -55,7 +55,15 @@ aside.sidebar
                             span.sidebar-menu__title Моя підписка
 
                     li.sidebar-menu__item
-                        a.button.button--outline.sidebar-menu__button(href="#") Модуль КК
+                        a.sidebar-menu__link(href="#")
+                            span.sidebar-menu__pic
+                                svg.sidebar-menu__icon(width="21" height="19")
+                                    use(xlink:href="img/sprite.svg#logout")
 
-                    li.sidebar-menu__item
-                        a.button.button--outline.sidebar-menu__button(href="#") Модуль КПК
+                            span.sidebar-menu__title Вихід
+
+                    //- li.sidebar-menu__item
+                    //-     a.button.button--outline.sidebar-menu__button(href="#") Модуль КК
+
+                    //- li.sidebar-menu__item
+                    //-     a.button.button--outline.sidebar-menu__button(href="#") Модуль КПК

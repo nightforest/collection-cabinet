@@ -1,13 +1,19 @@
 header.header.is-full
     .container.header__container
-        button.burger.header__burger(type="button" aria-label="Open sidebar" aria-expanded="false" data-modal-once="modal-tip-7" data-sidebar-toggle)
-            .burger__line
-            .burger__line
-            .burger__line
+        //- button.burger.header__burger(type="button" aria-label="Open sidebar" aria-expanded="false" data-modal-once="modal-tip-7" data-sidebar-toggle)
+        //-     .burger__line
+        //-     .burger__line
+        //-     .burger__line
 
         a.button.header__button(href="#" data-modal-once="modal-tip-3") Модуль КК
 
         a.button.button--outline.header__button(href="#" data-modal-once="modal-tip-3") Модуль КПК
+
+        a.button.button--outline.header__button(href="#" aria-label="Кабінет")
+            svg.sidebar-menu__icon(width="17" height="21")
+                use(xlink:href="img/sprite.svg#file")
+            
+            | Кабінет
 
         form.search.header__search(id="search-form" autocomplete="off" novalidate="novalidate")
             .search__group
@@ -18,12 +24,78 @@ header.header.is-full
                         use(xlink:href="img/sprite.svg#search")
 
         ul.actions.header__actions
+            li.actions__item.actions__item--visible-md
+                button.button.button--outline.actions__button(type="button" aria-label="Open sidebar" aria-expanded="false" data-modal-once="modal-tip-7" data-sidebar-toggle)
+                    svg.button__icon(width="17" height="17")
+                        use(xlink:href="img/sprite.svg#settings")
+
+            li.actions__item.actions__item--visible-md
+                button.button.button--outline.actions__button.is-active(type="button" aria-label="KK") КК
+            
+            li.actions__item.actions__item--visible-md
+                button.button.button--outline.actions__button(type="button" aria-label="KПK") КПК
+            
+            li.actions__item.actions__item--visible-md
+                button.button.button--outline.actions__button(type="button" aria-label="List")
+                    svg.button__icon(width="17" height="12")
+                        use(xlink:href="img/sprite.svg#list")
+            
+            li.actions__item.actions__item--visible-md
+                button.button.button--outline.actions__button(type="button" aria-label="View" disabled)
+                    svg.button__icon(width="17" height="11")
+                        use(xlink:href="img/sprite.svg#eye")
+            
+            li.actions__item.actions__item--visible-md
+                button.button.button--outline.actions__button(type="button" aria-label="Bookmarks")
+                    svg.button__icon(width="16" height="20")
+                        use(xlink:href="img/sprite.svg#bookmark")
+
             li.actions__item.is-dropdown.actions__item--hidden-md
                 button.button.button--outline.actions__button.is-dropdown__toggle(type="button" aria-label="Show dropdown menu")
                     svg.button__icon(width="21" height="22")
                         use(xlink:href="img/sprite.svg#bell")
                 
                 ul.actions-dropdown
+                    li.actions-dropdown__item
+                        .notification-card
+                            time.notification-card__date 27.11.2023
+
+                            .notification-card__info
+                                h3.notification-card__title Кримінальне процесуальне законодавство України
+                                a.button.button--outline.notification-card__more(href="#")
+                                    svg.button__icon(width="17" height="12")
+                                        use(xlink:href="img/sprite.svg#long-arrow-right")
+
+                    li.actions-dropdown__item
+                        .notification-card
+                            time.notification-card__date 27.11.2023
+
+                            .notification-card__info
+                                h3.notification-card__title Кримінальне процесуальне законодавство України
+                                a.button.button--outline.notification-card__more(href="#")
+                                    svg.button__icon(width="17" height="12")
+                                        use(xlink:href="img/sprite.svg#long-arrow-right")
+                    
+                    li.actions-dropdown__item
+                        .notification-card
+                            time.notification-card__date 27.11.2023
+
+                            .notification-card__info
+                                h3.notification-card__title Кримінальне процесуальне законодавство України
+                                a.button.button--outline.notification-card__more(href="#")
+                                    svg.button__icon(width="17" height="12")
+                                        use(xlink:href="img/sprite.svg#long-arrow-right")
+
+                    li.actions-dropdown__item
+                        .notification-card
+                            time.notification-card__date 27.11.2023
+
+                            .notification-card__info
+                                h3.notification-card__title Кримінальне процесуальне законодавство України
+                                a.button.button--outline.notification-card__more(href="#")
+                                    svg.button__icon(width="17" height="12")
+                                        use(xlink:href="img/sprite.svg#long-arrow-right")
+
                     li.actions-dropdown__item
                         .notification-card
                             time.notification-card__date 27.11.2023
@@ -56,12 +128,16 @@ header.header.is-full
             li.actions__item.actions__item--hidden-md
                 a.button.actions__button.actions__button--big(href="#") Моя підписка
 
-            li.actions__item.actions__item--visible-md
-                button.button.button--outline.actions__button(type="button" data-modal-once="modal-tip-6" aria-label="Show search modal")
-                    svg.button__icon(width="21" height="21")
-                        use(xlink:href="img/sprite.svg#search")
+            //- li.actions__item.actions__item--visible-md
+            //-     button.button.button--outline.actions__button(type="button" data-modal-once="modal-tip-6" aria-label="Show search modal")
+            //-         svg.button__icon(width="21" height="21")
+            //-             use(xlink:href="img/sprite.svg#search")
 
-            li.actions__item
+            li.actions__item.actions__item--hidden-md
                 a.button.button--outline.actions__button(href="#" aria-label="Logout")
                     svg.button__icon(width="24" height="22")
                         use(xlink:href="img/sprite.svg#logout")
+    
+        button.header__toggle-button(type="button" aria-label="Header toggle" data-header-toggle)
+            svg(width="12" height="8")
+                use(xlink:href="img/sprite.svg#dropdown-arrow")

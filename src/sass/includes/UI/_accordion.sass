@@ -29,13 +29,13 @@
     &__trigger
         position: absolute
         top: 5px
-        right: 10px
+        right: 5px
         display: flex
         align-items: center
         justify-content: center
         text-align: left
         gap: 15px
-        width: 40px
+        width: 48px
         height: 40px
         padding: 5px
         color: var(--blue)
@@ -44,8 +44,10 @@
         transition: all .5s ease
 
         &[aria-expanded="true"]
-            color: var(--blue)
-            background: #F7F8FA
+            color: var(--white)
+            background: var(--blue)
+            border-color: var(--blue-light)
+            box-shadow: 0 0 8px 0 #3fb7df
 
             .accordion__icon
                 transform: rotateX(180deg)

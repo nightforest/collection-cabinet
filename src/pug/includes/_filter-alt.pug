@@ -24,15 +24,47 @@ aside.filter.is-hide
                 button.button.button--outline.filter__toggle-button(type="button" aria-label="Hide Filter" data-filter-toggle)
                     svg.button__icon(width="17" height="17")
                         use(xlink:href="img/sprite.svg#close-modal")
-            
-            form.search.filter__search(id="filter-search-form" autocomplete="off" novalidate="novalidate")
-                .search__group
-                    input#inputFilterSearch.input.search__input(type="text" name="inputFilterSearch" data-modal-once="modal-tip-6" placeholder="Пошук..." autocomplete="off" required)
 
-                    button.search__button
-                        svg.search__icon(width="21" height="21")
-                            use(xlink:href="img/sprite.svg#search")
-                            
+            .filter__sticky-header
+                ul.actions.filter__actions
+                    li.actions__item
+                        button.button.button--outline.actions__button.is-active(type="button" aria-label="KK") КК
+                    
+                    li.actions__item
+                        button.button.button--outline.actions__button(type="button" aria-label="KПK") КПК
+                    
+                    li.actions__item
+                        button.button.button--outline.actions__button(type="button" aria-label="List")
+                            svg.button__icon(width="17" height="12")
+                                use(xlink:href="img/sprite.svg#list")
+                    
+                    li.actions__item
+                        button.button.button--outline.actions__button(type="button" aria-label="View" disabled)
+                            svg.button__icon(width="17" height="11")
+                                use(xlink:href="img/sprite.svg#eye")
+                    
+                    li.actions__item
+                        button.button.button--outline.actions__button(type="button" aria-label="Bookmarks")
+                            svg.button__icon(width="16" height="20")
+                                use(xlink:href="img/sprite.svg#bookmark")
+
+                    li.actions__item
+                        button.button.button--outline.actions__button(type="button" aria-label="Hide Filter" data-filter-toggle)
+                            svg.button__icon(width="17" height="17")
+                                use(xlink:href="img/sprite.svg#close-modal")
+                        
+                form.search.filter__search(id="filter-search-form" autocomplete="off" novalidate="novalidate")
+                    .search__group
+                        input#inputFilterSearch.input.search__input(type="text" name="inputFilterSearch" placeholder="Пошук..." autocomplete="off" required)
+
+                        button.search__button
+                            svg.search__icon(width="21" height="21")
+                                use(xlink:href="img/sprite.svg#search")
+                
+                button.filter__collapse-button(type="button" aria-label="Filter collapse" data-filter-collapse)
+                    svg(width="12" height="8")
+                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+
             .accordion.filter__accordion
                 .accordion__panel
                     .accordion__header#accordion-header-1
@@ -48,7 +80,7 @@ aside.filter.is-hide
                                 .accordion__header#accordion-header-2
                                     .checkbox.accordion__checkbox
                                         input.checkbox__input#accordion-checkbox-2(type="checkbox" name="checkbox" value="true" required)
-                                        label.checkbox__label(for="accordion-checkbox-2" data-modal-once="modal-tip-5") 
+                                        label.checkbox__label(for="accordion-checkbox-2") 
                                             strong.red-color 625 - 675
                                             |  ст. №-№130 Розділ 1 загальні положення
 
@@ -62,7 +94,7 @@ aside.filter.is-hide
                                             .accordion__header#accordion-header-6
                                                 .checkbox.accordion__checkbox
                                                     input.checkbox__input#accordion-checkbox-6(type="checkbox" name="checkbox" value="true" required)
-                                                    label.checkbox__label(for="accordion-checkbox-6" data-modal-once="modal-tip-5") ст. №-№130 Розділ 1 загальні положення
+                                                    label.checkbox__label(for="accordion-checkbox-6") ст. №-№130 Розділ 1 загальні положення
 
                                                 button.accordion__trigger(aria-expanded="true" aria-controls="accordion-content-6")
                                                     svg.accordion__icon(width="15" height="8")
@@ -255,5 +287,5 @@ aside.filter.is-hide
                                                 label.checkbox__label(for="accordion-checkbox-51") Cт. 1
 
         .filter__bottom
-            button.button.button--outline.filter__button(type="button" data-modal-once="modal-tip-13") Скинути
+            button.button.button--outline.filter__button(type="button") Скинути
             button.button.filter__button(type="button") Показати (213)

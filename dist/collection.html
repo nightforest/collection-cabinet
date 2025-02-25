@@ -29,30 +29,62 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-038a7e6a.js"></script>
-      <link rel="stylesheet" href="/assets/main-814527fc.css">
+      <script type="module" crossorigin src="/assets/main-f30670ac.js"></script>
+      <link rel="stylesheet" href="/assets/main-f9b427d1.css">
     </head>
     <body>
         <!-- Header -->
         
-<header class="header header--rel">
-  <div class="container header__container">
-    <button class="burger header__burger" type="button" aria-label="Open sidebar" aria-expanded="false" data-sidebar-toggle="data-sidebar-toggle">
-      <div class="burger__line"></div>
-      <div class="burger__line"></div>
-      <div class="burger__line"></div>
-    </button><a class="button header__button" href="#">Модуль КК</a><a class="button button--outline header__button" href="#">Модуль КПК</a>
+<header class="header">
+  <div class="container header__container"><a class="button header__button" href="#" data-modal-once="modal-tip-3">Модуль КК</a><a class="button button--outline header__button" href="#" data-modal-once="modal-tip-3">Модуль КПК</a><a class="button button--outline header__button" href="#" aria-label="Кабінет">
+      <svg class="sidebar-menu__icon" width="17" height="21">
+        <use xlink:href="img/sprite.svg#file"></use>
+      </svg>Кабінет</a>
     <form class="search header__search" id="search-form" autocomplete="off" novalidate="novalidate">
       <div class="search__group">
-        <input class="input search__input" id="inputSearch" type="text" name="inputSearch" placeholder="Пошук недоступний" autocomplete="off" required="required" disabled="disabled"/>
-        <button class="search__button" disabled="disabled">
+        <input class="input search__input" id="inputSearch" type="text" name="inputSearch" placeholder="Пошук по збірнику" autocomplete="off" required="required"/>
+        <button class="search__button">
           <svg class="search__icon" width="21" height="21">
             <use xlink:href="img/sprite.svg#search"></use>
           </svg>
         </button>
       </div>
-    </form><a class="button button--outline header__tariff-button" href="#">Перейти на Тариф 2 </a>
+    </form>
     <ul class="actions header__actions">
+      <li class="actions__item actions__item--visible-md">
+        <button class="button button--outline actions__button" type="button" aria-label="Open sidebar" aria-expanded="false" data-modal-once="modal-tip-7" data-sidebar-toggle="data-sidebar-toggle">
+          <svg class="button__icon" width="17" height="17">
+            <use xlink:href="img/sprite.svg#settings"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="actions__item actions__item--visible-md">
+        <button class="button button--outline actions__button is-active" type="button" aria-label="KK">КК</button>
+      </li>
+      <li class="actions__item actions__item--visible-md">
+        <button class="button button--outline actions__button" type="button" aria-label="KПK">КПК</button>
+      </li>
+      <li class="actions__item actions__item--visible-md">
+        <button class="button button--outline actions__button" type="button" aria-label="List">
+          <svg class="button__icon" width="17" height="12">
+            <use xlink:href="img/sprite.svg#list"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="actions__item actions__item--visible-md">
+        <button class="button button--outline actions__button" type="button" aria-label="View" disabled="disabled">
+          <svg class="button__icon" width="17" height="11">
+            <use xlink:href="img/sprite.svg#eye"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="actions__item actions__item--visible-md">
+        <button class="button button--outline actions__button" type="button" aria-label="Bookmarks">
+          <svg class="button__icon" width="16" height="20">
+            <use xlink:href="img/sprite.svg#bookmark"></use>
+          </svg>
+        </button>
+      </li>
       <li class="actions__item is-dropdown actions__item--hidden-md">
         <button class="button button--outline actions__button is-dropdown__toggle" type="button" aria-label="Show dropdown menu">
           <svg class="button__icon" width="21" height="22">
@@ -60,6 +92,50 @@
           </svg>
         </button>
         <ul class="actions-dropdown">
+          <li class="actions-dropdown__item">
+            <div class="notification-card">
+              <time class="notification-card__date">27.11.2023</time>
+              <div class="notification-card__info">
+                <h3 class="notification-card__title">Кримінальне процесуальне законодавство України</h3><a class="button button--outline notification-card__more" href="#">
+                  <svg class="button__icon" width="17" height="12">
+                    <use xlink:href="img/sprite.svg#long-arrow-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </li>
+          <li class="actions-dropdown__item">
+            <div class="notification-card">
+              <time class="notification-card__date">27.11.2023</time>
+              <div class="notification-card__info">
+                <h3 class="notification-card__title">Кримінальне процесуальне законодавство України</h3><a class="button button--outline notification-card__more" href="#">
+                  <svg class="button__icon" width="17" height="12">
+                    <use xlink:href="img/sprite.svg#long-arrow-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </li>
+          <li class="actions-dropdown__item">
+            <div class="notification-card">
+              <time class="notification-card__date">27.11.2023</time>
+              <div class="notification-card__info">
+                <h3 class="notification-card__title">Кримінальне процесуальне законодавство України</h3><a class="button button--outline notification-card__more" href="#">
+                  <svg class="button__icon" width="17" height="12">
+                    <use xlink:href="img/sprite.svg#long-arrow-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </li>
+          <li class="actions-dropdown__item">
+            <div class="notification-card">
+              <time class="notification-card__date">27.11.2023</time>
+              <div class="notification-card__info">
+                <h3 class="notification-card__title">Кримінальне процесуальне законодавство України</h3><a class="button button--outline notification-card__more" href="#">
+                  <svg class="button__icon" width="17" height="12">
+                    <use xlink:href="img/sprite.svg#long-arrow-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </li>
           <li class="actions-dropdown__item">
             <div class="notification-card">
               <time class="notification-card__date">27.11.2023</time>
@@ -94,44 +170,40 @@
         <div class="actions__count">2</div>
       </li>
       <li class="actions__item actions__item--hidden-md"><a class="button actions__button actions__button--big" href="#">Моя підписка</a></li>
-      <li class="actions__item actions__item--visible-md">
-        <button class="button button--outline actions__button" type="button" data-modal="modal-search-disabled" aria-label="Show search modal">
-          <svg class="button__icon" width="21" height="21">
-            <use xlink:href="img/sprite.svg#search"></use>
-          </svg>
-        </button>
-      </li>
-      <li class="actions__item"><a class="button button--outline actions__button" href="#" aria-label="Logout">
+      <li class="actions__item actions__item--hidden-md"><a class="button button--outline actions__button" href="#" aria-label="Logout">
           <svg class="button__icon" width="24" height="22">
             <use xlink:href="img/sprite.svg#logout"></use>
           </svg></a></li>
     </ul>
+    <button class="header__toggle-button" type="button" aria-label="Header toggle" data-header-toggle="data-header-toggle">
+      <svg width="12" height="8">
+        <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+      </svg>
+    </button>
   </div>
 </header>
 
         <!-- Main -->
-        <main id="main" class="main main--pt-0">
+        <main id="main" class="main">
             
-<section class="collection-section collection-section--pt-0">
+<section class="collection-section">
   <div class="container collection-section__container">
-    <header class="collection-section__sticky-header">
-      <div class="filter-toggle collection-section__filter-toggle">
-        <h3 class="filter-toggle__title">Фільтр</h3>
-        <button class="button button--outline filter-toggle__button" type="button" aria-label="Hide Filter" data-filter-toggle="data-filter-toggle">
-          <svg class="button__icon" width="20" height="20p">
-            <use xlink:href="img/sprite.svg#filter"></use>
-          </svg>
-        </button>
+    <div class="filter-toggle collection-section__filter-toggle">
+      <h3 class="filter-toggle__title">Фільтр<span class="filter-toggle__info green-color">У вас є активні фільтри</span></h3>
+      <button class="button button--outline filter-toggle__button is-active" type="button" aria-label="Hide Filter" data-filter-toggle="data-filter-toggle">
+        <svg class="button__icon" width="20" height="20">
+          <use xlink:href="img/sprite.svg#filter"></use>
+        </svg>
+      </button>
+    </div>
+    <form class="sort-form collection-section__sort-form" id="sort-form" autocomplete="off" novalidate="novalidate">
+      <div class="sort-form__group">
+        <select class="select" id="selectSortBy" name="selectSortBy" aria-label="Sort by" required="required">
+          <option value="1">Сортувати за зростанням</option>
+          <option value="2">Сортувати за ієрархією судових рішень (ВПВС, ОПВС, ККСВС) та хронологією</option>
+        </select>
       </div>
-      <form class="sort-form collection-section__sort-form" id="sort-form" autocomplete="off" novalidate="novalidate">
-        <div class="sort-form__group">
-          <select class="select" id="selectSortBy" name="selectSortBy" aria-label="Sort by" required="required">
-            <option value="1">Сортувати за зростанням</option>
-            <option value="2">Сортувати за ієрархією судових рішень (ВПВС, ОПВС, ККСВС) та хронологією</option>
-          </select>
-        </div>
-      </form>
-    </header>
+    </form>
     <table class="collection-table">
       <thead class="collection-table__thead">
         <tr>
@@ -153,8 +225,7 @@
       </thead>
       <tbody class="collection-table__tbody">
         <tr>
-          <td>
-            <time class="collection-table__date"><a class="black-link" href="#">27.11.2023</a></time><span class="collection-table__info"><a class="black-link" href="#">ккс вс</a></span>
+          <td><a class="collection-table__date" href="#">27.11.2023</a><a class="collection-table__info" href="#">ккс вс</a>
             <ul class="actions actions--center collection-table__actions">
               <li class="actions__item">
                 <button class="button button--xs button--outline" type="button" aria-label="Add to bookmarks" data-tooltip="В закладки" data-modal="modal-bookmark">
@@ -198,14 +269,18 @@
               <button class="collection-descr__more" type="button"><span>Читати детальніше</span>
                 <svg class="collection-descr__more-icon" width="8" height="4">
                   <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                </svg>
+              </button>
+              <button class="button button--outline button--xs" type="button" aria-label="Copy" data-tooltip="Копіювати">
+                <svg class="button__icon" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#copy"></use>
                 </svg>
               </button>
             </div>
           </td>
         </tr>
         <tr>
-          <td>
-            <time class="collection-table__date"><a class="black-link" href="#">27.11.2023</a></time><span class="collection-table__info"><a class="black-link" href="#">ккс вс</a></span>
+          <td><a class="collection-table__date" href="#">27.11.2023</a><a class="collection-table__info" href="#">ккс вс</a>
             <ul class="actions actions--center collection-table__actions">
               <li class="actions__item">
                 <button class="button button--xs button--outline" type="button" aria-label="Add to bookmarks" data-tooltip="В закладки" data-modal="modal-bookmark">
@@ -249,14 +324,18 @@
               <button class="collection-descr__more" type="button"><span>Читати детальніше</span>
                 <svg class="collection-descr__more-icon" width="8" height="4">
                   <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                </svg>
+              </button>
+              <button class="button button--outline button--xs" type="button" aria-label="Copy" data-tooltip="Копіювати">
+                <svg class="button__icon" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#copy"></use>
                 </svg>
               </button>
             </div>
           </td>
         </tr>
         <tr>
-          <td>
-            <time class="collection-table__date"><a class="black-link" href="#">27.11.2023</a></time><span class="collection-table__info"><a class="black-link" href="#">ккс вс</a></span>
+          <td><a class="collection-table__date" href="#">27.11.2023</a><a class="collection-table__info" href="#">ккс вс</a>
             <ul class="actions actions--center collection-table__actions">
               <li class="actions__item">
                 <button class="button button--xs button--outline" type="button" aria-label="Add to bookmarks" data-tooltip="В закладки" data-modal="modal-bookmark">
@@ -300,14 +379,18 @@
               <button class="collection-descr__more" type="button"><span>Читати детальніше</span>
                 <svg class="collection-descr__more-icon" width="8" height="4">
                   <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                </svg>
+              </button>
+              <button class="button button--outline button--xs" type="button" aria-label="Copy" data-tooltip="Копіювати">
+                <svg class="button__icon" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#copy"></use>
                 </svg>
               </button>
             </div>
           </td>
         </tr>
         <tr>
-          <td>
-            <time class="collection-table__date"><a class="black-link" href="#">27.11.2023</a></time><span class="collection-table__info"><a class="black-link" href="#">ккс вс</a></span>
+          <td><a class="collection-table__date" href="#">27.11.2023</a><a class="collection-table__info" href="#">ккс вс</a>
             <ul class="actions actions--center collection-table__actions">
               <li class="actions__item">
                 <button class="button button--xs button--outline" type="button" aria-label="Add to bookmarks" data-tooltip="В закладки" data-modal="modal-bookmark">
@@ -351,6 +434,11 @@
               <button class="collection-descr__more" type="button"><span>Читати детальніше</span>
                 <svg class="collection-descr__more-icon" width="8" height="4">
                   <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                </svg>
+              </button>
+              <button class="button button--outline button--xs" type="button" aria-label="Copy" data-tooltip="Копіювати">
+                <svg class="button__icon" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#copy"></use>
                 </svg>
               </button>
             </div>
@@ -408,16 +496,59 @@
           </svg>
         </button>
       </div>
-      <form class="search filter__search" id="filter-search-form" autocomplete="off" novalidate="novalidate">
-        <div class="search__group">
-          <input class="input search__input" id="inputFilterSearch" type="text" name="inputFilterSearch" placeholder="Пошук..." autocomplete="off" required="required"/>
-          <button class="search__button">
-            <svg class="search__icon" width="21" height="21">
-              <use xlink:href="img/sprite.svg#search"></use>
-            </svg>
-          </button>
-        </div>
-      </form>
+      <div class="filter__sticky-header">
+        <ul class="actions filter__actions">
+          <li class="actions__item">
+            <button class="button button--outline actions__button is-active" type="button" aria-label="KK">КК</button>
+          </li>
+          <li class="actions__item">
+            <button class="button button--outline actions__button" type="button" aria-label="KПK">КПК</button>
+          </li>
+          <li class="actions__item">
+            <button class="button button--outline actions__button" type="button" aria-label="List">
+              <svg class="button__icon" width="17" height="12">
+                <use xlink:href="img/sprite.svg#list"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="actions__item">
+            <button class="button button--outline actions__button" type="button" aria-label="View" disabled="disabled">
+              <svg class="button__icon" width="17" height="11">
+                <use xlink:href="img/sprite.svg#eye"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="actions__item">
+            <button class="button button--outline actions__button" type="button" aria-label="Bookmarks">
+              <svg class="button__icon" width="16" height="20">
+                <use xlink:href="img/sprite.svg#bookmark"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="actions__item">
+            <button class="button button--outline actions__button" type="button" aria-label="Hide Filter" data-filter-toggle="data-filter-toggle">
+              <svg class="button__icon" width="17" height="17">
+                <use xlink:href="img/sprite.svg#close-modal"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <form class="search filter__search" id="filter-search-form" autocomplete="off" novalidate="novalidate">
+          <div class="search__group">
+            <input class="input search__input" id="inputFilterSearch" type="text" name="inputFilterSearch" placeholder="Пошук..." autocomplete="off" required="required"/>
+            <button class="search__button">
+              <svg class="search__icon" width="21" height="21">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <button class="filter__collapse-button" type="button" aria-label="Filter collapse" data-filter-collapse="data-filter-collapse">
+          <svg width="12" height="8">
+            <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+          </svg>
+        </button>
+      </div>
       <div class="accordion filter__accordion">
         <div class="accordion__panel">
           <div class="accordion__header" id="accordion-header-1">
@@ -760,8 +891,10 @@
                 <svg class="sidebar-menu__icon" width="20" height="19">
                   <use xlink:href="img/sprite.svg#subscribe"></use>
                 </svg></span><span class="sidebar-menu__title">Моя підписка</span></a></li>
-          <li class="sidebar-menu__item"><a class="button button--outline sidebar-menu__button" href="#">Модуль КК</a></li>
-          <li class="sidebar-menu__item"><a class="button button--outline sidebar-menu__button" href="#">Модуль КПК</a></li>
+          <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#"><span class="sidebar-menu__pic">
+                <svg class="sidebar-menu__icon" width="21" height="19">
+                  <use xlink:href="img/sprite.svg#logout"></use>
+                </svg></span><span class="sidebar-menu__title">Вихід</span></a></li>
         </ul>
       </nav>
     </div>
