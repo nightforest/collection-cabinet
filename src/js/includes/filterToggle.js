@@ -22,7 +22,7 @@ const filterToggle = () => {
         }
     }
 
-    window.addEventListener('load', () => {
+    window.addEventListener('DOMContentLoaded', () => {
         scrollDetect();
 
         filterInner?.addEventListener('scroll', function() {
