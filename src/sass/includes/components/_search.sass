@@ -4,6 +4,11 @@
         position: relative
         width: 100%
 
+        &:has(.search__buttons-group)
+
+            .search__input
+                padding-right: 84px
+
     &__input
         padding-right: 44px
 
@@ -36,7 +41,27 @@
 
         &:disabled
             color: var(--grey-alt)
-    
+
+    &__buttons-group
+        position: absolute
+        top: 50%
+        right: 4px
+        margin-top: -15px
+        display: flex
+        align-items: center
+
+        &-item
+            padding: 3px 8px
+
+            &:not(:last-child)
+                border-right: 1px solid var(--grey)
+
+        .search__button
+            position: relative
+            top: auto
+            right: auto
+            margin: 0
+
     .just-validate-error-label
         position: absolute
         left: 0
