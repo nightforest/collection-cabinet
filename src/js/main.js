@@ -20,6 +20,7 @@ import tariffsSlider from './includes/tariffsSlider.js';
 import tips from './includes/tips.js';
 import headerToggle from './includes/headerToggle.js';
 import filterToggle from './includes/filterToggle.js';
+import recommendedCheckbox from './includes/recommendedCheckbox.js';
 import '../sass/main.sass';
 
 
@@ -45,3 +46,4 @@ tariffsSlider();
 // tips();
 headerToggle();
 filterToggle();
+recommendedCheckbox();

@@ -35,6 +35,9 @@
 
                 span
                     display: none
+            
+            .filter__recommend-button
+                display: none
 
             .filter__hide-button
 
@@ -232,8 +235,15 @@
         font-weight: 700
         line-height: 1.2
         color: var(--blue)
+    
+    &__recommend-button
+        font-size: 14px
+        padding: 5px 12px
+        margin-left: auto
+        text-align: left
 
     &__hide-button
+        flex-shrink: 0
         height: 40px
         width: 40px
         padding: 5px

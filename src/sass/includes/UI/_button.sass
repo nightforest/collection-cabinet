@@ -47,6 +47,12 @@
         color: var(--grey) !important
         cursor: not-allowed
 
+    &__icon
+        flex-shrink: 0
+
+        &--light
+            background: radial-gradient(circle, var(--yellow) 25%, transparent 70%)
+
     &--outline
         background: linear-gradient(90deg, rgba(55, 78, 115, .2) 20%, transparent 100%)
         background-color: var(--white) 
@@ -101,6 +107,9 @@
             background: var(--red)
             border-color: var(--red)
     
+    &--md
+        height: 40px
+
     &--sm
         height: 36px
     

@@ -29,8 +29,8 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-643e0626.js"></script>
-      <link rel="stylesheet" href="/assets/main-e6457641.css">
+      <script type="module" crossorigin src="/assets/main-4b0d9074.js"></script>
+      <link rel="stylesheet" href="/assets/main-34e84526.css">
     </head>
     <body>
         <!-- Header -->
@@ -296,6 +296,11 @@
             <use xlink:href="img/sprite.svg#filter"></use>
           </svg><span>Фільтр</span>
         </h3>
+        <button class="button button--md button--outline filter__recommend-button" type="button" aria-label="Recommended categories">
+          <svg class="button__icon button__icon--light" width="24" height="24">
+            <use xlink:href="img/sprite.svg#idea"></use>
+          </svg>Рекомендовані категорії
+        </button>
         <button class="button button--outline filter__hide-button" type="button" aria-label="Hide Filter" data-modal-once="modal-tip-3" data-tooltip-left="Регулювання масштабу" data-filter-hide="data-filter-hide">
           <svg class="button__icon" width="10" height="19">
             <use xlink:href="img/sprite.svg#arrow-left"></use>
@@ -333,6 +338,13 @@
             <button class="button button--outline actions__button" type="button" aria-label="Bookmarks">
               <svg class="button__icon" width="16" height="20">
                 <use xlink:href="img/sprite.svg#bookmark"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="actions__item">
+            <button class="button button--outline actions__button" type="button" aria-label="Recommended categories">
+              <svg class="button__icon button__icon--light" width="24" height="24">
+                <use xlink:href="img/sprite.svg#idea"></use>
               </svg>
             </button>
           </li>
@@ -471,7 +483,7 @@
                                                     <div class="accordion__content" id="accordion-content-94" role="region" aria-labelledby="accordion-header-94" aria-hidden="false">
                                                       <div class="accordion__inner">
                                                         <div class="accordion__text">
-                                                          <div class="checkbox accordion__checkbox">
+                                                          <div class="checkbox checkbox--light accordion__checkbox">
                                                             <input class="checkbox__input" id="accordion-checkbox-95" type="checkbox" name="checkbox" value="true" required="required" checked="checked"/>
                                                             <label class="checkbox__label" for="accordion-checkbox-95">Cт. 1</label>
                                                           </div>

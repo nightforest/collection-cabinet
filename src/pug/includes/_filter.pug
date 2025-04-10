@@ -17,6 +17,11 @@ aside.filter
                         use(xlink:href="img/sprite.svg#filter")
                     span Фільтр
 
+                button.button.button--md.button--outline.filter__recommend-button(type="button" aria-label="Recommended categories")
+                    svg.button__icon.button__icon--light(width="24" height="24")
+                        use(xlink:href="img/sprite.svg#idea")
+                    | Рекомендовані категорії
+
                 button.button.button--outline.filter__hide-button(type="button" aria-label="Hide Filter" data-modal-once="modal-tip-3" data-tooltip-left="Регулювання масштабу" data-filter-hide)
                     svg.button__icon(width="10" height="19")
                         use(xlink:href="img/sprite.svg#arrow-left")
@@ -49,6 +54,11 @@ aside.filter
                                 use(xlink:href="img/sprite.svg#bookmark")
 
                     li.actions__item
+                        button.button.button--outline.actions__button(type="button" aria-label="Recommended categories")
+                            svg.button__icon.button__icon--light(width="24" height="24")
+                                use(xlink:href="img/sprite.svg#idea")
+
+                    li.actions__item
                         button.button.button--outline.actions__button(type="button" aria-label="Hide Filter" data-filter-toggle)
                             svg.button__icon(width="17" height="17")
                                 use(xlink:href="img/sprite.svg#close-modal")
@@ -60,7 +70,7 @@ aside.filter
                         button.search__button
                             svg.search__icon(width="21" height="21")
                                 use(xlink:href="img/sprite.svg#search")
-                
+
                 button.filter__collapse-button(type="button" aria-label="Filter collapse" data-filter-collapse)
                     svg(width="12" height="8")
                         use(xlink:href="img/sprite.svg#dropdown-arrow")
@@ -163,14 +173,14 @@ aside.filter
                                                                                                         .accordion__content#accordion-content-94(role="region" aria-labelledby="accordion-header-94" aria-hidden="false")
                                                                                                             .accordion__inner
                                                                                                                 .accordion__text
-                                                                                                                    .checkbox.accordion__checkbox
+                                                                                                                    .checkbox.checkbox--light.accordion__checkbox
                                                                                                                         input.checkbox__input#accordion-checkbox-95(type="checkbox" name="checkbox" value="true" required checked)
                                                                                                                         label.checkbox__label(for="accordion-checkbox-95") Cт. 1
 
                                                     .accordion__panel
                                                         .accordion__header#accordion-header-10
                                                             .checkbox.accordion__checkbox
-                                                                input.checkbox__input#accordion-checkbox-10(type="checkbox" name="checkbox" value="true" required)
+                                                                input.checkbox__input#accordion-checkbox-10(type="checkbox" name="checkbox" value="true" required checked)
                                                                 label.checkbox__label(for="accordion-checkbox-10") ст. №-№130 Розділ 1 загальні положення
 
                                                             button.accordion__trigger(aria-expanded="false" aria-controls="accordion-content-10")
@@ -181,7 +191,7 @@ aside.filter
                                                             .accordion__inner
                                                                 .accordion__text
                                                                     .checkbox.accordion__checkbox
-                                                                        input.checkbox__input#accordion-checkbox-101(type="checkbox" name="checkbox" value="true" required)
+                                                                        input.checkbox__input#accordion-checkbox-101(type="checkbox" name="checkbox" value="true" required checked)
                                                                         label.checkbox__label(for="accordion-checkbox-101") Cт. 1
 
                                                     .accordion__panel

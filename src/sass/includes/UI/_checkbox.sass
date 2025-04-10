@@ -1,4 +1,8 @@
 .checkbox
+    --checkbox-box-shadow: #3fb7df
+    --checkbox-border-color: var(--blue)
+    --checkbox-border-color-checked: var(--blue-light)
+
     padding: 0
     margin: 0
     line-height: 1
@@ -23,7 +27,7 @@
             left: 0
             width: 24px
             height: 24px
-            border: 1px solid var(--blue)
+            border: 1px solid var(--checkbox-border-color)
             background: var(--white)
             border-radius: 4px
             transition: all .5s ease
@@ -54,8 +58,8 @@
         // Checked
         &:checked + .checkbox__label::before
             background: var(--white)
-            border-color: var(--blue-light)
-            box-shadow: 0 0 8px 0 #3fb7df
+            border-color: var(--checkbox-border-color-checked)
+            box-shadow: 0 0 8px 0 var(--checkbox-box-shadow)
 
         &:checked + .checkbox__label::after
             opacity: 1
@@ -102,3 +106,7 @@
 
     > .just-validate-error-label
         display: none
+    
+    &--light
+        --checkbox-box-shadow: var(--light-red)
+        --checkbox-border-color-checked: var(--light-red)
