@@ -1,3 +1,5 @@
+import fixHeight from "./fixHeight";
+
 const filter = () => {
     const body = document.querySelector('body');
     const header = document.querySelector('.header');
@@ -24,6 +26,8 @@ const filter = () => {
         filterNav?.classList.toggle('is-hide');
         header?.classList.toggle('is-full');
         main?.classList.toggle('is-full');
+
+        fixHeight();
     });
 
     const filterShowHide = () => {

@@ -1,0 +1,183 @@
+.codex
+    position: fixed
+    bottom: 0
+    right: 100px
+    display: flex
+    flex-direction: column
+    background: #F7F8FA
+    border-radius: 10px 10px 0 0
+    width: 360px
+    padding: 15px 30px
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 6px 6px 0 rgba(0, 0, 0, 0.09), 0 13px 8px 0 rgba(0, 0, 0, 0.05), 0 22px 9px 0 rgba(0, 0, 0, 0.01), 0 35px 10px 0 rgba(0, 0, 0, 0)
+    z-index: 3
+
+    @media ($max-md)
+        right: 85px
+        width: calc(100% - 85px)
+
+    &.is-active
+        height: 100dvh
+        right: 30px
+        width: calc(100% - 60px - var(--filter-width))
+        padding-bottom: 30px
+
+        @media ($max-md)
+            width: 100%
+            right: 0
+            padding: 15px 10px
+            border-radius: 0
+
+        .codex__header
+            margin-bottom: 16px
+        
+        .codex__body
+            display: flex
+
+        .codex__toggle-icon-in
+            display: none
+        
+        .codex__toggle-icon-out
+            display: block
+
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 12px
+    
+    &__title
+        font-size: 22px
+        font-weight: 700
+        color: var(--blue)
+
+        @media ($max-md)
+            font-size: 16px
+    
+    &__subtitle
+        font-size: 18px
+        font-weight: 700
+        margin-bottom: 10px
+
+        @media ($max-md)
+            font-size: 14px
+    
+    &__number
+        color: #FF4B26
+
+    &__toggle
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 22px
+        height: 22px
+        color: var(--blue)
+        transition: color .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue-light)
+        
+        &-icon
+
+            &-out
+                display: none
+
+    &__body
+        display: none
+        flex-direction: column
+        flex: 1
+        padding: 15px
+        border-radius: 10px
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 6px 6px 0 rgba(0, 0, 0, 0.09), 0 13px 8px 0 rgba(0, 0, 0, 0.05), 0 22px 9px 0 rgba(0, 0, 0, 0.01), 0 35px 10px 0 rgba(0, 0, 0, 0)
+        background: var(--white)
+    
+    &-controls
+        display: flex
+        gap: 10px
+        padding-bottom: 10px
+        margin-bottom: 5px
+        overflow-x: scroll
+        scrollbar-width: thin
+        scrollbar-color: var(--blue) #F7F8FA
+        
+        &::-webkit-scrollbar
+            -webkit-appearance: none !important
+            width: 4px
+            height: 4px
+
+        &::-webkit-scrollbar-track
+            background: #F7F8FA
+            border-radius: 4px
+
+        &::-webkit-scrollbar-thumb
+            border: none
+            background-color: var(--blue)
+            border-radius: 4px
+
+        .button
+            white-space: nowrap
+
+            @media ($max-md)
+                font-size: 14px
+
+            &.is-active
+                box-shadow: none
+
+    &-article
+        display: flex
+        flex-direction: column
+        flex: 1
+
+        &__header
+            display: flex
+            align-items: center
+            gap: 10px
+            border: 1px solid var(--black)
+            border-radius: 10px
+            padding: 10px
+            min-height: 62px
+            margin-bottom: 20px
+
+        &__nav-button
+            flex-shrink: 0
+            width: 40px
+            padding: 0
+        
+        &__title
+            flex: 1
+            font-size: 20px
+            font-weight: 700
+            text-align: center
+
+            @media ($max-md)
+                font-size: 14px
+        
+        &__body
+            position: relative
+            flex: 1
+
+        &__text
+            position: absolute
+            inset: 0
+            overflow-y: scroll
+            scrollbar-width: thin
+            scrollbar-color: var(--blue) #F7F8FA
+            
+            &::-webkit-scrollbar
+                -webkit-appearance: none !important
+                width: 4px
+                height: 4px
+
+            &::-webkit-scrollbar-track
+                background: #F7F8FA
+                border-radius: 4px
+
+            &::-webkit-scrollbar-thumb
+                border: none
+                background-color: var(--blue)
+                border-radius: 4px
+
+            @media ($max-md)
+                font-size: 14px
+

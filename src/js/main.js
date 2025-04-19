@@ -21,6 +21,8 @@ import tips from './includes/tips.js';
 import headerToggle from './includes/headerToggle.js';
 import filterToggle from './includes/filterToggle.js';
 import recommendedCheckbox from './includes/recommendedCheckbox.js';
+import scrollToId from './includes/scrollToId.js';
+import codex from './includes/codex.js';
 import '../sass/main.sass';
 
 
@@ -47,3 +49,5 @@ tariffsSlider();
 headerToggle();
 filterToggle();
 recommendedCheckbox();
+scrollToId();
+codex();
