@@ -6,19 +6,23 @@
     align-items: center
     justify-content: center
     width: 56px
-    height: 60px
+    height: 50px
     padding: 5px
-    background: #F7F8FA
+    background: linear-gradient(90deg, rgba(55, 78, 115, .2) 20%, transparent 100%)
+    background-color: var(--white)
+    border: 1px solid var(--blue)
+    border-bottom: none
     border-radius: 10px 10px 0 0
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 6px 6px 0 rgba(0, 0, 0, 0.09), 0 13px 8px 0 rgba(0, 0, 0, 0.05), 0 22px 9px 0 rgba(0, 0, 0, 0.01), 0 35px 10px 0 rgba(0, 0, 0, 0)
     color: var(--blue)
-    transition: color .5s
+    transition: color .5s, background-color .5s
 
     &:hover,
     &:active,
     &:focus-visible
-        color: var(--blue-light)
+        color: var(--white)
+        background-color: var(--blue)
 
     @media ($max-md)
-        height: 52px
+        height: 42px
         right: 15px
