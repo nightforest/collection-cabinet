@@ -1,0 +1,50 @@
+.text-options
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 10px
+    padding: 7px 12px
+    border: 1px solid var(--blue)
+    border-radius: 10px
+
+    @media ($max-lg)
+        flex-wrap: wrap
+
+    &__item
+        display: flex
+        align-items: center
+        gap: 8px
+
+    &__title
+        font-size: 14px
+        font-weight: 700
+        line-height: 1
+        max-width: 70px
+    
+    &__info
+        display: flex
+        color: var(--blue)
+        transition: color .5s
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue-light)
+    
+    &__controls
+        display: flex
+        margin-left: auto
+    
+    &__button
+        padding: 0
+        width: 32px
+        height: 32px
+        font-size: 18px
+        font-family: Arial, Helvetica, sans-serif
+
+        &:first-child
+            border-radius: 10px 0 0 10px
+
+        &:last-child
+            border-radius: 0 10px 10px 0
+            margin-left: -1px

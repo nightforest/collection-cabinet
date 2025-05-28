@@ -1,27 +1,52 @@
 .codex
-    position: fixed
-    bottom: 0
-    right: 100px
+    position: relative
     display: flex
     flex-direction: column
-    background: linear-gradient(90deg, #038DD4 20%, #0ebeff 100%)
     border-radius: 10px 10px 0 0
-    min-width: 240px
     width: auto
     padding: 10px 30px
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 6px 6px 0 rgba(0, 0, 0, 0.09), 0 13px 8px 0 rgba(0, 0, 0, 0.05), 0 22px 9px 0 rgba(0, 0, 0, 0.01), 0 35px 10px 0 rgba(0, 0, 0, 0)
-    z-index: 3
+    // box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 6px 6px 0 rgba(0, 0, 0, 0.09), 0 13px 8px 0 rgba(0, 0, 0, 0.05), 0 22px 9px 0 rgba(0, 0, 0, 0.01), 0 35px 10px 0 rgba(0, 0, 0, 0)
+    background: linear-gradient(90deg, rgba(55, 78, 115, .2) 20%, transparent 100%)
+    background-color: var(--white) 
+    border: 1px solid var(--blue)
+    color: var(--blue)
 
-    @media ($max-md)
-        right: 85px
-        width: calc(100% - 85px)
-        min-width: 0
+    &-wrap
+        position: fixed
+        bottom: 0
+        right: 92px
+        display: flex
+        gap: 6px
+        z-index: 3
+
+        @media ($max-md)
+            right: 77px
+
+    &--primary
+        color: var(--white)
+        background: linear-gradient(90deg, #038DD4 20%, #0ebeff 100%)
+
+    &--secondary
+        color: var(--white)
+        background: linear-gradient(90deg, #3B64D7 20%, #485678 100%)
+    
+    &--disabled
+        background: var(--grey)
+        color: var(--black)
+        border-color: var(--grey)
+        cursor: pointer
+
+        .codex__toggle
+            display: none
 
     &.is-active
+        position: fixed
+        bottom: 0
         height: 100dvh
         right: 30px
         width: calc(100% - 60px - var(--filter-width))
         padding-bottom: 30px
+        z-index: 2
 
         @media ($max-md)
             width: 100%
@@ -31,9 +56,17 @@
 
         .codex__header
             margin-bottom: 16px
+            gap: 12px
         
         .codex__body
             display: flex
+
+        .codex__toggle
+            width: 22px
+            height: 22px
+
+            &:after
+                display: none
 
         .codex__toggle-icon-in
             display: none
@@ -41,20 +74,89 @@
         .codex__toggle-icon-out
             display: block
 
+        .codex__search
+            display: block
+
+            @media ($max-md)
+                display: none
+
+                &.is-active
+                    display: block
+        
+        .codex__content-link
+            display: inline-flex
+
+        .codex__search-toggle
+            display: none
+
+            @media ($max-md)
+                display: flex
+        
+
+
     &__header
         display: flex
         align-items: center
         justify-content: space-between
-        gap: 12px
     
     &__title
         font-size: 22px
         font-weight: 700
-        color: var(--white)
+        transition: color .5s ease
 
         @media ($max-md)
             font-size: 16px
     
+    &__search
+        display: none
+        max-width: 575px
+        width: 100%
+        margin-left: auto
+
+        @media ($max-md)
+            position: fixed
+            top: 70px
+            left: 10px
+            right: 10px
+            width: auto
+            max-width: 100%
+            z-index: 1
+
+        &.is-active
+            display: block
+
+        .search__input
+            height: 40px
+            background: rgb(255 255 255 / .2)
+            border-color: rgb(255 255 255 / .2)
+            color: var(--white)
+
+            &::placeholder
+                color: var(--white)
+
+            @media ($max-md)
+                background: rgb(55 78 115 / .9)
+    
+    &__search-toggle
+        display: none
+        align-items: center
+        justify-content: center
+        flex-shrink: 0
+        width: 40px
+        height: 40px
+        border-radius: 10px
+        margin-left: auto
+        background: rgb(255 255 255 / .2)
+        color: var(--white)
+
+    &__content-link
+        display: none
+        white-space: nowrap
+        margin-right: 30px
+
+        @media ($max-md)
+            margin-right: 0
+
     &__subtitle
         font-size: 18px
         font-weight: 700
@@ -66,19 +168,26 @@
     &__number
         color: #FF4B26
 
+    &__info
+        position: relative
+        display: flex
+        transition: color .5s
+        z-index: 1
+        color: currentColor
+
+        &:hover
+            color: var(--white)
+
     &__toggle
         display: flex
         align-items: center
         justify-content: center
-        width: 22px
-        height: 22px
-        color: var(--white)
         transition: color .5s ease
 
-        &:hover,
-        &:active,
-        &:focus-visible
-            color: var(--blue-light)
+        &:after
+            position: absolute
+            inset: 0
+            content: ""
         
         &-icon
 
@@ -93,6 +202,7 @@
         border-radius: 10px
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 6px 6px 0 rgba(0, 0, 0, 0.09), 0 13px 8px 0 rgba(0, 0, 0, 0.05), 0 22px 9px 0 rgba(0, 0, 0, 0.01), 0 35px 10px 0 rgba(0, 0, 0, 0)
         background: var(--white)
+        color: var(--blue)
     
     &-controls
         display: flex

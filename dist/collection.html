@@ -29,8 +29,8 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-4298db5f.js"></script>
-      <link rel="stylesheet" href="/assets/main-339b812f.css">
+      <script type="module" crossorigin src="/assets/main-8d8aff3d.js"></script>
+      <link rel="stylesheet" href="/assets/main-c4bc43af.css">
     </head>
     <body>
         <!-- Header -->
@@ -221,15 +221,49 @@
           <th>Дата</th>
           <th>Назва статті</th>
           <th>
-            <div class="collection-table__th-group"><span>Опис</span>
-              <form class="sort-form collection-table__sort-form" id="sort-table-form" autocomplete="off" novalidate="novalidate">
-                <div class="sort-form__group">
-                  <select class="select" id="selectSortBy" name="selectSortBy" aria-label="Sort by" required="required">
-                    <option value="1">Сортувати за спаданням</option>
-                    <option value="2">Сортувати за ієрархією судових рішень (ВПВС, ОПВС, ККСВС) та хронологією</option>
-                  </select>
+            <div class="collection-table__th-wrap"><span>Опис</span>
+              <div class="collection-table__th-group">
+                <div class="text-options collection-table__text-options">
+                  <div class="text-options__item">
+                    <div class="text-options__title">Шрифт</div><a class="text-options__info" href="#" data-modal="modal-tip-15">
+                      <svg width="22" height="22">
+                        <use xlink:href="img/sprite.svg#info"> </use>
+                      </svg></a>
+                    <div class="text-options__controls">
+                      <button class="button button--outline text-options__button" type="button" aria-label="Minus">-</button>
+                      <button class="button button--outline text-options__button" type="button" aria-label="Plus">+</button>
+                    </div>
+                  </div>
+                  <div class="text-options__item">
+                    <div class="switch collection-table__switch">
+                      <input class="switch__input" id="new-tab-switch" type="checkbox" name="checkbox" value="true"/>
+                      <label class="switch__label" for="new-tab-switch"></label>
+                    </div><a class="text-options__info" href="#" data-modal="modal-tip-15">
+                      <svg width="22" height="22">
+                        <use xlink:href="img/sprite.svg#info"> </use>
+                      </svg></a>
+                  </div>
+                  <div class="text-options__item">
+                    <div class="text-options__title">Кіл-ть символів</div><a class="text-options__info" href="#" data-modal="modal-tip-15">
+                      <svg width="22" height="22">
+                        <use xlink:href="img/sprite.svg#info"> </use>
+                      </svg></a>
+                    <div class="text-options__controls">
+                      <button class="button button--outline text-options__button" type="button" aria-label="Minus">-</button>
+                      <button class="button button--outline text-options__button" type="button" aria-label="Plus">+</button>
+                    </div>
+                  </div>
                 </div>
-              </form>
+                <button class="button-link collection-table__reset-button" type="button">Скинути</button>
+                <form class="sort-form collection-table__sort-form" id="sort-table-form" autocomplete="off" novalidate="novalidate">
+                  <div class="sort-form__group">
+                    <select class="select" id="selectSortBy" name="selectSortBy" aria-label="Sort by" required="required">
+                      <option value="1">Сортувати за спаданням</option>
+                      <option value="2">Сортувати за ієрархією судових рішень (ВПВС, ОПВС, ККСВС) та хронологією</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
             </div>
           </th>
         </tr>
@@ -458,6 +492,11 @@
       </tbody>
     </table>
     <nav class="pagenav collection-section__pagenav" aria-label="Page navigation">
+      <button class="pagenav__load-more" type="button">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#load"></use>
+        </svg>Показати ще
+      </button>
       <ul class="pagenav__list">
         <li class="pagenav__item"><a class="pagenav__arrow" href="#" aria-label="Previous">
             <svg class="pagenav__icon" width="7" height="14">
@@ -924,58 +963,176 @@
   </div>
 </aside>
 
+        <!-- Content -->
+        
+<aside class="content">
+  <div class="content__panel">
+    <div class="content__top">
+      <h3 class="content__title">Зміст документа</h3>
+      <button class="content__close" aria-label="Close modal" data-content-toggle="data-content-toggle" type="button">
+        <svg class="content__close-icon" width="23" height="22">
+          <use xlink:href="img/sprite.svg#close-modal"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="content__inner">
+      <ul>
+        <li class="strong">Кодекс України про адміністравні прапорушення
+          <ul>
+            <li class="strong">Розділ III. Органи, уповноважені розлядати
+              <ul>
+                <li class="strong">Глава 16. Осовні положення
+                  <ul>
+                    <li><a href="#"><span class="red-color">Стаття 213.</span> Незаконне виготовлення, зберігання, збут або транспортування з метою збуту підакцизних товарів</a></li>
+                    <li><a href="#"><span class="red-color">Стаття 213.</span> Незаконне виготовлення, зберігання, збут або транспортування з метою збуту підакцизних товарів</a></li>
+                    <li><a href="#"><span class="red-color">Стаття 213.</span> Незаконне виготовлення, зберігання, збут або транспортування з метою збуту підакцизних товарів</a></li>
+                    <li><a href="#"><span class="red-color">Стаття 213.</span> Незаконне виготовлення, зберігання, збут або транспортування з метою збуту підакцизних товарів</a></li>
+                  </ul>
+                </li>
+                <li class="strong">Глава 16. Осовні положення
+                  <ul>
+                    <li><a href="#"><span class="red-color">Стаття 213.</span> Незаконне виготовлення, зберігання, збут або транспортування з метою збуту підакцизних товарів</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
         <!-- Codex -->
         
-<section class="codex">
-  <header class="codex__header">
-    <h2 class="codex__title">Кодекс КК</h2>
-    <button class="codex__toggle" id="codex-toggle" type="button" aria-label="Codex toggle">
-      <svg class="codex__toggle-icon-in" width="22" height="22">
-        <use xlink:href="img/sprite.svg#zoom-in"></use>
-      </svg>
-      <svg class="codex__toggle-icon-out" width="22" height="22">
-        <use xlink:href="img/sprite.svg#zoom-out"></use>
-      </svg>
-    </button>
-  </header>
-  <div class="codex__body">
-    <div class="codex-controls">
-      <button class="button button--md button--outline is-active" type="button">214-216</button>
-      <button class="button button--md button--outline" type="button">276</button>
-      <button class="button button--md button--outline" type="button">277</button>
-      <button class="button button--md button--outline" type="button">278</button>
-      <button class="button button--md button--outline" type="button">279</button>
-    </div>
-    <article class="codex-article">
-      <div class="codex-article__header">
-        <button class="button button--outline button--md codex-article__nav-button" type="button" aria-label="prev article">
-          <svg class="button__icon" width="10" height="19">
-            <use xlink:href="img/sprite.svg#arrow-left"></use>
-          </svg>
-        </button>
-        <h3 class="codex-article__title"><span class="codex__number">279</span> Зміна повідомлення про підозру</h3>
-        <button class="button button--outline button--md codex-article__nav-button" type="button" aria-label="next article">
-          <svg class="button__icon" width="10" height="19">
-            <use xlink:href="img/sprite.svg#arrow-right"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="codex-article__body">
-        <div class="codex-article__text">
-          <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
-          <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
-          <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
-          <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
-          <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
-          <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
-          <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
-          <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
-          <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+<div class="codex-wrap">
+  <section class="codex codex--secondary">
+    <header class="codex__header">
+      <h2 class="codex__title">Кас</h2>
+      <button class="codex__search-toggle" type="button" aria-label="Show search">
+        <svg width="21" height="21">
+          <use xlink:href="img/sprite.svg#search"></use>
+        </svg>
+      </button>
+      <form class="search codex__search" id="filter-search-form" autocomplete="off" novalidate="novalidate">
+        <div class="search__group">
+          <input class="input search__input" id="inputCodexSearch1" type="text" name="inputCodexSearch1" placeholder="Пошук в межах статей" autocomplete="off" required="required"/>
+          <button class="search__button">
+            <svg class="search__icon" width="21" height="21">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
         </div>
+      </form>
+      <button class="button button--outline button--md codex__content-link" type="button" data-content-toggle="data-content-toggle">Зміст кодексу</button>
+      <button class="codex__toggle" type="button" aria-label="Codex toggle">
+        <svg class="codex__toggle-icon-out" width="22" height="22">
+          <use xlink:href="img/sprite.svg#zoom-out"></use>
+        </svg>
+      </button>
+    </header>
+    <div class="codex__body">
+      <div class="codex-controls">
+        <button class="button button--md button--outline is-active" type="button">214-216</button>
+        <button class="button button--md button--outline" type="button">276</button>
+        <button class="button button--md button--outline" type="button">277</button>
+        <button class="button button--md button--outline" type="button">278</button>
+        <button class="button button--md button--outline" type="button">279</button>
       </div>
-    </article>
-  </div>
-</section><a class="up-button" href="#main" data-scroll="data-scroll" aria-label="Scroll to top">
+      <article class="codex-article">
+        <div class="codex-article__header">
+          <button class="button button--outline button--md codex-article__nav-button" type="button" aria-label="prev article">
+            <svg class="button__icon" width="10" height="19">
+              <use xlink:href="img/sprite.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <h3 class="codex-article__title"><span class="codex__number">279</span> Зміна повідомлення про підозру</h3>
+          <button class="button button--outline button--md codex-article__nav-button" type="button" aria-label="next article">
+            <svg class="button__icon" width="10" height="19">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="codex-article__body">
+          <div class="codex-article__text">
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="codex codex--primary codex--disabled" data-modal="modal-tip-15">
+    <header class="codex__header">
+      <h2 class="codex__title">КПК</h2>
+      <button class="codex__search-toggle" type="button" aria-label="Show search">
+        <svg width="21" height="21">
+          <use xlink:href="img/sprite.svg#search"></use>
+        </svg>
+      </button>
+      <form class="search codex__search" id="filter-search-form" autocomplete="off" novalidate="novalidate">
+        <div class="search__group">
+          <input class="input search__input" id="inputCodexSearch2" type="text" name="inputCodexSearch2" placeholder="Пошук в межах статей" autocomplete="off" required="required"/>
+          <button class="search__button">
+            <svg class="search__icon" width="21" height="21">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <button class="button button--outline button--md codex__content-link" type="button" data-content-toggle="data-content-toggle">Зміст кодексу</button>
+      <button class="codex__toggle" type="button" aria-label="Codex toggle" data-modal="modal-tip-15" disabled="disabled">
+        <svg class="codex__toggle-icon-out" width="22" height="22">
+          <use xlink:href="img/sprite.svg#zoom-out"></use>
+        </svg>
+      </button>
+    </header>
+    <div class="codex__body">
+      <div class="codex-controls">
+        <button class="button button--md button--outline is-active" type="button">214-216</button>
+        <button class="button button--md button--outline" type="button">276</button>
+        <button class="button button--md button--outline" type="button">277</button>
+        <button class="button button--md button--outline" type="button">278</button>
+        <button class="button button--md button--outline" type="button">279</button>
+      </div>
+      <article class="codex-article">
+        <div class="codex-article__header">
+          <button class="button button--outline button--md codex-article__nav-button" type="button" aria-label="prev article">
+            <svg class="button__icon" width="10" height="19">
+              <use xlink:href="img/sprite.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <h3 class="codex-article__title"><span class="codex__number">279</span> Зміна повідомлення про підозру</h3>
+          <button class="button button--outline button--md codex-article__nav-button" type="button" aria-label="next article">
+            <svg class="button__icon" width="10" height="19">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="codex-article__body">
+          <div class="codex-article__text">
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+            <p>Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</div><a class="up-button" href="#main" data-scroll="data-scroll" aria-label="Scroll to top">
   <svg class="up-button__icon" width="16" height="25">
     <use xlink:href="img/sprite.svg#long-arrow-top"></use>
   </svg></a>
@@ -1403,6 +1560,18 @@
           <p>4. Для швидкого орієнтування у змісті КПК ознайомтесь вручну з усіма категоріями у Главі 4 КПК, оскільки майже кожне питання стосується цієї Глави (у більшості випадків)</p>
           <p>Наша пошукова система передбачає врахування зміни закінчень та зв’язку слів, візуалізує пошукові слова у тексті. Але цього замало! Дуже замало, коли йдеться про релевантність та швидкість. Саме тому Ви читаєте багато непотрібної – нерелевантної інформації у подібних пошукових системах.</p>
           <p>Майте на увазі, що на сьогодні жодна система не забезпечує належне семантичне розуміння тексту. Обираючи необхідну категорію Ви отримуєте відповіді з усіх можливих ситуацій на одне питання, при цьому зі змінами у часі. Таким чином Ви економите свій час та отримуєте більше релевантної інформації за помірну ціну.</p>
+        </div>
+        <button class="button modal__ok-button" type="button" data-modal-close="data-modal-close">Добре</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal--tip" id="modal-tip-15">
+    <div class="modal__inner">
+      <div class="modal__window"> 
+        <div class="modal__text">
+          <h3>На початку Вашого пошуку <span class="red-color">не використовуйте</span> "Пошук по збірнику" (пошук за словами у правових позиціях)</h3>
+          <p>У випадку використання такого пошуку, релевантність відповіді стандартна, як і в інших системах. </p>
+          <p>Ви залежні від коректності пошукового запиту та нерозуміння системою семантичного значення слова, речення, абзацу, що є дуже важливим, коли йдеться про пошук інформації за кримінальною юрисдикцією! Існує ризик того, що необхідну Вам інформацію, яка є у системі,  Ви просто не побачите.</p>
         </div>
         <button class="button modal__ok-button" type="button" data-modal-close="data-modal-close">Добре</button>
       </div>

@@ -1,5 +1,22 @@
 .pagenav
 
+    &__load-more
+        display: flex
+        align-items: center
+        gap: 8px
+        font-size: 18px
+        font-weight: 700
+        color: var(--blue)
+        transition: color .5s
+
+        &:not(:last-child)
+            margin-bottom: 20px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue-light)
+
     &__list
         display: flex
         align-items: center

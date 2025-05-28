@@ -63,23 +63,42 @@ const codex = () => {
     // ]
     // };
 
-    const codex = document.querySelector(".codex");
-    const codexToggle = document.getElementById("codex-toggle");
+    
+    const codexToggle = document.querySelectorAll(".codex__toggle");
+    const codexSearchToggle = document.querySelectorAll(".codex__search-toggle");
     // const topButtons = document.getElementById("codex-topButtons");
     // const titleEl = document.getElementById("codex-title");
     // const textEl = document.getElementById("codex-text");
     // const prevBtn = document.getElementById("codex-prevBtn");
     // const nextBtn = document.getElementById("codex-nextBtn");
     
-    codexToggle.addEventListener("click", () => {
-        if(codex.classList.contains('is-active')) {
-            codex.classList.remove('is-active');
-            enableScroll();
-        } else {
-            codex.classList.add('is-active');
-            disableScroll();
-        }
+    codexToggle.forEach(item => {
+        item.addEventListener("click", () => {
+            const codex = item.closest(".codex");
+
+            if(codex.classList.contains('is-active')) {
+                codex.classList.remove('is-active');
+                enableScroll();
+            } else {
+                codex.classList.add('is-active');
+                disableScroll();
+            }
+        });
     });
+
+    codexSearchToggle.forEach(item => {
+        item.addEventListener("click", () => {
+            const codex = item.closest(".codex");
+            const codexSearch = codex.querySelector(".codex__search");
+
+            if(codexSearch.classList.contains('is-active')) {
+                codexSearch.classList.remove('is-active');
+            } else {
+                codexSearch.classList.add('is-active');
+            }
+        });
+    });
+    
 
     // let currentKey = "";
     // let currentIndex = 0;

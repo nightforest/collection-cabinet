@@ -1,0 +1,93 @@
+.content
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 4
+    width: 100%
+    max-width: 100%
+    height: calc(var(--vh) * 100)
+    outline: 0
+    opacity: 0
+    visibility: hidden
+    transition: all .25s ease
+
+    &.is-visible
+        opacity: 1
+        visibility: visible
+
+        .content__panel
+            visibility: visible
+            transform: translate3d(0, 0, 0)
+
+    &__panel
+        position: fixed
+        top: 0
+        right: 0
+        width: 100%
+        max-width: 575px
+        height: 100%
+        background: var(--blue)
+        visibility: hidden
+        transform: translate3d(100%, 0, 0)
+        transition: all .25s ease
+
+        @media ($max-sm)
+            max-width: 100%
+
+    &__top
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 10px
+        padding: 10px 30px
+        height: 60px
+        background: var(--blue)
+
+        @media ($max-md)
+            padding: 10px 20px
+
+    &__close
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 40px
+        height: 40px
+        color: var(--white)
+
+    &__title
+        color: var(--white)
+        font-size: 16px
+        font-weight: 600
+        text-transform: uppercase
+
+    &__inner
+        height: calc(100% - 60px)
+        width: 100%
+        padding: 0 30px 30px
+        overflow-y: auto
+
+        @media ($max-md)
+            padding: 0 20px 20px
+
+        ul
+            padding-left: 1rem
+            margin: 1rem 0
+            list-style: none
+            color: var(--white)
+
+            li
+                margin: 0 0 1rem
+                font-size: 14px
+                font-weight: 400
+
+                &.strong
+                    font-weight: 600
+
+        a
+            color: var(--white)
+
+            &:hover
+                text-decoration: underline
+        
+        > ul
+            padding-left: 0

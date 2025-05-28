@@ -18,10 +18,19 @@
 
         &__thead
 
+            // @media ($max-md)
+            //     display: none
+
             @media ($max-md)
-                display: none
+                display: flex
+                width: 100%
 
             tr
+
+                @media ($max-md)
+                    display: flex
+                    width: 100%
+
                 th
                     vertical-align: middle
                     background: var(--white)
@@ -34,12 +43,22 @@
                     &:first-child
                         text-align: center
                         width: 10%
+
+                        @media ($max-md)
+                            display: none
                     
                     &:nth-child(2)
                         width: 20%
+
+                        @media ($max-md)
+                            display: none
                     
                     &:nth-child(3)
                         width: 70%
+
+                        @media ($max-md)
+                            width: 100%
+                            padding: 15px 10px
 
         &__tbody
             
@@ -156,6 +175,14 @@
             @media ($max-md)
                 font-size: 12px
 
+        &__number
+            font-weight: 700
+            font-size: 14px
+            color: var(--blue)
+
+            &:not(:last-child)
+                margin-bottom: 5px
+
         &__actions
             flex-wrap: wrap
             gap: 6px
@@ -170,15 +197,59 @@
                 width: 20px
                 height: 20px
 
-        &__th-group
+        &__th-wrap
             display: flex
             align-items: center
-            justify-content: space-between
-            flex-wrap: wrap
+            gap: 20px
+
+            @media ($max-md)
+                flex-direction: column
+                align-items: stretch
+                gap: 12px
+
+        &__th-group
+            display: grid
+            grid-template-columns: auto 1fr
+            grid-template-rows: auto auto
+            align-items: center
             gap: 6px 12px
+            flex: 1
+
+            @media ($max-md)
+                display: flex
+                flex-direction: column
+                align-items: stretch
+                gap: 12px
+
+        &__switch
+
+            @media ($max-md)
+                max-width: 100%
+
+                .switch__label
+                    display: flex
+
+        &__text-options
+            grid-row: 1
+            grid-column: span 2
+
+            @media ($max-md)
+                max-width: 100%
+                justify-content: space-between
+                gap: 8px
+                padding: 7px
+        
+        &__reset-button
+            grid-row: 2
+
+            @media ($max-md)
+                font-size: 14px
         
         &__sort-form
-            max-width: 290px
+            grid-row: 2
+
+            @media ($max-md)
+                display: none
 
         &--auto
 

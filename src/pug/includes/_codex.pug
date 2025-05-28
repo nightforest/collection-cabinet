@@ -1,56 +1,134 @@
-section.codex
-    header.codex__header
-        h2.codex__title Кодекс КК
+.codex-wrap
+    section.codex.codex--secondary
+        header.codex__header
+            h2.codex__title Кас
 
-        button#codex-toggle.codex__toggle(type="button" aria-label="Codex toggle")
-            svg.codex__toggle-icon-in(width="22" height="22")
-                use(xlink:href="img/sprite.svg#zoom-in")
+            button.codex__search-toggle(type="button" aria-label="Show search")
+                svg(width="21" height="21")
+                    use(xlink:href="img/sprite.svg#search")
+
+            form.search.codex__search(id="filter-search-form" autocomplete="off" novalidate="novalidate")
+                .search__group
+                    input#inputCodexSearch1.input.search__input(type="text" name="inputCodexSearch1" placeholder="Пошук в межах статей" autocomplete="off" required)
+
+                    button.search__button
+                        svg.search__icon(width="21" height="21")
+                            use(xlink:href="img/sprite.svg#search")
+
+            button.button.button--outline.button--md.codex__content-link(type="button" data-content-toggle) Зміст кодексу
+
+            button.codex__toggle(type="button" aria-label="Codex toggle")
+                svg.codex__toggle-icon-out(width="22" height="22")
+                    use(xlink:href="img/sprite.svg#zoom-out")
+
+        .codex__body
+            .codex-controls
+                button.button.button--md.button--outline.is-active(type="button") 214-216
+                button.button.button--md.button--outline(type="button") 276
+                button.button.button--md.button--outline(type="button") 277
+                button.button.button--md.button--outline(type="button") 278
+                button.button.button--md.button--outline(type="button") 279
             
-            svg.codex__toggle-icon-out(width="22" height="22")
-                use(xlink:href="img/sprite.svg#zoom-out")
+            //- h3.codex__subtitle
+            //-     span.codex__number 279
+            //-     |  З цією категорією рекомендовано досліджувати також категорії у статті
 
-    .codex__body
-        .codex-controls
-            button.button.button--md.button--outline.is-active(type="button") 214-216
-            button.button.button--md.button--outline(type="button") 276
-            button.button.button--md.button--outline(type="button") 277
-            button.button.button--md.button--outline(type="button") 278
-            button.button.button--md.button--outline(type="button") 279
-        
-        //- h3.codex__subtitle
-        //-     span.codex__number 279
-        //-     |  З цією категорією рекомендовано досліджувати також категорії у статті
+            //- .codex-controls
+            //-     button.button.button--md.button--outline(type="button") 214
+            //-     button.button.button--md.button--outline(type="button") 276
+            //-     button.button.button--md.button--outline(type="button") 277
 
-        //- .codex-controls
-        //-     button.button.button--md.button--outline(type="button") 214
-        //-     button.button.button--md.button--outline(type="button") 276
-        //-     button.button.button--md.button--outline(type="button") 277
+            article.codex-article
+                .codex-article__header
+                    button.button.button--outline.button--md.codex-article__nav-button(type="button" aria-label="prev article")
+                        svg.button__icon(width="10" height="19")
+                            use(xlink:href="img/sprite.svg#arrow-left")
 
-        article.codex-article
-            .codex-article__header
-                button.button.button--outline.button--md.codex-article__nav-button(type="button" aria-label="prev article")
-                    svg.button__icon(width="10" height="19")
-                        use(xlink:href="img/sprite.svg#arrow-left")
+                    h3.codex-article__title
+                        span.codex__number 279
+                        |  Зміна повідомлення про підозру
 
-                h3.codex-article__title
-                    span.codex__number 279
-                    |  Зміна повідомлення про підозру
+                    button.button.button--outline.button--md.codex-article__nav-button(type="button" aria-label="next article")
+                        svg.button__icon(width="10" height="19")
+                            use(xlink:href="img/sprite.svg#arrow-right")
 
-                button.button.button--outline.button--md.codex-article__nav-button(type="button" aria-label="next article")
-                    svg.button__icon(width="10" height="19")
-                        use(xlink:href="img/sprite.svg#arrow-right")
+                .codex-article__body
+                    .codex-article__text
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
 
-            .codex-article__body
-                .codex-article__text
-                    p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
-                    p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
-                    p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
-                    p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
-                    p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
-                    p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
-                    p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
-                    p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
-                    p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+    section.codex.codex--primary.codex--disabled(data-modal="modal-tip-15")
+        header.codex__header
+            h2.codex__title КПК
+
+            button.codex__search-toggle(type="button" aria-label="Show search")
+                svg(width="21" height="21")
+                    use(xlink:href="img/sprite.svg#search")
+
+            form.search.codex__search(id="filter-search-form" autocomplete="off" novalidate="novalidate")
+                .search__group
+                    input#inputCodexSearch2.input.search__input(type="text" name="inputCodexSearch2" placeholder="Пошук в межах статей" autocomplete="off" required)
+
+                    button.search__button
+                        svg.search__icon(width="21" height="21")
+                            use(xlink:href="img/sprite.svg#search")
+
+            button.button.button--outline.button--md.codex__content-link(type="button" data-content-toggle) Зміст кодексу
+
+            button.codex__toggle(type="button" aria-label="Codex toggle" data-modal="modal-tip-15" disabled)
+                svg.codex__toggle-icon-out(width="22" height="22")
+                    use(xlink:href="img/sprite.svg#zoom-out")
+
+        .codex__body
+            .codex-controls
+                button.button.button--md.button--outline.is-active(type="button") 214-216
+                button.button.button--md.button--outline(type="button") 276
+                button.button.button--md.button--outline(type="button") 277
+                button.button.button--md.button--outline(type="button") 278
+                button.button.button--md.button--outline(type="button") 279
+            
+            //- h3.codex__subtitle
+            //-     span.codex__number 279
+            //-     |  З цією категорією рекомендовано досліджувати також категорії у статті
+
+            //- .codex-controls
+            //-     button.button.button--md.button--outline(type="button") 214
+            //-     button.button.button--md.button--outline(type="button") 276
+            //-     button.button.button--md.button--outline(type="button") 277
+
+            article.codex-article
+                .codex-article__header
+                    button.button.button--outline.button--md.codex-article__nav-button(type="button" aria-label="prev article")
+                        svg.button__icon(width="10" height="19")
+                            use(xlink:href="img/sprite.svg#arrow-left")
+
+                    h3.codex-article__title
+                        span.codex__number 279
+                        |  Зміна повідомлення про підозру
+
+                    button.button.button--outline.button--md.codex-article__nav-button(type="button" aria-label="next article")
+                        svg.button__icon(width="10" height="19")
+                            use(xlink:href="img/sprite.svg#arrow-right")
+
+                .codex-article__body
+                    .codex-article__text
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+                        p Кримінальне процесуальне законодавство України складається з відповідних положень Конституції України, міжнародних договорів, згода на обов’язковість яких надана Верховною Радою України, цього Кодексу та інших законів України.
+
 
 a.up-button(href="#main" data-scroll aria-label="Scroll to top")
     svg.up-button__icon(width="16" height="25")
