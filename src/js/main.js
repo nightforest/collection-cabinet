@@ -24,6 +24,7 @@ import filterToggle from './includes/filterToggle.js';
 import recommendedCheckbox from './includes/recommendedCheckbox.js';
 import scrollToId from './includes/scrollToId.js';
 import codex from './includes/codex.js';
+import tooltips from './includes/tooltips.js';
 import '../sass/main.sass';
 
 
@@ -53,3 +54,4 @@ headerToggle();
 filterToggle();
 recommendedCheckbox();
 scrollToId();
+tooltips();

@@ -207,9 +207,14 @@
                 align-items: stretch
                 gap: 12px
 
+            span
+
+                @media ($max-md)
+                    display: none
+
         &__th-group
             display: grid
-            grid-template-columns: auto 1fr
+            grid-template-columns: 1fr
             grid-template-rows: auto auto
             align-items: center
             gap: 6px 12px
@@ -230,8 +235,6 @@
                     display: flex
 
         &__text-options
-            grid-row: 1
-            grid-column: span 2
 
             @media ($max-md)
                 max-width: 100%
@@ -240,13 +243,11 @@
                 padding: 7px
         
         &__reset-button
-            grid-row: 2
 
             @media ($max-md)
                 font-size: 14px
         
         &__sort-form
-            grid-row: 2
 
             @media ($max-md)
                 display: none

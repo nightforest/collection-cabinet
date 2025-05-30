@@ -29,8 +29,8 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-999f44bf.js"></script>
-      <link rel="stylesheet" href="/assets/main-a404b753.css">
+      <script type="module" crossorigin src="/assets/main-e64958c5.js"></script>
+      <link rel="stylesheet" href="/assets/main-1155aada.css">
     </head>
     <body>
         <!-- Header -->
@@ -253,8 +253,10 @@
                       <button class="button button--outline text-options__button" type="button" aria-label="Plus">+</button>
                     </div>
                   </div>
+                  <div class="text-options__item">
+                    <button class="button-link collection-table__reset-button" type="button">Скинути</button>
+                  </div>
                 </div>
-                <button class="button-link collection-table__reset-button" type="button">Скинути</button>
                 <form class="sort-form collection-table__sort-form" id="sort-table-form" autocomplete="off" novalidate="novalidate">
                   <div class="sort-form__group">
                     <select class="select" id="selectSortBy" name="selectSortBy" aria-label="Sort by" required="required">
@@ -535,11 +537,14 @@
             <use xlink:href="img/sprite.svg#filter"></use>
           </svg><span>Фільтр</span>
         </h3>
-        <button class="button button--md button--outline filter__recommend-button" type="button" aria-label="Recommended categories">
+        <button class="button button--md button--outline filter__recommend-button" type="button" data-tippy="tooltip-1" aria-label="Recommended categories">
           <svg class="button__icon button__icon--light" width="24" height="24">
             <use xlink:href="img/sprite.svg#idea"></use>
           </svg>Рекомендовані категорії
         </button>
+        <div class="tooltip" id="tooltip-1" style="display: none;">
+          <p>Оберіть одну кінцеву категорію зі змісту, натисніть «показати» і функція буде доступною для активації</p>
+        </div>
         <button class="button button--outline filter__hide-button" type="button" aria-label="Hide Filter" data-modal-once="modal-tip-3" data-tooltip-left="Регулювання масштабу" data-filter-hide="data-filter-hide">
           <svg class="button__icon" width="10" height="19">
             <use xlink:href="img/sprite.svg#arrow-left"></use>
@@ -581,7 +586,7 @@
             </button>
           </li>
           <li class="actions__item">
-            <button class="button button--outline actions__button" type="button" aria-label="Recommended categories">
+            <button class="button button--outline actions__button" type="button" aria-label="Recommended categories" disabled="disabled">
               <svg class="button__icon button__icon--light" width="24" height="24">
                 <use xlink:href="img/sprite.svg#idea"></use>
               </svg>

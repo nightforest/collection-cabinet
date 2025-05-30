@@ -20,6 +20,7 @@
     "smoothscroll-for-websites": "^1.4.10",
     "swiper": "^9.2.4",
     "text-mask-addons": "^3.8.0",
-    "vanilla-text-mask": "^5.1.1"
+    "vanilla-text-mask": "^5.1.1",
+    "tippy.js": "^6.3.7"
   }
 }

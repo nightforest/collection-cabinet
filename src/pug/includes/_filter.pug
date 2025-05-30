@@ -17,10 +17,13 @@ aside.filter
                         use(xlink:href="img/sprite.svg#filter")
                     span Фільтр
 
-                button.button.button--md.button--outline.filter__recommend-button(type="button" aria-label="Recommended categories")
+                button.button.button--md.button--outline.filter__recommend-button(type="button" data-tippy="tooltip-1" aria-label="Recommended categories")
                     svg.button__icon.button__icon--light(width="24" height="24")
                         use(xlink:href="img/sprite.svg#idea")
                     | Рекомендовані категорії
+
+                #tooltip-1.tooltip(style="display: none;")
+                    p Оберіть одну кінцеву категорію зі змісту, натисніть «показати» і функція буде доступною для активації
 
                 button.button.button--outline.filter__hide-button(type="button" aria-label="Hide Filter" data-modal-once="modal-tip-3" data-tooltip-left="Регулювання масштабу" data-filter-hide)
                     svg.button__icon(width="10" height="19")
@@ -54,7 +57,7 @@ aside.filter
                                 use(xlink:href="img/sprite.svg#bookmark")
 
                     li.actions__item
-                        button.button.button--outline.actions__button(type="button" aria-label="Recommended categories")
+                        button.button.button--outline.actions__button(type="button" aria-label="Recommended categories" disabled)
                             svg.button__icon.button__icon--light(width="24" height="24")
                                 use(xlink:href="img/sprite.svg#idea")
 
