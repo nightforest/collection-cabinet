@@ -7,10 +7,7 @@
     // box-shadow: 0 0 0 1px rgba(0, 0, 0, .1)
     border-bottom: 1px solid #e5e5e5
     z-index: $z-index-3
-    padding-left: 560px
-
-    @media (max-width: 1400px)
-        padding-left: 420px
+    padding-left: 128px
 
     @media ($max-md)
         background-color: #F7F8FA
@@ -19,13 +16,14 @@
         box-shadow: 0 0 30px 0 rgba(0, 0, 0, .3)
         transform: translateY(calc((100% - 25px) * -1))
         transition: transform .25s ease
+        padding-left: 0
 
-    &.is-full
-        padding-left: 128px
-        transition: padding .25s ease, transform .25s ease
+    // &.is-full
+    //     padding-left: 128px
+    //     transition: padding .25s ease, transform .25s ease
 
-        @media ($max-md)
-            padding-left: 0
+    //     @media ($max-md)
+    //         padding-left: 0
 
     &.is-visible
         transform: translateY(0)
