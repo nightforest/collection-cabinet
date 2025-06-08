@@ -2,7 +2,7 @@
     position: fixed
     top: 0
     left: 0
-    z-index: $z-index-3
+    z-index: 4
     width: 100%
     max-width: calc(100vw - 300px)
     height: calc(var(--vh) * 100)
@@ -37,6 +37,12 @@
                     display: none
             
             .filter__recommend-button
+                display: none
+            
+            .filter__action-button
+                display: none
+
+            .filter__top-search
                 display: none
 
             .filter__hide-button
@@ -138,6 +144,12 @@
         @media ($max-md)
             display: none
 
+        &-search
+            width: 100%
+
+            .search__input
+                height: 40px
+
     &__logo
 
         .logo__link
@@ -170,6 +182,7 @@
 
     &__sticky-header
         margin-bottom: 15px
+        display: none
 
         @media ($max-md)
             position: fixed
@@ -239,8 +252,12 @@
     &__recommend-button
         font-size: 14px
         padding: 5px 12px
-        margin-left: auto
+        // margin-left: auto
         text-align: left
+        white-space: nowrap
+
+    &__action-button
+        white-space: nowrap
 
     &__hide-button
         flex-shrink: 0

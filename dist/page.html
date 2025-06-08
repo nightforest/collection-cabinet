@@ -29,14 +29,15 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-39839d7a.js"></script>
-      <link rel="stylesheet" href="/assets/main-b2721ae9.css">
+      <script type="module" crossorigin src="/assets/main-fefd03b1.js"></script>
+      <link rel="stylesheet" href="/assets/main-03951bc2.css">
     </head>
     <body>
         <!-- Header -->
         
 <header class="header">
-  <div class="container header__container"><a class="button header__button" href="#" data-modal-once="modal-tip-3">Модуль КК</a><a class="button button--outline header__button" href="#" data-modal-once="modal-tip-3">Модуль КПК</a><a class="button button--outline header__button" href="#" aria-label="Кабінет">
+  <div class="container header__container">
+    <div class="logo header__logo"><a class="logo__link" href="#" aria-label="logo"><img class="logo__img" src="img/logo.png" srcset="img/logo@2x.png 2x" width="82" height="61" alt="logo"/></a></div><a class="button button--outline header__button" href="#" aria-label="Кабінет">
       <svg class="sidebar-menu__icon" width="17" height="21">
         <use xlink:href="img/sprite.svg#file"></use>
       </svg>Кабінет</a>
@@ -320,39 +321,36 @@
 <aside class="filter is-hide">
   <div class="filter__panel">
     <div class="filter__top">
-      <div class="logo filter__logo"><a class="logo__link" href="#" aria-label="logo"><img class="logo__img" src="img/logo-white.png" srcset="img/logo-white@2x.png 2x" width="82" height="61" alt="logo"/></a></div>
       <button class="burger filter__burger" type="button" aria-label="Open sidebar" aria-expanded="false" data-modal-once="modal-tip-7" data-sidebar-toggle="data-sidebar-toggle">
         <div class="burger__line"></div>
         <div class="burger__line"></div>
         <div class="burger__line"></div>
       </button>
+      <form class="search filter__top-search" id="filter-search-form" autocomplete="off" novalidate="novalidate">
+        <div class="search__group">
+          <input class="input search__input" id="inputFilterSearch" type="text" name="inputFilterSearch" placeholder="Пошук..." autocomplete="off" required="required"/>
+          <button class="search__button">
+            <svg class="search__icon" width="21" height="21">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <button class="button button--md button--outline filter__recommend-button" type="button" data-tippy="tooltip-1" aria-label="Recommended categories">
+        <svg class="button__icon button__icon--light" width="24" height="24">
+          <use xlink:href="img/sprite.svg#idea"></use>
+        </svg>Рекомендовані категорії
+      </button>
+      <div class="tooltip" id="tooltip-1" style="display: none;">
+        <p>Оберіть одну кінцеву категорію зі змісту, натисніть «показати» і функція буде доступною для активації</p>
+      </div><a class="button button--outline button--md filter__action-button" href="#" data-modal-once="modal-tip-3">Модуль КК</a><a class="button button--outline button--md filter__action-button" href="#" data-modal-once="modal-tip-3">Модуль КПК</a>
+      <button class="button button--outline filter__hide-button" type="button" aria-label="Hide Filter" data-modal-once="modal-tip-3" data-tooltip-left="Регулювання масштабу" data-filter-hide="data-filter-hide">
+        <svg class="button__icon" width="10" height="19">
+          <use xlink:href="img/sprite.svg#arrow-left"></use>
+        </svg>
+      </button>
     </div>
     <div class="filter__inner">
-      <div class="filter__header">
-        <h3 class="filter__title">
-          <svg class="filter__title-icon" width="38" height="38">
-            <use xlink:href="img/sprite.svg#filter"></use>
-          </svg><span>Фільтр</span>
-        </h3>
-        <button class="button button--md button--outline filter__recommend-button" type="button" data-tippy="tooltip-1" aria-label="Recommended categories">
-          <svg class="button__icon button__icon--light" width="24" height="24">
-            <use xlink:href="img/sprite.svg#idea"></use>
-          </svg>Рекомендовані категорії
-        </button>
-        <div class="tooltip" id="tooltip-1" style="display: none;">
-          <p>Оберіть одну кінцеву категорію зі змісту, натисніть «показати» і функція буде доступною для активації</p>
-        </div>
-        <button class="button button--outline filter__hide-button" type="button" aria-label="Hide Filter" data-modal-once="modal-tip-3" data-tooltip-left="Регулювання масштабу" data-filter-hide="data-filter-hide">
-          <svg class="button__icon" width="10" height="19">
-            <use xlink:href="img/sprite.svg#arrow-left"></use>
-          </svg>
-        </button>
-        <button class="button button--outline filter__toggle-button" type="button" aria-label="Hide Filter" data-filter-toggle="data-filter-toggle">
-          <svg class="button__icon" width="17" height="17">
-            <use xlink:href="img/sprite.svg#close-modal"></use>
-          </svg>
-        </button>
-      </div>
       <div class="filter__sticky-header">
         <ul class="actions filter__actions">
           <li class="actions__item">

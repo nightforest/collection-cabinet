@@ -1,37 +1,52 @@
 aside.filter.is-hide
     .filter__panel
         .filter__top
-            .logo.filter__logo
-                a.logo__link(href="#" aria-label="logo")
-                    img.logo__img(src="img/logo-white.png" srcset="img/logo-white@2x.png 2x" width="82" height="61" alt="logo")
+            //- .logo.filter__logo
+            //-     a.logo__link(href="#" aria-label="logo")
+            //-         img.logo__img(src="img/logo-white.png" srcset="img/logo-white@2x.png 2x" width="82" height="61" alt="logo")
 
             button.burger.filter__burger(type="button" aria-label="Open sidebar" aria-expanded="false" data-modal-once="modal-tip-7" data-sidebar-toggle)
                 .burger__line
                 .burger__line
                 .burger__line
 
+            form.search.filter__top-search(id="filter-search-form" autocomplete="off" novalidate="novalidate")
+                .search__group
+                    input#inputFilterSearch.input.search__input(type="text" name="inputFilterSearch" placeholder="Пошук..." autocomplete="off" required)
+
+                    button.search__button
+                        svg.search__icon(width="21" height="21")
+                            use(xlink:href="img/sprite.svg#search")
+
+            button.button.button--md.button--outline.filter__recommend-button(type="button" data-tippy="tooltip-1" aria-label="Recommended categories")
+                svg.button__icon.button__icon--light(width="24" height="24")
+                    use(xlink:href="img/sprite.svg#idea")
+                | Рекомендовані категорії
+
+            #tooltip-1.tooltip(style="display: none;")
+                p Оберіть одну кінцеву категорію зі змісту, натисніть «показати» і функція буде доступною для активації
+            
+            a.button.button--outline.button--md.filter__action-button(href="#" data-modal-once="modal-tip-3") Модуль КК
+
+            a.button.button--outline.button--md.filter__action-button(href="#" data-modal-once="modal-tip-3") Модуль КПК
+
+            button.button.button--outline.filter__hide-button(type="button" aria-label="Hide Filter" data-modal-once="modal-tip-3" data-tooltip-left="Регулювання масштабу" data-filter-hide)
+                svg.button__icon(width="10" height="19")
+                    use(xlink:href="img/sprite.svg#arrow-left")
+
+
         .filter__inner
-            .filter__header
-                h3.filter__title
-                    svg.filter__title-icon(width="38" height="38")
-                        use(xlink:href="img/sprite.svg#filter")
-                    span Фільтр
+            //- .filter__header
+                //- h3.filter__title
+                //-     svg.filter__title-icon(width="38" height="38")
+                //-         use(xlink:href="img/sprite.svg#filter")
+                //-     span Фільтр
 
-                button.button.button--md.button--outline.filter__recommend-button(type="button" data-tippy="tooltip-1" aria-label="Recommended categories")
-                    svg.button__icon.button__icon--light(width="24" height="24")
-                        use(xlink:href="img/sprite.svg#idea")
-                    | Рекомендовані категорії
-
-                #tooltip-1.tooltip(style="display: none;")
-                    p Оберіть одну кінцеву категорію зі змісту, натисніть «показати» і функція буде доступною для активації
-
-                button.button.button--outline.filter__hide-button(type="button" aria-label="Hide Filter" data-modal-once="modal-tip-3" data-tooltip-left="Регулювання масштабу" data-filter-hide)
-                    svg.button__icon(width="10" height="19")
-                        use(xlink:href="img/sprite.svg#arrow-left")
                 
-                button.button.button--outline.filter__toggle-button(type="button" aria-label="Hide Filter" data-filter-toggle)
-                    svg.button__icon(width="17" height="17")
-                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                //- button.button.button--outline.filter__toggle-button(type="button" aria-label="Hide Filter" data-filter-toggle)
+                //-     svg.button__icon(width="17" height="17")
+                //-         use(xlink:href="img/sprite.svg#close-modal")
 
             .filter__sticky-header
                 ul.actions.filter__actions
