@@ -10,7 +10,8 @@ const enableScroll = () => {
     vars.bodyEl.classList.remove('scroll-disabled');
     window.scroll({
       top: pagePosition,
-      left: 0
+      left: 0,
+      behavior: 'instant'
     });
     vars.bodyEl.removeAttribute('data-position');
     vars.htmlEl.style.scrollBehavior = 'smooth';

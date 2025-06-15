@@ -1,12 +1,10 @@
-export const openModal = (modal) => {
-    const body = document.querySelector("body");
-    const header = document.querySelector(".header");
-    const modalWrap = document.querySelector(".modal-wrap");
-    const paddingRight = window.innerWidth - document.documentElement.clientWidth;
+import disableScroll from "./disableScroll";
+import enableScroll from "./enableScroll";
 
-    body.classList.add('scroll-disabled');
-    body.style.paddingRight = paddingRight + 'px';
-    header.style.paddingRight = paddingRight + 'px';
+export const openModal = (modal) => {
+    const modalWrap = document.querySelector(".modal-wrap");
+
+    disableScroll();
     modalWrap.classList.add('is-visible');
     modal.classList.add('is-visible');
 
@@ -18,7 +16,6 @@ export const openModal = (modal) => {
 }
 
 export const closeModal = (modal) => {
-    const body = document.querySelector("body");
     const header = document.querySelector(".header");
     const modalWrap = document.querySelector(".modal-wrap");
 
@@ -26,11 +23,9 @@ export const closeModal = (modal) => {
     modal.classList.remove('is-visible');
 
     if (!header.classList.contains('is-active')) {
-        setTimeout(() => {
-            body.classList.remove('scroll-disabled');
-            body.style.paddingRight = '0px';
-            header.style.paddingRight = '0px';
-        }, 500);
+        // setTimeout(() => {
+            enableScroll();
+        // }, 500);
     }
 
     const video = modal.querySelector('#youtube-video');

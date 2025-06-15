@@ -1,14 +1,14 @@
 import fixHeight from "./fixHeight";
+import disableScroll from "./disableScroll";
+import enableScroll from "./enableScroll";
 
 const filter = () => {
-    const body = document.querySelector('body');
     const header = document.querySelector('.header');
     const main = document.querySelector('.main');
     const filterNav = document.querySelector(".filter");
     const filterNavToggleAll = document.querySelectorAll("[data-filter-toggle]");
     const filterNavHide = document.querySelector("[data-filter-hide]");
-    const paddingRight = window.innerWidth - document.documentElement.clientWidth;
-    
+
     filterNavToggleAll?.forEach(item => {
         item?.addEventListener('click', e => {
             e.preventDefault();
@@ -63,14 +63,10 @@ const filter = () => {
         });
 
         if (filterNav.classList.contains('is-visible')) {
-            body.classList.add('scroll-disabled');
-            body.style.paddingRight = paddingRight + 'px';
-            header.style.paddingRight = paddingRight + 'px';
+            disableScroll();
         } else {
             setTimeout(() => {
-                body.classList.remove('scroll-disabled');
-                body.style.paddingRight = '0px';
-                header.style.paddingRight = '0px';
+                enableScroll();
             }, 500);
         }
     }

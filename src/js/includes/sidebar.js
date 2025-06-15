@@ -1,10 +1,11 @@
+import disableScroll from "./disableScroll";
+import enableScroll from "./enableScroll";
+
 const sidebar = () => {
-    const body = document.querySelector('body');
     const header = document.querySelector('.header');
     const mobileNav = document.querySelector(".sidebar");
     const mobileNavToggleAll = document.querySelectorAll("[data-sidebar-toggle]");
-    const paddingRight = window.innerWidth - document.documentElement.clientWidth;
-    
+
     mobileNavToggleAll?.forEach(item => {
         item?.addEventListener('click', () => {
             // e.preventDefault();
@@ -27,14 +28,10 @@ const sidebar = () => {
         });
 
         if (mobileNav.classList.contains('is-visible')) {
-            body.classList.add('scroll-disabled');
-            body.style.paddingRight = paddingRight + 'px';
-            header.style.paddingRight = paddingRight + 'px';
+            disableScroll();
         } else {
             setTimeout(() => {
-                body.classList.remove('scroll-disabled');
-                body.style.paddingRight = '0px';
-                header.style.paddingRight = '0px';
+                enableScroll();
             }, 500);
         }
     }
