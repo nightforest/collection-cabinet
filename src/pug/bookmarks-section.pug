@@ -10,7 +10,12 @@ section.bookmarks-section
                     
         header.bookmarks-section__header
             .bookmarks-section__header-row
-                h1.page-title.bookmarks-section__title Мій профіль
+                .bookmarks-section__title-group
+                    button.button.button--outline.bookmarks-section__back-button(type="button" aria-label="Back")
+                        svg.button__icon(width="10" height="19")
+                            use(xlink:href="img/sprite.svg#arrow-left")
+
+                    h1.page-title.bookmarks-section__title Кабінет
 
                 form.sort-form.bookmarks-section__sort-form(id="sort-form" autocomplete="off" novalidate="novalidate")
                     .sort-form__group
@@ -19,10 +24,6 @@ section.bookmarks-section
                             option(value="2") Сортувати за назвою
 
             .bookmarks-section__header-row
-                button.button.button--outline.bookmarks-section__back-button(type="button" aria-label="Back" data-tooltip="Назад")
-                    svg.button__icon(width="10" height="19")
-                        use(xlink:href="img/sprite.svg#arrow-left")
-                        
                 form.search.bookmarks-section__search(id="bookmark-search-form" autocomplete="off" novalidate="novalidate")
                     .search__group
                         input#inputBookmarkSearch.input.search__input(type="text" name="inputBookmarkSearch" placeholder="Пошук по файлах" autocomplete="off" required)

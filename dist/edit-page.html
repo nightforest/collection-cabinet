@@ -29,21 +29,59 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-c8f51693.js"></script>
-      <link rel="stylesheet" href="/assets/main-8b4ef070.css">
+      <script type="module" crossorigin src="/assets/main-a8b8ba81.js"></script>
+      <link rel="stylesheet" href="/assets/main-380a5926.css">
     </head>
     <body>
         <!-- Header -->
         
 <header class="header">
   <div class="container header__container">
-    <div class="logo header__logo"><a class="logo__link" href="#" aria-label="logo"><img class="logo__img" src="img/logo.png" srcset="img/logo@2x.png 2x" width="82" height="61" alt="logo"/></a></div><a class="button button--outline header__button" href="#" aria-label="Кабінет">
+    <div class="select-module is-dropdown header__select-module">
+      <button class="button button--outline is-dropdown__toggle select-module__toggle" type="button" aria-label="Show dropdown menu">Велика палата
+        <svg class="button__icon" width="15" height="8">
+          <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+        </svg>
+      </button>
+      <div class="select-module__dropdown">
+        <ul class="select-module__list">
+          <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                <svg class="select-module__icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#hammer"></use>
+                </svg></span><span class="select-module__title">Модуль КК</span></a></li>
+          <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                <svg class="select-module__icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#hammer"></use>
+                </svg></span><span class="select-module__title">Модуль КПК</span></a></li>
+          <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                <svg class="select-module__icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#hammer"></use>
+                </svg></span><span class="select-module__title">КАС</span></a></li>
+          <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                <svg class="select-module__icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#hammer"></use>
+                </svg></span><span class="select-module__title">КГС</span></a></li>
+          <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                <svg class="select-module__icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#hammer"></use>
+                </svg></span><span class="select-module__title">КЦС</span></a></li>
+          <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                <svg class="select-module__icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#hammer"></use>
+                </svg></span><span class="select-module__title">Велика Палата</span></a></li>
+          <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                <svg class="select-module__icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#hammer"></use>
+                </svg></span><span class="select-module__title">Рішення ЄСПЛ</span></a></li>
+        </ul>
+      </div>
+    </div><a class="button button--outline header__button" href="#" aria-label="Кабінет">
       <svg class="sidebar-menu__icon" width="17" height="21">
         <use xlink:href="img/sprite.svg#file"></use>
       </svg>Кабінет</a>
     <form class="search header__search" id="search-form" autocomplete="off" novalidate="novalidate">
       <div class="search__group">
-        <input class="input search__input" id="inputSearch" type="text" name="inputSearch" placeholder="Пошук по збірнику" autocomplete="off" required="required"/>
+        <input class="input search__input" id="inputSearch" type="text" name="inputSearch" placeholder="Пошук по збірнику" data-tippy="tooltip-2" autocomplete="off" required="required"/>
         <div class="search__buttons-group">
           <div class="search__buttons-group-item">
             <button class="search__button" type="button">
@@ -60,8 +98,17 @@
             </button>
           </div>
         </div>
+        <div class="search__tip">
+          <p>Шукає по діячому модулю</p>
+        </div>
+      </div>
+      <div class="search__date-group">
+        <input class="input input--date search__date-input" type="text" name="pickDateInput" placeholder="Виберіть дату" autocomplete="off"/>
       </div>
     </form>
+    <div class="tooltip" id="tooltip-2" style="display: none;">
+      <p>Даний пошук також передбачає пошук дати судового рішення, номера справи</p>
+    </div>
     <ul class="actions header__actions">
       <li class="actions__item actions__item--visible-md">
         <button class="button button--outline actions__button" type="button" aria-label="Open sidebar" aria-expanded="false" data-modal-once="modal-tip-7" data-sidebar-toggle="data-sidebar-toggle">
@@ -250,11 +297,22 @@
       <form class="search filter__top-search" id="filter-search-form" autocomplete="off" novalidate="novalidate">
         <div class="search__group">
           <input class="input search__input" id="inputFilterSearch" type="text" name="inputFilterSearch" placeholder="Пошук..." autocomplete="off" required="required"/>
-          <button class="search__button">
-            <svg class="search__icon" width="21" height="21">
-              <use xlink:href="img/sprite.svg#search"></use>
-            </svg>
-          </button>
+          <div class="search__buttons-group">
+            <div class="search__buttons-group-item">
+              <button class="search__button" type="button">
+                <svg class="search__icon" width="18" height="18">
+                  <use xlink:href="img/sprite.svg#close-modal"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="search__buttons-group-item">
+              <button class="search__button">
+                <svg class="search__icon" width="21" height="21">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </form>
       <button class="button button--md button--outline filter__recommend-button" type="button" data-tippy="tooltip-1" aria-label="Recommended categories">
@@ -264,7 +322,46 @@
       </button>
       <div class="tooltip" id="tooltip-1" style="display: none;">
         <p>Оберіть одну кінцеву категорію зі змісту, натисніть «показати» і функція буде доступною для активації</p>
-      </div><a class="button button--outline button--md filter__action-button" href="#" data-modal-once="modal-tip-3">Модуль КК</a><a class="button button--outline button--md filter__action-button" href="#" data-modal-once="modal-tip-3">Модуль КПК</a>
+      </div>
+      <div class="select-module is-dropdown filter__select-module">
+        <button class="button button--outline button--md is-dropdown__toggle select-module__toggle" type="button" aria-label="Show dropdown menu">Велика палата
+          <svg class="button__icon" width="15" height="8">
+            <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+          </svg>
+        </button>
+        <div class="select-module__dropdown">
+          <ul class="select-module__list">
+            <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                  <svg class="select-module__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#hammer"></use>
+                  </svg></span><span class="select-module__title">Модуль КК</span></a></li>
+            <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                  <svg class="select-module__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#hammer"></use>
+                  </svg></span><span class="select-module__title">Модуль КПК</span></a></li>
+            <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                  <svg class="select-module__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#hammer"></use>
+                  </svg></span><span class="select-module__title">КАС</span></a></li>
+            <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                  <svg class="select-module__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#hammer"></use>
+                  </svg></span><span class="select-module__title">КГС</span></a></li>
+            <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                  <svg class="select-module__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#hammer"></use>
+                  </svg></span><span class="select-module__title">КЦС</span></a></li>
+            <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                  <svg class="select-module__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#hammer"></use>
+                  </svg></span><span class="select-module__title">Велика Палата</span></a></li>
+            <li class="select-module__item"><a class="select-module__link" href="#"><span class="select-module__pic">
+                  <svg class="select-module__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#hammer"></use>
+                  </svg></span><span class="select-module__title">Рішення ЄСПЛ</span></a></li>
+          </ul>
+        </div>
+      </div>
       <button class="button button--outline filter__hide-button" type="button" aria-label="Hide Filter" data-modal-once="modal-tip-3" data-tooltip-left="Регулювання масштабу" data-filter-hide="data-filter-hide">
         <svg class="button__icon" width="10" height="19">
           <use xlink:href="img/sprite.svg#arrow-left"></use>
@@ -272,6 +369,9 @@
       </button>
     </div>
     <div class="filter__inner">
+      <div class="filter__inner-tip">
+        <p>У вас є активні фільтри</p>
+      </div>
       <div class="filter__sticky-header">
         <ul class="actions filter__actions">
           <li class="actions__item">
@@ -319,11 +419,22 @@
         <form class="search filter__search" id="filter-search-form" autocomplete="off" novalidate="novalidate">
           <div class="search__group">
             <input class="input search__input" id="inputFilterSearch" type="text" name="inputFilterSearch" placeholder="Пошук..." autocomplete="off" required="required"/>
-            <button class="search__button">
-              <svg class="search__icon" width="21" height="21">
-                <use xlink:href="img/sprite.svg#search"></use>
-              </svg>
-            </button>
+            <div class="search__buttons-group">
+              <div class="search__buttons-group-item">
+                <button class="search__button" type="button">
+                  <svg class="search__icon" width="18" height="18">
+                    <use xlink:href="img/sprite.svg#close-modal"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="search__buttons-group-item">
+                <button class="search__button">
+                  <svg class="search__icon" width="21" height="21">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </form>
         <button class="filter__collapse-button" type="button" aria-label="Filter collapse" data-filter-collapse="data-filter-collapse">

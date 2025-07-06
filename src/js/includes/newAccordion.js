@@ -1,7 +1,7 @@
 const newAccordion = () => {
     const accordion = document.querySelector(".accordion");
     
-    const accordionTriggerAll = document.querySelectorAll(".accordion__trigger");
+    const accordionTriggerAll = document.querySelectorAll(".accordion__header");
 
     accordionTriggerAll?.forEach(item => {
         item.addEventListener("click", (e) => {

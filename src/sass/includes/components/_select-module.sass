@@ -1,0 +1,87 @@
+.select-module
+    position: relative
+
+    &.is-active
+
+        .select-module__dropdown
+            opacity: 1
+            visibility: visible
+            transform: translateY(0)
+
+        .button__icon
+            transform: rotateX(180deg)
+
+    &__toggle
+        white-space: nowrap
+
+        .button__icon
+            transition: transform .25s
+
+    &__dropdown
+        position: absolute
+        left: 0
+        top: calc(100% + 12px)
+        border-radius: 10px
+        border: 1px solid var(--white)
+        background: var(--blue)
+        min-width: 220px
+        // max-height: 260px
+        // overflow-y: auto
+        opacity: 0
+        visibility: hidden
+        transform: translateY(10px)
+        transition: transform .25s, opacity .25s, visibility .25s
+        z-index: $z-index-1
+
+    &__list
+        margin: 0
+        padding: 6px
+        list-style: none
+    
+    &__item
+        position: relative
+
+        &:not(:last-child)
+            border-bottom: 1px solid rgb(255 255 255 / 0.2)
+
+    &__link
+        display: flex
+        align-items: center
+        gap: 12px
+        padding: 6px
+        font-size: 14px
+        font-weight: 400
+        line-height: 1.4
+        color: var(--white)
+        text-transform: uppercase
+        transition: color .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--white)
+
+            .select-module__pic
+                background: var(--white)
+                color: var(--blue)
+
+        &.is-active
+            color: var(--white)
+            font-weight: 600
+
+            .select-module__pic
+                background: var(--white)
+                color: var(--blue)
+    
+    &__pic
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 32px
+        width: 32px
+        min-width: 32px
+        border-radius: 8px
+        line-height: 1
+        border: 1px solid var(--white)
+        color: var(--white)
+        transition: all .5s ease

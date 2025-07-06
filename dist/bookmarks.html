@@ -29,8 +29,8 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-c8f51693.js"></script>
-      <link rel="stylesheet" href="/assets/main-8b4ef070.css">
+      <script type="module" crossorigin src="/assets/main-a8b8ba81.js"></script>
+      <link rel="stylesheet" href="/assets/main-380a5926.css">
     </head>
     <body>
         <!-- Header -->
@@ -209,7 +209,14 @@
     </div>
     <header class="bookmarks-section__header">
       <div class="bookmarks-section__header-row">
-        <h1 class="page-title bookmarks-section__title">Мій профіль</h1>
+        <div class="bookmarks-section__title-group">
+          <button class="button button--outline bookmarks-section__back-button" type="button" aria-label="Back">
+            <svg class="button__icon" width="10" height="19">
+              <use xlink:href="img/sprite.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <h1 class="page-title bookmarks-section__title">Кабінет</h1>
+        </div>
         <form class="sort-form bookmarks-section__sort-form" id="sort-form" autocomplete="off" novalidate="novalidate">
           <div class="sort-form__group">
             <select class="select" id="selectSortBy" name="selectSortBy" aria-label="Sort by" required="required">
@@ -220,11 +227,6 @@
         </form>
       </div>
       <div class="bookmarks-section__header-row">
-        <button class="button button--outline bookmarks-section__back-button" type="button" aria-label="Back" data-tooltip="Назад">
-          <svg class="button__icon" width="10" height="19">
-            <use xlink:href="img/sprite.svg#arrow-left"></use>
-          </svg>
-        </button>
         <form class="search bookmarks-section__search" id="bookmark-search-form" autocomplete="off" novalidate="novalidate">
           <div class="search__group">
             <input class="input search__input" id="inputBookmarkSearch" type="text" name="inputBookmarkSearch" placeholder="Пошук по файлах" autocomplete="off" required="required"/>

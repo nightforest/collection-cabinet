@@ -25,6 +25,7 @@ import recommendedCheckbox from './includes/recommendedCheckbox.js';
 import scrollToId from './includes/scrollToId.js';
 import codex from './includes/codex.js';
 import tooltips from './includes/tooltips.js';
+import airDatepicker from './includes/airDatepicker.js';
 import '../sass/main.sass';
 
 
@@ -55,3 +56,4 @@ filterToggle();
 recommendedCheckbox();
 scrollToId();
 tooltips();
+airDatepicker();

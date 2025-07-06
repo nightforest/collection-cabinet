@@ -69,6 +69,12 @@
             .filter__search
                 display: none
 
+            .filter__inner-tip
+                display: block
+            
+            .filter__select-module
+                display: none
+
     &.is-visible
         opacity: 1
         visibility: visible
@@ -169,6 +175,12 @@
             &.is-header-visible
                 padding-top: 35px
 
+    &__inner-tip
+        color: #71AD4F
+        font-size: 14px
+        font-weight: 700
+        display: none
+
     &__header
         display: flex
         align-items: center
@@ -258,6 +270,12 @@
 
     &__action-button
         white-space: nowrap
+
+    &__select-module
+
+        .select-module__dropdown
+            right: 0
+            left: auto
 
     &__hide-button
         flex-shrink: 0

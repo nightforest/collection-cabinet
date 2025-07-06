@@ -14,9 +14,16 @@ aside.filter.is-hide
                 .search__group
                     input#inputFilterSearch.input.search__input(type="text" name="inputFilterSearch" placeholder="Пошук..." autocomplete="off" required)
 
-                    button.search__button
-                        svg.search__icon(width="21" height="21")
-                            use(xlink:href="img/sprite.svg#search")
+                    .search__buttons-group
+                        .search__buttons-group-item
+                            button.search__button(type="button")
+                                svg.search__icon(width="18" height="18")
+                                    use(xlink:href="img/sprite.svg#close-modal")
+
+                        .search__buttons-group-item
+                            button.search__button
+                                svg.search__icon(width="21" height="21")
+                                    use(xlink:href="img/sprite.svg#search")
 
             button.button.button--md.button--outline.filter__recommend-button(type="button" data-tippy="tooltip-1" aria-label="Recommended categories")
                 svg.button__icon.button__icon--light(width="24" height="24")
@@ -26,9 +33,65 @@ aside.filter.is-hide
             #tooltip-1.tooltip(style="display: none;")
                 p Оберіть одну кінцеву категорію зі змісту, натисніть «показати» і функція буде доступною для активації
             
-            a.button.button--outline.button--md.filter__action-button(href="#" data-modal-once="modal-tip-3") Модуль КК
+            .select-module.is-dropdown.filter__select-module
+                button.button.button--outline.button--md.is-dropdown__toggle.select-module__toggle(type="button" aria-label="Show dropdown menu") Велика палата
+                    svg.button__icon(width="15" height="8")
+                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+                
+                .select-module__dropdown
+                    ul.select-module__list
+                        li.select-module__item
+                            a.select-module__link(href="#")
+                                span.select-module__pic
+                                    svg.select-module__icon(width="20" height="20")
+                                        use(xlink:href="img/sprite.svg#hammer")
+                                span.select-module__title Модуль КК
+                        
+                        li.select-module__item
+                            a.select-module__link(href="#")
+                                span.select-module__pic
+                                    svg.select-module__icon(width="20" height="20")
+                                        use(xlink:href="img/sprite.svg#hammer")
+                                span.select-module__title Модуль КПК
+                                
+                        li.select-module__item
+                            a.select-module__link(href="#")
+                                span.select-module__pic
+                                    svg.select-module__icon(width="20" height="20")
+                                        use(xlink:href="img/sprite.svg#hammer")
+                                span.select-module__title КАС
+                        
+                        li.select-module__item
+                            a.select-module__link(href="#")
+                                span.select-module__pic
+                                    svg.select-module__icon(width="20" height="20")
+                                        use(xlink:href="img/sprite.svg#hammer")
+                                span.select-module__title КГС
+                        
+                        li.select-module__item
+                            a.select-module__link(href="#")
+                                span.select-module__pic
+                                    svg.select-module__icon(width="20" height="20")
+                                        use(xlink:href="img/sprite.svg#hammer")
+                                span.select-module__title КЦС
 
-            a.button.button--outline.button--md.filter__action-button(href="#" data-modal-once="modal-tip-3") Модуль КПК
+                        li.select-module__item
+                            a.select-module__link(href="#")
+                                span.select-module__pic
+                                    svg.select-module__icon(width="20" height="20")
+                                        use(xlink:href="img/sprite.svg#hammer")
+                                span.select-module__title Велика Палата
+                        
+                        li.select-module__item
+                            a.select-module__link(href="#")
+                                span.select-module__pic
+                                    svg.select-module__icon(width="20" height="20")
+                                        use(xlink:href="img/sprite.svg#hammer")
+                                span.select-module__title Рішення ЄСПЛ
+                                
+            //- a.button.button--outline.button--md.filter__action-button(href="#" data-modal-once="modal-tip-3") Модуль КК
+
+            //- a.button.button--outline.button--md.filter__action-button(href="#" data-modal-once="modal-tip-3") Модуль КПК
 
             button.button.button--outline.filter__hide-button(type="button" aria-label="Hide Filter" data-modal-once="modal-tip-3" data-tooltip-left="Регулювання масштабу" data-filter-hide)
                 svg.button__icon(width="10" height="19")
@@ -47,6 +110,8 @@ aside.filter.is-hide
                 //- button.button.button--outline.filter__toggle-button(type="button" aria-label="Hide Filter" data-filter-toggle)
                 //-     svg.button__icon(width="17" height="17")
                 //-         use(xlink:href="img/sprite.svg#close-modal")
+            .filter__inner-tip
+                p У вас є активні фільтри
 
             .filter__sticky-header
                 ul.actions.filter__actions
@@ -85,9 +150,16 @@ aside.filter.is-hide
                     .search__group
                         input#inputFilterSearch.input.search__input(type="text" name="inputFilterSearch" placeholder="Пошук..." autocomplete="off" required)
 
-                        button.search__button
-                            svg.search__icon(width="21" height="21")
-                                use(xlink:href="img/sprite.svg#search")
+                        .search__buttons-group
+                            .search__buttons-group-item
+                                button.search__button(type="button")
+                                    svg.search__icon(width="18" height="18")
+                                        use(xlink:href="img/sprite.svg#close-modal")
+
+                            .search__buttons-group-item
+                                button.search__button
+                                    svg.search__icon(width="21" height="21")
+                                        use(xlink:href="img/sprite.svg#search")
 
                 button.filter__collapse-button(type="button" aria-label="Filter collapse" data-filter-collapse)
                     svg(width="12" height="8")

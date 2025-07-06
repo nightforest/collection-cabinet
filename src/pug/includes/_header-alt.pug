@@ -1,8 +1,8 @@
 header.header
     .container.header__container
-        .logo.header__logo
-            a.logo__link(href="#" aria-label="logo")
-                img.logo__img(src="img/logo.png" srcset="img/logo@2x.png 2x" width="82" height="61" alt="logo")
+        //- .logo.header__logo
+        //-     a.logo__link(href="#" aria-label="logo")
+        //-         img.logo__img(src="img/logo.png" srcset="img/logo@2x.png 2x" width="82" height="61" alt="logo")
 
         //- button.burger.header__burger(type="button" aria-label="Open sidebar" aria-expanded="false" data-modal-once="modal-tip-7" data-sidebar-toggle)
         //-     .burger__line
@@ -12,6 +12,62 @@ header.header
         //- a.button.header__button(href="#" data-modal-once="modal-tip-3") Модуль КК
 
         //- a.button.button--outline.header__button(href="#" data-modal-once="modal-tip-3") Модуль КПК
+        
+        .select-module.is-dropdown.header__select-module
+            button.button.button--outline.is-dropdown__toggle.select-module__toggle(type="button" aria-label="Show dropdown menu") Велика палата
+                svg.button__icon(width="15" height="8")
+                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+            
+            .select-module__dropdown
+                ul.select-module__list
+                    li.select-module__item
+                        a.select-module__link(href="#")
+                            span.select-module__pic
+                                svg.select-module__icon(width="20" height="20")
+                                    use(xlink:href="img/sprite.svg#hammer")
+                            span.select-module__title Модуль КК
+                    
+                    li.select-module__item
+                        a.select-module__link(href="#")
+                            span.select-module__pic
+                                svg.select-module__icon(width="20" height="20")
+                                    use(xlink:href="img/sprite.svg#hammer")
+                            span.select-module__title Модуль КПК
+                            
+                    li.select-module__item
+                        a.select-module__link(href="#")
+                            span.select-module__pic
+                                svg.select-module__icon(width="20" height="20")
+                                    use(xlink:href="img/sprite.svg#hammer")
+                            span.select-module__title КАС
+                    
+                    li.select-module__item
+                        a.select-module__link(href="#")
+                            span.select-module__pic
+                                svg.select-module__icon(width="20" height="20")
+                                    use(xlink:href="img/sprite.svg#hammer")
+                            span.select-module__title КГС
+                    
+                    li.select-module__item
+                        a.select-module__link(href="#")
+                            span.select-module__pic
+                                svg.select-module__icon(width="20" height="20")
+                                    use(xlink:href="img/sprite.svg#hammer")
+                            span.select-module__title КЦС
+
+                    li.select-module__item
+                        a.select-module__link(href="#")
+                            span.select-module__pic
+                                svg.select-module__icon(width="20" height="20")
+                                    use(xlink:href="img/sprite.svg#hammer")
+                            span.select-module__title Велика Палата
+                    
+                    li.select-module__item
+                        a.select-module__link(href="#")
+                            span.select-module__pic
+                                svg.select-module__icon(width="20" height="20")
+                                    use(xlink:href="img/sprite.svg#hammer")
+                            span.select-module__title Рішення ЄСПЛ
 
         a.button.button--outline.header__button(href="#" aria-label="Кабінет")
             svg.sidebar-menu__icon(width="17" height="21")
@@ -21,7 +77,7 @@ header.header
 
         form.search.header__search(id="search-form" autocomplete="off" novalidate="novalidate")
             .search__group
-                input#inputSearch.input.search__input(type="text" name="inputSearch" placeholder="Пошук по збірнику" autocomplete="off" required)
+                input#inputSearch.input.search__input(type="text" name="inputSearch" placeholder="Пошук по збірнику" data-tippy="tooltip-2" autocomplete="off" required)
 
                 .search__buttons-group
                     .search__buttons-group-item
@@ -33,6 +89,15 @@ header.header
                         button.search__button
                             svg.search__icon(width="21" height="21")
                                 use(xlink:href="img/sprite.svg#search")
+
+                .search__tip
+                    p Шукає по діячому модулю
+
+            .search__date-group
+                input.input.input--date.search__date-input(type="text" name="pickDateInput" placeholder="Виберіть дату" autocomplete="off")
+
+        #tooltip-2.tooltip(style="display: none;")
+            p Даний пошук також передбачає пошук дати судового рішення, номера справи
 
         ul.actions.header__actions
             li.actions__item.actions__item--visible-md
